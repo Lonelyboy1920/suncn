@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <include
+        android:id="@+id/view_mi_title"
+        layout="@layout/title_bar" />
+
+    <com.qd.longchat.view.QDXEditText
+        android:id="@+id/et_mi_input"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="1dp"
+        android:background="@color/colorWhite"
+        android:minHeight="100dp"
+        android:paddingStart="5dp"
+        android:paddingEnd="5dp"
+        android:text=""
+        android:textColor="@color/colorBlack"
+        android:textSize="16sp" />
+
+</LinearLayout>

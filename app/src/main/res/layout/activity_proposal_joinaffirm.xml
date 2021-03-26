@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/main_bg"
+    android:orientation="vertical">
+
+    <include layout="@layout/view_head_white" />
+
+    <LinearLayout
+        android:id="@+id/ll_join"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingLeft="10dp"
+        android:paddingTop="5dp"
+        android:paddingRight="10dp"
+        android:paddingBottom="5dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/string_joint_name_or_not"
+            android:textColor="@color/font_title"
+            android:textSize="@dimen/font_normal" />
+
+        <RadioGroup
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_weight="1"
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:id="@+id/rb_yes"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:buttonTint="@color/radiobutton_selector"
+                android:checked="true"
+                android:text="@string/string_agree_to_joint_name"
+                android:textColor="@color/font_title"
+                android:textSize="@dimen/font_15" />
+
+            <RadioButton
+                android:id="@+id/rb_no"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:layout_weight="1"
+                android:buttonTint="@color/radiobutton_selector"
+                android:text="@string/string_disagree_to_joint_name"
+                android:textColor="@color/font_title"
+                android:textSize="@dimen/font_15" />
+        </RadioGroup>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:orientation="vertical">
+
+        <View
+            style="@style/style_line_bg_white"
+            android:layout_height="10dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingLeft="10dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/string_joint_comments"
+                android:textColor="@color/font_title"
+                android:textSize="@dimen/font_normal" />
+
+            <TextView
+                android:id="@+id/tv_count"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="right"
+                android:textColor="@color/font_source"
+                android:textSize="@dimen/font_small" />
+
+            <com.gavin.giframe.widget.GITextView
+                android:id="@+id/tv_mike"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:foreground="?android:attr/selectableItemBackground"
+                android:paddingLeft="10dp"
+                android:paddingTop="10dp"
+                android:paddingRight="10dp"
+                android:paddingBottom="10dp"
+                android:text="@string/font_mike"
+                android:textColor="@color/font_content"
+                android:textSize="@dimen/font_medium" />
+        </LinearLayout>
+
+        <com.gavin.giframe.widget.GIEditText
+            android:id="@+id/et_idea"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:background="@null"
+            android:fadeScrollbars="false"
+            android:gravity="top"
+            android:hint="@string/string_please_enter_joint_comments"
+            android:inputType=""
+            android:lines="10"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:paddingBottom="10dp"
+            android:scrollbarStyle="outsideOverlay"
+            android:scrollbars="vertical"
+            android:textColor="@color/font_title"
+            android:textColorHint="@color/font_hint"
+            android:textSize="@dimen/font_normal"
+            app:maxLength="@integer/int_textlength_500" />
+    </LinearLayout>
+</LinearLayout>

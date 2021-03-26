@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    android:background="@color/colorActivityBackground"
+    android:orientation="vertical">
+
+    <include
+        android:id="@+id/view_ss_tile"
+        layout="@layout/title_bar"/>
+
+    <ImageView
+        android:id="@+id/iv_ss_img"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@mipmap/im_icon_sign_ok"
+        android:layout_marginTop="80dp"
+        android:layout_gravity="center_horizontal"
+        />
+
+    <TextView
+        android:id="@+id/tv_ss_msg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:textColor="@color/colorBlack"
+        android:layout_marginTop="20dp"
+        android:textSize="@dimen/text_view_size_focused"
+        />
+
+    <TextView
+        android:id="@+id/tv_ss_date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/colorBlack"
+        android:layout_marginTop="50dp"
+        android:textSize="14sp"
+        android:layout_marginStart="30dp"
+        />
+
+    <TextView
+        android:id="@+id/tv_ss_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/colorBlack"
+        android:layout_marginTop="5dp"
+        android:textSize="@dimen/text_view_size_focused"
+        android:layout_marginStart="30dp"
+        />
+
+    <TextView
+        android:id="@+id/tv_ss_address"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/colorBlack"
+        android:layout_marginTop="5dp"
+        android:textSize="14sp"
+        android:layout_marginStart="30dp"
+        />
+
+</LinearLayout>

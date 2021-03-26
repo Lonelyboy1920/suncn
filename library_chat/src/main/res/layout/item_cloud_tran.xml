@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:id="@+id/ll_item_title_layout"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:orientation="horizontal"
+        android:background="@color/colorActivityBackground"
+        android:paddingStart="@dimen/dimen_margin_16"
+        android:paddingEnd="@dimen/dimen_margin_16"
+        android:visibility="gone"
+        android:gravity="center_vertical">
+
+        <TextView
+            android:id="@+id/tv_item_title"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@color/colorActivityBackground"
+            android:textColor="@color/colorTextUnFocused"
+            android:textSize="12sp"/>
+
+        <TextView
+            android:id="@+id/tv_item_right"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="12sp"
+            android:textColor="@color/colorBtnNormal"
+            />
+    </LinearLayout>
+
+
+    <ImageView
+        android:id="@+id/iv_item_icon"
+        android:layout_width="@dimen/dimen_big_photo_size"
+        android:layout_height="@dimen/dimen_big_photo_size"
+        android:layout_below="@+id/ll_item_title_layout"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:layout_marginStart="@dimen/dimen_margin_16" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toEndOf="@+id/iv_item_icon"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_below="@+id/ll_item_title_layout"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tv_item_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/colorBlack"
+            android:textSize="@dimen/text_view_size_focused"
+            android:singleLine="true"
+            />
+
+        <TextView
+            android:id="@+id/tv_item_info"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/colorTextUnFocused"
+            android:textSize="12sp"
+            android:layout_marginTop="13dp"
+            android:visibility="gone"
+            />
+
+        <ProgressBar
+            android:id="@+id/pb_item_progress"
+            android:layout_width="220dp"
+            android:layout_height="wrap_content"
+            style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+            android:layout_marginTop="13dp"
+            android:progress="10"
+            android:max="100"
+            android:visibility="gone"
+            />
+    </LinearLayout>
+
+</RelativeLayout>

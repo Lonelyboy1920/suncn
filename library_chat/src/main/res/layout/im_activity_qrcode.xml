@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#000000">
+
+    <include
+        android:id="@+id/qr_title"
+        layout="@layout/title_bar" />
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:background="@drawable/view_round_white"
+        android:paddingBottom="10dp"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:paddingTop="10dp">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/qr_photo"
+            android:layout_width="@dimen/dimen_big_photo_size"
+            android:layout_height="@dimen/dimen_big_photo_size" />
+
+        <TextView
+            android:id="@+id/qr_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_toEndOf="@+id/qr_photo"
+            android:textSize="@dimen/text_view_size_focused" />
+
+        <TextView
+            android:id="@+id/qr_departmnet"
+            android:layout_width="170dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/qr_name"
+            android:layout_marginTop="5dp"
+            android:ellipsize="end"
+            android:layout_alignLeft="@+id/qr_name"
+            android:textColor="@color/colorTextUnFocused"
+            android:textSize="14sp" />
+
+        <ImageView
+            android:id="@+id/qr_image"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/qr_departmnet"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/qr_image"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp"
+            android:text="扫一扫二维码，添加好友" />
+
+    </RelativeLayout>
+
+</RelativeLayout>

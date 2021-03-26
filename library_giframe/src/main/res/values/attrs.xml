@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- 水印控件 -->
+    <declare-styleable name="WaterMarkText">
+        <attr name="degree" format="integer" /><!-- 显示的角度 -->
+    </declare-styleable>
+
+    <!-- 圆形图片 -->
+    <declare-styleable name="roundedimageview">
+        <attr name="border_thickness" format="dimension" /><!-- 线框粗度 -->
+        <attr name="border_inside_color" format="color" /><!-- 内框颜色 -->
+        <attr name="border_outside_color" format="color" /><!-- 外框颜色 -->
+    </declare-styleable>
+
+    <!-- 自定义TextView -->
+    <declare-styleable name="GITextView">
+        <attr name="myStyle" format="string" /><!-- 字体样式 -->
+        <attr name="textSpacing" format="float" /><!-- 字体间距 -->
+    </declare-styleable>
+
+    <!-- 自定义EditText -->
+    <declare-styleable name="GIEditText">
+        <attr name="maxLength" format="integer" /><!-- 最大可输入的字数 -->
+    </declare-styleable>
+</resources>

@@ -1,0 +1,59 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/rl_main"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/transparent">
+
+    <RelativeLayout
+        android:id="@+id/rv_icon"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="5dp">
+
+        <com.gavin.giframe.widget.RoundImageView
+            android:id="@+id/iv_icon"
+            style="@style/style_iv_headPhoto"
+            android:layout_width="55dp"
+            android:layout_height="55dp"
+            android:layout_centerInParent="true" />
+
+        <com.gavin.giframe.widget.GITextView
+            android:id="@+id/ic_admin"
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="4dp"
+            android:textColor="@color/red"
+            android:textSize="@dimen/font_normal"
+            android:contentDescription="TODO"
+            android:text="&#xe65c;"
+            android:visibility="gone"/>
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/tv_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/rv_icon"
+        android:ellipsize="end"
+        android:gravity="center"
+        android:paddingBottom="5dp"
+        android:singleLine="true"
+        android:text="测试测试测试测试"
+        android:textColor="@color/font_title"
+        android:textSize="@dimen/font_small" />
+
+    <com.gavin.giframe.widget.GITextView
+        android:id="@+id/tv_count"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="5dp"
+        android:layout_marginRight="5dp"
+        android:gravity="center"
+        android:background="@mipmap/btn_clear_edit"
+        android:textColor="@color/red"
+        android:textSize="@dimen/font_normal"
+        android:visibility="visible" />
+</RelativeLayout>

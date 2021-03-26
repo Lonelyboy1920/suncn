@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical">
+
+    <include layout="@layout/view_head_white" />
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/line_bg_white"
+            android:orientation="vertical">
+
+            <com.suncn.ihold_zxztc.view.MenuItemEditLayout
+                android:id="@+id/tv_duty_type"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:label="@string/string_duty_type"
+                app:label_color="@color/font_title"
+                app:right_icon="@string/font_arrow"
+                app:show_line="true"
+                app:show_arrow="true" />
+
+            <com.suncn.ihold_zxztc.view.MenuItemEditLayout
+                android:id="@+id/tv_date"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:label="@string/string_happen_time"
+                app:label_color="@color/font_title"
+                app:right_icon="@string/font_date"
+                app:show_arrow="true" />
+
+
+            <LinearLayout
+                android:id="@+id/ll_place"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/ll_date"
+                android:layout_marginTop="0.5dp"
+                android:background="@color/white"
+                android:orientation="vertical"
+                android:padding="10dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/string_specific_address"
+                        android:textColor="@color/font_title"
+                        android:textSize="@dimen/font_15" />
+
+                    <com.gavin.giframe.widget.GITextView
+                        android:id="@+id/tv_place_count"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:paddingLeft="10dp"
+                        android:paddingRight="10dp"
+                        android:textColor="@color/font_source"
+                        android:textSize="@dimen/font_small"
+                        tools:text="0/50" />
+                </RelativeLayout>
+
+                <com.gavin.giframe.widget.GIEditText
+                    android:id="@+id/et_place"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@null"
+                    android:gravity="left"
+                    android:hint="@string/stringhint_tips_specfic_addr"
+                    android:minLines="4"
+                    android:paddingTop="5dp"
+                    android:textColor="@color/font_title"
+                    android:textSize="@dimen/font_normal"
+                    app:maxLength="@integer/int_textlength_50" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/ll_place"
+                android:layout_marginTop="0.5dp"
+                android:background="@color/white"
+                android:orientation="vertical"
+                android:padding="10dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="5dp"
+                        android:text="@string/string_feedback_content"
+                        android:textColor="@color/font_title"
+                        android:textSize="@dimen/font_15" />
+
+                    <com.gavin.giframe.widget.GITextView
+                        android:id="@+id/tv_content_count"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:paddingLeft="10dp"
+                        android:paddingRight="10dp"
+                        android:textColor="@color/font_source"
+                        android:textSize="@dimen/font_small"
+                        tools:text="0/500" />
+                </RelativeLayout>
+
+                <com.gavin.giframe.widget.GIEditText
+                    android:id="@+id/et_content"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@null"
+                    android:gravity="left"
+                    android:hint="@string/string_hint_tips_feedback_content"
+                    android:minLines="7"
+                    android:paddingTop="5dp"
+                    android:textColor="@color/font_title"
+                    android:textSize="@dimen/font_normal"
+                    app:maxLength="@integer/int_textlength_500" />
+            </LinearLayout>
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+</LinearLayout>

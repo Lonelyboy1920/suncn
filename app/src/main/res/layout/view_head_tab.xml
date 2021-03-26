@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/view_head_bg">
+
+    <View
+        android:id="@+id/view_place"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/statusBar_height"
+        android:visibility="gone" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/layout_height_head"
+        android:layout_below="@id/view_place">
+
+        <com.gavin.giframe.widget.GITextView
+            android:id="@+id/btn_back"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:background="?android:attr/selectableItemBackground"
+            android:gravity="center_vertical"
+            android:minWidth="10dp"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:text="@string/font_back"
+            android:textColor="@color/white"
+            android:textSize="@dimen/font_large"
+            android:visibility="invisible"
+            app:myStyle="1" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <com.gavin.giframe.widget.GITextView
+                android:id="@+id/tv_tabLeft"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawableBottom="@drawable/shape_tab_line_white"
+                android:drawablePadding="3dp"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:text="@string/string_dynamic"
+                android:textColor="@color/white"
+                android:textSize="@dimen/font_18_dp"
+                android:visibility="visible"
+                app:myStyle="3" />
+
+            <com.gavin.giframe.widget.GITextView
+                android:id="@+id/tv_tabRight"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawablePadding="1dp"
+                android:ellipsize="end"
+                android:gravity="center"
+                android:maxLines="1"
+                android:text="@string/string_follow"
+                android:textColor="@color/top_unselect"
+                android:textSize="@dimen/font_18_dp"
+                android:visibility="visible"
+                app:myStyle="3" />
+        </LinearLayout>
+
+        <com.gavin.giframe.widget.GITextView
+            android:id="@+id/tv_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:gravity="center"
+            android:minWidth="10dp"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:text="@string/font_edit"
+            android:textColor="@color/white"
+            android:textSize="@dimen/font_large"
+            android:visibility="gone"
+            app:myStyle="1" />
+
+        <com.gavin.giframe.widget.GITextView
+            android:id="@+id/tv_remind"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_toStartOf="@id/tv_count"
+            android:background="?android:attr/selectableItemBackground"
+            android:gravity="center"
+            android:minWidth="10dp"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:text="@string/font_notice"
+            android:textColor="@color/white"
+            android:textSize="@dimen/font_large"
+            android:visibility="gone"
+            app:myStyle="1" />
+
+        <com.gavin.giframe.widget.GITextView
+            android:id="@+id/tv_count"
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            android:layout_alignParentEnd="true"
+            android:layout_marginLeft="-20dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginRight="5dp"
+            android:background="@drawable/shape_whiltcircle"
+            android:gravity="center"
+            android:minWidth="1dp"
+            android:text=""
+            android:textColor="@color/view_head_bg"
+            android:textSize="9sp"
+            android:visibility="gone"
+            app:myStyle="1" />
+    </RelativeLayout>
+</RelativeLayout>

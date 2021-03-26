@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_alignParentBottom="true"
+    android:layout_marginTop="0.5dp"
+    android:background="@android:color/white"
+    android:gravity="center_vertical"
+    android:orientation="horizontal"
+    android:paddingLeft="10dp"
+    android:paddingTop="5dp"
+    android:paddingBottom="5dp">
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:background="@drawable/shape_et_comment_bg"
+        android:orientation="horizontal">
+
+        <EditText
+            android:id="@+id/et_discuss"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@null"
+            android:gravity="top"
+            android:hint="@string/string_friendly_commen_is_the_starting_point_of_communication"
+            android:inputType=""
+            android:lines="3"
+            android:maxLength="500"
+            android:maxLines="3"
+            android:padding="10dp"
+            android:textColor="@color/font_title"
+            android:textColorHint="@color/font_source"
+            android:textSize="@dimen/font_15_dp" />
+
+        <com.gavin.giframe.widget.GITextView
+            android:id="@+id/tv_mike"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:foreground="?android:attr/selectableItemBackground"
+            android:gravity="center"
+            android:padding="10dp"
+            android:text="@string/font_mike"
+            android:textColor="@color/font_content"
+            android:textSize="@dimen/font_18_dp" />
+    </LinearLayout>
+
+
+    <TextView
+        android:id="@+id/tv_confirm"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:text="@string/string_public"
+        android:textColor="@color/font_source"
+        android:textSize="@dimen/font_16_dp" />
+</LinearLayout>

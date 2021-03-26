@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/colorWhite">
+
+    <LinearLayout
+        android:id="@+id/ll_item_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginStart="10dp"
+        android:visibility="visible">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/iv_item_icon"
+            android:layout_width="@dimen/dimen_normal_photo_size"
+            android:layout_height="@dimen/dimen_normal_photo_size" />
+
+        <TextView
+            android:id="@+id/tv_item_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:textSize="16sp"
+            android:textColor="@color/colorBlack"
+            android:singleLine="true"/>
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tv_item_desc"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="14sp"
+        android:layout_marginTop="10dp"
+        android:gravity="center_horizontal"
+        android:textColor="@color/colorTextUnFocused"
+        android:layout_marginBottom="15dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:visibility="visible"
+        />
+
+    <ImageView
+        android:id="@+id/iv_item_space"
+        android:layout_width="match_parent"
+        android:layout_height="20dp"
+        android:background="@color/colorActivityBackground"
+        android:visibility="visible"/>
+
+    <RelativeLayout
+        android:id="@+id/rl_item_content_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:background="@drawable/bg_list_item"
+        android:visibility="visible">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/iv_item_photo"
+            android:layout_width="@dimen/dimen_large_photo_size"
+            android:layout_height="@dimen/dimen_large_photo_size"
+            android:layout_alignParentEnd="true"/>
+
+        <TextView
+            android:id="@+id/tv_item_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/colorBlack"
+            android:textSize="16sp"
+            android:layout_alignTop="@+id/iv_item_photo"
+            android:layout_toStartOf="@+id/iv_item_photo"
+            android:layout_marginEnd="10dp"
+            android:maxLines="2"
+            />
+
+        <TextView
+            android:id="@+id/tv_item_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/colorTextUnFocused"
+            android:textSize="14sp"
+            android:layout_alignBottom="@+id/iv_item_photo"
+            />
+    </RelativeLayout>
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/colorLine"/>
+
+    <TextView
+        android:id="@+id/tv_item_bottom"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:paddingBottom="10dp"
+        android:gravity="center"
+        android:text="-------------- 已无更多 --------------"
+        android:textSize="13sp"
+        android:background="@color/colorActivityBackground"
+        android:visibility="visible"/>
+</LinearLayout>

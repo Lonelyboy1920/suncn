@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorActivityBackground"
+    android:orientation="vertical">
+
+    <include
+        android:id="@+id/view_title"
+        layout="@layout/title_bar"/>
+
+    <TextView
+        android:id="@+id/tv_add_link"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_alert_test"
+        android:layout_marginTop="10dp"
+        android:text="@string/add_linkmen"
+        android:textSize="16sp"
+        android:textColor="@color/colorBlack"
+        android:paddingStart="@dimen/dimen_margin_16"
+        android:paddingTop="10dp"
+        android:paddingEnd="10dp"
+        android:paddingBottom="10dp"
+        android:drawableEnd="@mipmap/im_arrow_right"
+        />
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/colorLine"/>
+
+    <TextView
+        android:id="@+id/tv_add_customer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_alert_test"
+        android:text="@string/add_customers"
+        android:textSize="16sp"
+        android:textColor="@color/colorBlack"
+        android:paddingStart="@dimen/dimen_margin_16"
+        android:paddingTop="10dp"
+        android:paddingEnd="10dp"
+        android:paddingBottom="10dp"
+        android:drawableEnd="@mipmap/im_arrow_right"
+        />
+
+</LinearLayout>

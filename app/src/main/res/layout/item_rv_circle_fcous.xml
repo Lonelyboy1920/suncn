@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:gravity="center_vertical"
+    android:padding="10dp">
+
+    <com.gavin.giframe.widget.RoundImageView
+        android:id="@+id/iv_img"
+        style="@style/style_iv_headPhoto"
+        android:layout_width="55dp"
+        android:layout_height="55dp" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tv_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="张三"
+            android:textColor="@color/font_title"
+            android:textSize="@dimen/font_normal" />
+
+        <com.gavin.giframe.widget.GITextView
+            android:id="@+id/tv_sector"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingTop="5dp"
+            android:paddingBottom="5dp"
+            android:text="党派界别"
+            android:textColor="@color/font_source"
+            android:textSize="@dimen/font_mini" />
+
+        <com.gavin.giframe.widget.GITextView
+            android:id="@+id/tv_duty"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:maxLines="2"
+            android:text="职位职位职位"
+            android:textColor="@color/font_source"
+            android:textSize="@dimen/font_mini" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_follow"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="5dp"
+        android:gravity="center_vertical">
+
+        <ImageView
+            android:id="@+id/iv_follow"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:contentDescription="TODO"
+            android:src="@mipmap/notice_icon" />
+
+        <com.gavin.giframe.widget.GITextView
+            android:id="@+id/tv_follow"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="已关注"
+            android:textColor="@color/font_content" />
+    </LinearLayout>
+</LinearLayout>

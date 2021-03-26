@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/colorWhite">
+
+    <LinearLayout
+        android:id="@+id/ll_file_time_layout"
+        android:layout_width="match_parent"
+        android:layout_height="35dp"
+        android:orientation="horizontal"
+        >
+
+        <RelativeLayout
+            android:id="@+id/rl_file_tag_layout"
+            android:layout_width="50dp"
+            android:layout_height="35dp"
+            >
+
+            <ImageView
+                android:id="@+id/iv_file_tag_img"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@mipmap/im_attach_icon"
+                android:layout_centerInParent="true"
+                />
+
+            <ImageView
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/iv_file_tag_img"
+                android:background="@color/colorPrimary"
+                android:layout_centerHorizontal="true"
+                />
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/tv_file_date"
+            android:layout_width="match_parent"
+            android:layout_height="35dp"
+            android:gravity="center_vertical"
+            android:textColor="@color/colorTabSelected"
+            android:textSize="14sp"
+            android:text="2018年08月01日"
+            />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="80dp">
+
+        <LinearLayout
+            android:layout_width="50dp"
+            android:layout_height="match_parent"
+            android:gravity="center">
+
+            <ImageView
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:src="@color/colorPrimary"
+                />
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/iv_file_icon"
+            android:layout_width="@dimen/dimen_big_photo_size"
+            android:layout_height="@dimen/dimen_big_photo_size"
+            android:layout_marginStart="50dp"
+            android:layout_centerVertical="true"/>
+
+        <TextView
+            android:id="@+id/tv_file_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@+id/iv_file_icon"
+            android:layout_toStartOf="@+id/tv_file_time"
+            android:layout_alignTop="@+id/iv_file_icon"
+            android:textColor="@color/colorBlack"
+            android:textSize="14sp"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:singleLine="true"
+            android:ellipsize="end"
+            />
+
+        <TextView
+            android:id="@+id/tv_file_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="@dimen/dimen_margin_16"
+            android:layout_alignTop="@+id/iv_file_icon"
+            android:textSize="14sp"
+            android:textColor="@color/colorTextUnFocused"
+            />
+
+        <TextView
+            android:id="@+id/tv_file_size"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_file_name"
+            android:layout_alignStart="@+id/tv_file_name"
+            android:layout_marginTop="10dp"
+            android:textSize="14sp"
+            android:textColor="@color/colorTextUnFocused"
+            />
+
+        <TextView
+            android:id="@+id/tv_file_tag"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/tv_file_size"
+            android:layout_toEndOf="@+id/tv_file_size"
+            android:layout_marginStart="10dp"
+            android:textColor="@color/colorTextUnFocused"
+            android:textSize="14sp"
+            />
+
+    </RelativeLayout>
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:src="@color/colorLine"
+        android:layout_marginStart="50dp"
+        android:layout_marginEnd="@dimen/dimen_margin_16"/>
+
+</LinearLayout>

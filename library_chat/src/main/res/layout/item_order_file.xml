@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorWhite">
+
+    <ImageView
+        android:id="@+id/iv_item_line"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/colorLine"
+        android:layout_alignParentTop="true"
+        android:visibility="gone"/>
+
+    <ImageView
+        android:id="@+id/iv_item_icon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_order_file"
+        android:layout_marginStart="@dimen/dimen_margin_16"
+        android:layout_centerVertical="true"
+        />
+
+    <TextView
+        android:id="@+id/tv_item_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toEndOf="@+id/iv_item_icon"
+        android:layout_toStartOf="@+id/iv_item_del"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="5dp"
+        android:textColor="@color/colorTextUnFocused"
+        android:textSize="12sp"
+        android:layout_marginTop="5dp"
+        android:singleLine="true"
+        />
+
+    <TextView
+        android:id="@+id/tv_item_size"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/tv_item_name"
+        android:layout_below="@+id/tv_item_name"
+        android:layout_marginTop="5dp"
+        android:textColor="@color/colorTextUnFocused"
+        android:textSize="12sp"
+        android:layout_marginBottom="5dp"/>
+
+    <ImageView
+        android:id="@+id/iv_item_del"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_order_del"
+        android:layout_centerVertical="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="@dimen/dimen_margin_16"
+        />
+
+
+
+</RelativeLayout>

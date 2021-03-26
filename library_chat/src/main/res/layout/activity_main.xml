@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorWhite">
+
+    <include
+        android:id="@+id/view_main_title"
+        layout="@layout/title_bar"/>
+
+    <include
+        android:id="@+id/view_main_search"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        layout="@layout/search_bar"
+        android:layout_below="@+id/view_main_title" />
+
+    <FrameLayout
+        android:id="@+id/fl_main_content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/view_main_search"
+        android:layout_above="@+id/iv_main_line"
+        />
+
+    <ImageView
+        android:id="@+id/iv_main_line"
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/colorLine"
+        android:layout_above="@+id/ll_main_bottom"
+        />
+
+    <LinearLayout
+        android:id="@+id/ll_main_bottom"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_alignParentBottom="true"
+        android:paddingBottom="3dp"
+        android:paddingTop="3dp"
+        android:baselineAligned="false">
+
+        <RelativeLayout
+            android:id="@+id/rl_main_conversation"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1">
+
+            <TextView
+                android:id="@+id/tv_main_msg"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="@string/main_conversation"
+                android:textColor="@color/colorTabSelected"
+                android:textSize="@dimen/dimen_main_tab_text_size"
+                android:drawableTop="@mipmap/im_icon_msg_selected"
+                android:gravity="center"
+                />
+
+            <TextView
+                android:id="@+id/tv_main_msg_remind"
+                android:layout_width="15dp"
+                android:layout_height="15dp"
+                android:background="@drawable/ic_tab_red_round"
+                android:layout_alignEnd="@+id/tv_main_msg"
+                android:layout_marginTop="3dp"
+                android:gravity="center"
+                android:textColor="@color/colorWhite"
+                android:textSize="6sp"
+                android:visibility="gone"
+                />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rl_main_contact"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1">
+
+            <TextView
+                android:id="@+id/tv_main_contact"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="@string/main_contact"
+                android:textColor="@color/colorTabUnselected"
+                android:textSize="@dimen/dimen_main_tab_text_size"
+                android:drawableTop="@mipmap/im_icon_contacts_unselected"
+                android:gravity="center"
+                />
+
+            <TextView
+                android:id="@+id/tv_main_contact_remind"
+                android:layout_width="15dp"
+                android:layout_height="15dp"
+                android:background="@drawable/ic_tab_red_round"
+                android:layout_alignEnd="@+id/tv_main_contact"
+                android:layout_marginTop="3dp"
+                android:gravity="center"
+                android:textColor="@color/colorWhite"
+                android:textSize="@dimen/dimen_main_tab_remind_text_size"
+                android:visibility="gone"
+                />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rl_main_app"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1">
+
+            <TextView
+                android:id="@+id/tv_main_app"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="@string/main_work"
+                android:textColor="@color/colorTabUnselected"
+                android:textSize="@dimen/dimen_main_tab_text_size"
+                android:drawableTop="@mipmap/im_icon_app_unselected"
+                android:gravity="center"
+                />
+
+            <TextView
+                android:id="@+id/tv_main_app_remind"
+                android:layout_width="15dp"
+                android:layout_height="15dp"
+                android:background="@drawable/ic_tab_red_round"
+                android:layout_alignEnd="@+id/tv_main_app"
+                android:layout_marginTop="3dp"
+                android:gravity="center"
+                android:textColor="@color/colorWhite"
+                android:textSize="@dimen/dimen_main_tab_remind_text_size"
+                android:visibility="gone"
+                />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rl_main_self"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1">
+
+            <TextView
+                android:id="@+id/tv_main_self"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="@string/main_self"
+                android:textColor="@color/colorTabUnselected"
+                android:textSize="@dimen/dimen_main_tab_text_size"
+                android:drawableTop="@mipmap/im_icon_self_unselected"
+                android:gravity="center"
+                />
+
+            <TextView
+                android:id="@+id/tv_main_self_remind"
+                android:layout_width="15dp"
+                android:layout_height="15dp"
+                android:background="@drawable/ic_tab_red_round"
+                android:layout_alignEnd="@+id/tv_main_self"
+                android:layout_marginTop="3dp"
+                android:gravity="center"
+                android:textColor="@color/colorWhite"
+                android:textSize="@dimen/dimen_main_tab_remind_text_size"
+                android:visibility="gone"
+                />
+        </RelativeLayout>
+
+    </LinearLayout>
+
+</RelativeLayout>

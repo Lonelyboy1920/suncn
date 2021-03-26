@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="center"
+    android:orientation="vertical">
+
+    <com.gavin.giframe.widget.GITextView
+        android:id="@+id/tv_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:padding="15dp"
+        android:text="登录"
+        android:textColor="@color/font_title"
+        android:textSize="20sp"
+        app:myStyle="3" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="35dp"
+        android:text="请验证已有手机指纹"
+        android:textColor="@color/font_content"
+        android:textSize="18sp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:orientation="horizontal"
+        android:padding="15dp">
+
+        <com.gavin.giframe.widget.GITextView
+            android:id="@+id/tv_finger"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/font_fingerprint"
+            android:textColor="@color/font_source"
+            android:textSize="40sp"
+            app:myStyle="1" />
+
+        <TextView
+            android:id="@+id/tv_zwsb"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="10dp"
+            android:text="指纹识别"
+            android:textColor="@color/font_source"
+            android:textSize="16sp" />
+    </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:foreground="?android:attr/selectableItemBackground"
+    android:orientation="vertical">
+
+    <com.gavin.giframe.widget.GITextView
+        android:id="@+id/tv_meet_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ellipsize="end"
+        android:maxLines="2"
+        android:paddingLeft="10dp"
+        android:paddingTop="10dp"
+        android:paddingRight="10dp"
+        android:text="标题"
+        android:textColor="@color/font_source"
+        android:textSize="@dimen/font_mini"
+        android:visibility="visible" />
+
+    <TextView
+        android:id="@+id/tv_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ellipsize="end"
+        android:maxLines="2"
+        android:paddingLeft="10dp"
+        android:paddingTop="10dp"
+        android:paddingRight="10dp"
+        android:text="标题"
+        android:textColor="@color/font_title"
+        android:textSize="@dimen/font_15" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:padding="10dp">
+
+        <com.gavin.giframe.widget.GITextView
+            android:id="@+id/tv_date"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:singleLine="true"
+            android:text="2019-01-01"
+            android:textColor="@color/font_source"
+            android:textSize="@dimen/font_mini"
+            app:myStyle="1" />
+
+        <com.gavin.giframe.widget.GITextView
+            android:id="@+id/tv_state"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:focusable="false"
+            android:paddingTop="2dp"
+            android:paddingBottom="2dp"
+            android:singleLine="true"
+            android:text="未立案"
+            android:textColor="@color/zxta_state_orange"
+            android:textSize="@dimen/font_mini"
+            app:myStyle="1" />
+    </LinearLayout>
+</LinearLayout>

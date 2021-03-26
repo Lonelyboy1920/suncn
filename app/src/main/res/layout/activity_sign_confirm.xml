@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tool="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/main_bg"
+    android:orientation="vertical">
+
+    <include layout="@layout/view_head_white" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@mipmap/change_role_dialog_top_bg">
+
+        <com.gavin.giframe.widget.GITextView
+            android:id="@+id/tv_close"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="15dp"
+            android:layout_marginRight="15dp"
+            android:background="?android:attr/selectableItemBackground"
+            android:text="&#xe63f;"
+            android:textColor="@color/white"
+            android:textSize="@dimen/font_huge"
+            android:visibility="invisible" />
+
+        <com.gavin.giframe.widget.RoundImageView
+            android:id="@+id/iv_person_head"
+            style="@style/style_iv_headPhoto"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_below="@id/tv_close"
+            android:layout_centerHorizontal="true" />
+    </RelativeLayout>
+
+    <LinearLayout
+        style="@style/style_layout_item"
+        android:paddingTop="5dp"
+        android:paddingBottom="5dp">
+
+        <TextView
+            style="@style/style_tv_item_left"
+            android:layout_width="80dp"
+            android:layout_gravity="center"
+            android:gravity="right"
+            android:text="@string/string_name" />
+
+        <TextView
+            android:id="@+id/tv_user"
+            style="@style/style_tv_item_right"
+            android:layout_gravity="center"
+            android:text="" />
+    </LinearLayout>
+
+    <LinearLayout
+        style="@style/style_layout_item"
+        android:paddingTop="5dp"
+        android:paddingBottom="5dp">
+
+        <TextView
+            style="@style/style_tv_item_left"
+            android:layout_width="80dp"
+            android:layout_gravity="center"
+            android:gravity="right"
+            android:text="@string/string_job_title_no_line" />
+
+        <TextView
+            android:id="@+id/tv_duty"
+            style="@style/style_tv_item_right"
+            android:layout_gravity="center"
+            android:text="" />
+    </LinearLayout>
+
+    <LinearLayout
+        style="@style/style_layout_item"
+        android:paddingTop="5dp"
+        android:paddingBottom="5dp">
+
+        <TextView
+            style="@style/style_tv_item_left"
+            android:layout_width="80dp"
+            android:layout_gravity="center"
+            android:gravity="right"
+            android:text="@string/string_partisan" />
+
+        <TextView
+            android:id="@+id/tv_faction"
+            style="@style/style_tv_item_right"
+            android:layout_gravity="center"
+            android:text="" />
+    </LinearLayout>
+
+    <LinearLayout
+        style="@style/style_layout_item"
+        android:paddingTop="5dp"
+        android:paddingBottom="5dp">
+
+        <TextView
+            style="@style/style_tv_item_left"
+            android:layout_width="80dp"
+            android:layout_gravity="center"
+            android:gravity="right"
+            android:text="@string/string_sector" />
+
+        <TextView
+            android:id="@+id/tv_sector"
+            style="@style/style_tv_item_right"
+            android:layout_gravity="center"
+            android:text="" />
+    </LinearLayout>
+
+    <LinearLayout
+        style="@style/style_layout_item"
+        android:paddingTop="5dp"
+        android:paddingBottom="5dp">
+
+        <TextView
+            android:id="@+id/tv_name_tag"
+            style="@style/style_tv_item_left"
+            android:layout_width="80dp"
+            android:layout_gravity="center"
+            android:gravity="right"
+            tool:text="@string/string_activity_name" />
+
+        <TextView
+            android:id="@+id/tv_name"
+            style="@style/style_tv_item_right"
+            android:layout_gravity="center"
+            android:text="" />
+    </LinearLayout>
+
+    <LinearLayout
+        style="@style/style_layout_item"
+        android:paddingTop="5dp"
+        android:paddingBottom="5dp">
+
+        <TextView
+            android:id="@+id/tv_date_tag"
+            style="@style/style_tv_item_left"
+            android:layout_width="80dp"
+            android:layout_gravity="center"
+            android:gravity="right"
+            tool:text="@string/string_activity_time" />
+
+        <TextView
+            android:id="@+id/tv_date"
+            style="@style/style_tv_item_right"
+            android:layout_gravity="center"
+            android:text="" />
+    </LinearLayout>
+
+    <LinearLayout
+        style="@style/style_layout_item"
+        android:paddingTop="5dp"
+        android:paddingBottom="5dp">
+
+        <TextView
+            android:id="@+id/tv_place_tag"
+            style="@style/style_tv_item_left"
+            android:layout_width="80dp"
+            android:layout_gravity="center"
+            android:gravity="right"
+            tool:text="@string/string_activity_address" />
+
+        <TextView
+            android:id="@+id/tv_place"
+            style="@style/style_tv_item_right"
+            android:layout_gravity="center"
+            android:text="" />
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btn_confirm"
+        style="@style/style_btn_submit"
+        android:layout_width="match_parent"
+        android:layout_height="35dp"
+        android:layout_margin="40dp"
+        android:text="@string/string_information_confirmed"
+        android:textColor="@color/white"
+        android:textSize="@dimen/font_normal" />
+</LinearLayout>

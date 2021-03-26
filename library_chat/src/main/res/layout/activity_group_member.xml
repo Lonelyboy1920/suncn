@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/white"
+    android:fitsSystemWindows="true"
+    >
+
+    <include
+        android:id="@+id/view_gm_title"
+        layout="@layout/title_bar"/>
+
+    <include
+        android:id="@+id/view_gm_search"
+        layout="@layout/search_bar"/>
+
+    <ListView
+        android:id="@+id/lv_gm_list"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:divider="@null"/>
+
+</LinearLayout>

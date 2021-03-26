@@ -1,0 +1,4 @@
+<resources>
+    <item name="tag_gpos" type="id"/>
+    <item name="tag_cpos" type="id"/>
+</resources>

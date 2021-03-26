@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <include
+        android:id="@+id/view_title"
+        layout="@layout/title_bar" />
+
+    <com.handmark.pulltorefresh.library.PullToRefreshListView
+        android:id="@+id/lv_list"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:divider="@null"
+        android:paddingBottom="10dp"
+        android:layout_below="@+id/view_title"
+        android:layout_above="@+id/ll_chat_bottom_layout"/>
+
+    <LinearLayout
+        android:id="@+id/ll_chat_bottom_layout"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:orientation="vertical"
+        android:background="@color/colorWhite"
+        android:visibility="gone"
+        android:layout_alignParentBottom="true">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/colorLine"/>
+
+        <TextView
+            android:id="@+id/tv_del"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="@string/conversation_del"
+            android:gravity="center_vertical"
+            android:paddingStart="@dimen/dimen_margin_16"
+            android:paddingEnd="@dimen/dimen_margin_16"
+            android:textSize="16sp" />
+    </LinearLayout>
+
+
+
+</RelativeLayout>

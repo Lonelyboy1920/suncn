@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include
+        android:id="@+id/view_bd_title"
+        layout="@layout/title_bar"/>
+
+    <com.baidu.mapapi.map.MapView
+        android:id="@+id/view_map"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="8"
+        />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1.5"
+        android:background="@color/colorWhite"
+        android:paddingStart="4dp"
+        android:layout_margin="4dp"
+        >
+
+        <TextView
+            android:id="@+id/tv_simple_info"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="16sp"
+            android:textColor="@color/colorBlack"
+            android:ellipsize="middle"
+            android:layout_toStartOf="@+id/iv_navi"
+            android:layout_alignTop="@+id/iv_navi"
+            android:singleLine="true" />
+
+        <TextView
+            android:id="@+id/tv_detail_info"
+            android:layout_below="@+id/tv_simple_info"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="13sp"
+            android:maxLines="2"
+            android:ellipsize="middle"
+            android:textColor="@color/colorBlack"
+            android:layout_toStartOf="@+id/iv_navi"
+            />
+
+        <ImageView
+            android:id="@+id/iv_navi"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@mipmap/im_location_info_navi"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="6dp"
+            android:layout_marginLeft="6dp"
+            />
+    </RelativeLayout>
+
+</LinearLayout>

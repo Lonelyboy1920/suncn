@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/tv_content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginBottom="5dp"
+        android:background="@color/main_bg"
+        android:ellipsize="end"
+        android:maxLines="2"
+        android:text="委员意见反馈"
+        android:textColor="@color/font_title"
+        android:textSize="@dimen/font_normal" />
+
+    <LinearLayout
+        android:id="@+id/ll_zh_opinion"
+        style="@style/style_layout_item">
+
+        <TextView
+            style="@style/style_tv_item_left"
+            android:layout_width="wrap_content"
+            android:text="综合意见" />
+
+        <TextView
+            android:id="@+id/et_zh_opinion"
+            style="@style/style_tv_item_right"
+            tools:text="sdfsdfsfds" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_td_opinion"
+        style="@style/style_layout_item">
+
+        <TextView
+            style="@style/style_tv_item_left"
+            android:layout_width="wrap_content"
+            android:text="办理态度意见" />
+
+        <TextView
+            android:id="@+id/tv_td_opinion"
+            style="@style/style_tv_item_right" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_jg_opinion"
+        style="@style/style_layout_item">
+
+        <TextView
+            style="@style/style_tv_item_left"
+            android:layout_width="wrap_content"
+            android:text="办理结果意见" />
+
+        <TextView
+            android:id="@+id/tv_jg_opinion"
+            style="@style/style_tv_item_right" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_jt_opinion"
+        style="@style/style_layout_item">
+
+        <TextView
+            style="@style/style_tv_item_left"
+            android:layout_width="wrap_content"
+            android:text="具体意见" />
+
+        <TextView
+            android:id="@+id/tv_jt_opinion"
+            style="@style/style_tv_item_right" />
+    </LinearLayout>
+</LinearLayout>

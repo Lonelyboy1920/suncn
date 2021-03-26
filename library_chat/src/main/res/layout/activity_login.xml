@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:fitsSystemWindows="true"
+    android:background="@mipmap/ic_login_bg">
+
+
+    <com.github.siyamed.shapeimageview.RoundedImageView
+        android:id="@+id/iv_login_icon"
+        android:layout_width="@dimen/dimen_large_photo_size"
+        android:layout_height="@dimen/dimen_large_photo_size"
+        android:layout_centerHorizontal="true"
+        android:src="@mipmap/ic_launcher"
+        app:siRadius="5dp"
+        app:siSquare="true"
+        app:siBorderType="stroke"
+        android:layout_marginTop="130dp"
+        app:siBorderAlpha="0"
+        />
+
+
+    <LinearLayout
+        android:id="@+id/ll_login_account"
+        android:layout_below="@+id/iv_login_icon"
+        android:layout_width="300dp"
+        android:layout_height="44dp"
+        android:orientation="horizontal"
+        android:layout_centerHorizontal="true"
+        android:gravity="center_vertical"
+        android:background="@drawable/ic_login_edit"
+        android:layout_marginTop="40dp">
+
+        <ImageView
+            android:id="@+id/iv_login_account"
+            android:layout_width="18dp"
+            android:layout_height="20dp"
+            android:background="@mipmap/im_login_act"
+            android:layout_marginStart="10dp" />
+
+        <com.qd.longchat.view.QDXEditText
+            android:id="@+id/et_login_account"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@null"
+            android:hint="@string/login_account_hint"
+            android:layout_marginLeft="10dp"
+            android:textSize="16sp"
+            android:layout_marginRight="10dp"
+            android:singleLine="true"
+            android:textColorHint="@color/colorTextHint"
+            android:textColor="@color/colorBlack"
+            android:maxEms="30"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_login_pwd"
+        android:layout_below="@+id/ll_login_account"
+        android:layout_width="300dp"
+        android:layout_height="44dp"
+        android:orientation="horizontal"
+        android:layout_centerHorizontal="true"
+        android:gravity="center_vertical"
+        android:background="@drawable/ic_login_edit"
+        android:layout_marginTop="10dp">
+
+        <ImageView
+            android:id="@+id/iv_login_pwd"
+            android:layout_width="18dp"
+            android:layout_height="20dp"
+            android:background="@mipmap/im_login_pwd"
+            android:layout_marginStart="10dp"
+            />
+
+        <com.qd.longchat.view.QDXEditText
+            android:id="@+id/et_login_pwd"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@null"
+            android:hint="@string/login_pwd_hint"
+            android:layout_marginLeft="10dp"
+            android:textSize="16sp"
+            android:layout_marginRight="10dp"
+            android:singleLine="true"
+            android:textColorHint="@color/colorTextHint"
+            android:textColor="@color/colorBlack"
+            android:inputType="textPassword"
+            android:maxEms="20"
+            />
+    </LinearLayout>
+
+
+    <Button
+        android:id="@+id/btn_login_sign"
+        android:layout_below="@+id/ll_login_pwd"
+        android:layout_width="300dp"
+        android:layout_height="@dimen/dimen_btn_height"
+        android:background="@drawable/ic_rounded_rectangle_btn"
+        android:layout_marginTop="20dp"
+        android:text="@string/login_login"
+        android:textColor="@color/colorWhite"
+        android:textSize="16sp"
+        android:layout_centerHorizontal="true"
+        />
+
+    <LinearLayout
+        android:id="@+id/ll_login_loading"
+        android:layout_below="@+id/btn_login_sign"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:gravity="center"
+        android:visibility="gone"
+        >
+
+        <com.github.ybq.android.spinkit.SpinKitView
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            style="@style/SpinKitView.FadingCircle"
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            app:SpinKit_Color="@color/colorGray"
+            />
+
+        <TextView
+            android:id="@+id/tv_login_loading_info"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="12sp"
+            android:textColor="@color/colorGray"
+            android:layout_marginStart="10dp"
+            />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_login_more"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:paddingBottom="10dp"
+        android:paddingTop="10dp">
+
+        <TextView
+            android:id="@+id/tv_login_more"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/login_more"
+            android:textColor="#0f58b1"
+            android:gravity="center"
+            android:textSize="16sp" />
+
+        <ImageView
+            android:layout_width="28dp"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/im_login_more"
+            android:layout_marginTop="2dp"
+            />
+    </LinearLayout>
+
+</RelativeLayout>

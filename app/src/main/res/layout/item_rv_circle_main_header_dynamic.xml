@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="120dp"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:paddingLeft="5dp"
+    android:paddingRight="5dp"
+    android:paddingBottom="7dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/shape_bg_write_r5"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:paddingLeft="5dp"
+        android:paddingTop="5dp"
+        android:paddingRight="5dp"
+        android:visibility="visible">
+
+        <com.gavin.giframe.widget.RoundImageView
+            android:id="@+id/iv_img"
+            style="@style/style_iv_headPhoto" />
+
+        <TextView
+            android:id="@+id/tv_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="5dp"
+            android:singleLine="true"
+            android:text="张三"
+            android:textColor="@color/font_title"
+            android:textSize="@dimen/font_small" />
+
+        <TextView
+            android:id="@+id/tv_describe"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:gravity="center_horizontal|top"
+            android:lines="2"
+            android:text="帅帅的一个小伙子"
+            android:textColor="@color/font_source"
+            android:textSize="@dimen/font_mini" />
+
+        <LinearLayout
+            android:id="@+id/ll_follow"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:foreground="?android:attr/selectableItemBackground"
+            android:gravity="center_vertical"
+            android:paddingLeft="10dp"
+            android:paddingTop="4dp"
+            android:paddingRight="10dp"
+            android:paddingBottom="5dp">
+
+            <ImageView
+                android:id="@+id/iv_notice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:contentDescription="TODO"
+                android:src="@mipmap/not_notice_icon" />
+
+            <com.gavin.giframe.widget.GITextView
+                android:id="@+id/tv_follow"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/string_follow"
+                android:textSize="@dimen/font_15_dp"
+                android:textColor="@color/zxta_state_red" />
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

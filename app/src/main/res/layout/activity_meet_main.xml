@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/ll_head"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:gravity="center_vertical"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp">
+
+        <TextView
+            android:id="@+id/tv_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:singleLine="true"
+            android:text="视频会议"
+            android:textColor="@color/white"
+            android:textSize="@dimen/font_normal" />
+
+    </LinearLayout>
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/recyclerView"
+        android:layout_below="@+id/ll_head"
+        android:scaleType="centerCrop"
+        android:src="@mipmap/default_meet" />
+
+    <LinearLayout
+        android:id="@+id/my_sf"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/recyclerView"
+        android:layout_below="@+id/ll_head"
+        android:orientation="vertical"></LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="25dp"
+        android:layout_below="@+id/my_sf"
+        android:layout_marginTop="-25dp"
+        android:background="@drawable/shape_meet_bg"
+        android:gravity="center"
+        android:minWidth="50dp">
+
+        <com.gavin.giframe.widget.GITextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/font_mike"
+            android:textColor="@color/white" />
+
+        <TextView
+            android:id="@+id/tv_main_user"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="张三"
+            android:textColor="@color/white"
+            android:textSize="@dimen/font_mini" />
+    </LinearLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/ll_btm" />
+
+    <LinearLayout
+        android:id="@+id/ll_btm"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="#323232"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingTop="5dp">
+
+        <TextView
+            android:id="@+id/tv_audio"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:drawableTop="@drawable/main_toolbar_mic_iv_bg_selector"
+            android:gravity="center"
+            android:paddingTop="5dp"
+            android:text="静音"
+            android:textColor="@color/white"
+            android:textSize="11sp" />
+
+        <TextView
+            android:id="@+id/tv_video"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:drawableTop="@drawable/main_toolbar_camera_iv_bg_selector"
+            android:gravity="center"
+            android:paddingTop="5dp"
+            android:text="摄像头"
+            android:textColor="@color/white"
+            android:textSize="11sp" />
+
+        <com.gavin.giframe.widget.GITextView
+            android:id="@+id/tv_leave"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:background="@mipmap/exit_meet"
+            android:textColor="@color/view_head_bg" />
+
+        <TextView
+            android:id="@+id/tv_camare"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:drawableTop="@mipmap/icon_camare"
+            android:gravity="center"
+            android:paddingTop="5dp"
+            android:text="切换摄像头"
+            android:textColor="@color/white"
+            android:textSize="11sp" />
+
+        <TextView
+            android:id="@+id/tv_user"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:drawableTop="@mipmap/icon_user"
+            android:gravity="center"
+            android:paddingTop="5dp"
+            android:text="参会人员"
+            android:textColor="@color/white"
+            android:textSize="11sp" />
+
+    </LinearLayout>
+</RelativeLayout>

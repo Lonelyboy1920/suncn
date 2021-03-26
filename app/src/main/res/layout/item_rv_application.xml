@@ -1,0 +1,35 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/rl_main"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="?android:attr/selectableItemBackground"
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
+    android:padding="10dp">
+
+    <com.gavin.giframe.widget.GITextView
+        android:id="@+id/tv_count"
+        style="@style/style_count"
+        android:layout_marginStart="28dp"
+        android:text="9"
+        android:visibility="gone" />
+
+    <ImageView
+        android:id="@+id/iv_icon"
+        android:layout_width="55dp"
+        android:layout_height="55dp"
+        android:background="@mipmap/icon_more_func"
+        android:contentDescription="TODO" />
+
+    <com.gavin.giframe.widget.GITextView
+        android:id="@+id/tv_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:gravity="center"
+        android:text="测试测试测试测试"
+        android:textColor="@color/font_title"
+        android:textSize="@dimen/font_15"
+        app:myStyle="2" />
+</LinearLayout>

@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="color_45">#454545</color>
+    <color name="login_line">#dfdedc</color>
+    <color name="font_expend">#cccccc</color>
+    <color name="view_goto">#03a5e9</color>
+    <color name="view_line_bg">#d1d1d1</color>
+    <color name="font_msg">#1d1d1d</color>
+    <color name="color_white_hover">#e7e7e7</color>
+    <color name="line_bg_grey">#cccccc</color>
+    <color name="office_detail_menu">#222222</color>
+
+    <!-- 头像边框颜色 -->
+    <color name="border_img_inside">#fffffe</color>
+    <color name="border_img_outside">#cccccc</color>
+
+    <color name="finger_userlogin">#555555</color>
+    <color name="font_hint">#bbbbbb</color>
+    <color name="font_time">#8994a6</color>
+    <color name="font_role">#723d08</color>
+    <color name="font_duty">#fad4d1</color>
+    <color name="font_comment_username">#f57c00</color>
+    <color name="image_color">#f6f6f6</color>
+    <!--背景色-->
+    <color name="line_bg_whitegrey">#bbbbbb</color>
+
+    <color name="zxta_state_orange">#f57c00</color>
+    <color name="zxta_state_green">#84b812</color>
+    <color name="zxta_state_grey">#c3bfbb</color>
+    <color name="zxta_state_red">#ef4b39</color>
+
+    <color name="multiple_image_select_primaryDark">#ef4b39</color>
+    <color name="multiple_image_select_accent">#ef4b39</color>
+    <!--选中图片之后toolbar的颜色-->
+    <color name="multiple_image_select_primary">#ef4b39</color>
+    <color name="my_name">#4b2f16</color>
+    <color name="my_shou">#ffba26</color>
+    <color name="my_zan">#fe7849</color>
+    <color name="top_unselect">#9ac1da</color>
+    <color name="gray_bg">#f8f7f7</color>
+    <color name="line_color">#ecedef</color>
+    <color name="more">#797979</color>
+    <color name="chuxi">#90a4ae</color>
+    <color name="qj_color">#25b1f5</color>
+    <color name="view_more">#999999</color>
+    <color name="view_leave">#4fc2ff</color>
+
+    <color name="view_reply">#ee8744</color>
+    <color name="line_has_zan">#fe7849</color>
+    <color name="view_zan">#bebebe</color>
+    <color name="rippelColor">#0099CC</color>
+
+    <color name="text_title">#1b1b1b</color>
+    <color name="bg_content">#ecedf1</color>
+    <color name="view_head_bg_hover">#ef4b39</color>
+    <color name="divider_line">#d9d9d9</color>
+    <color name="color_bottom_text_normal">#0079EF</color>
+    <color name="bg_news_tab">#f3f6f8</color>
+
+
+    <color name="white">#ffffff</color>
+    <color name="white_trans">#ffffffff</color>
+    <color name="black">#000000</color>
+    <color name="red">#ff0000</color>
+    <color name="transparent">#00000000</color>
+
+    <color name="colorPrimary">@color/view_head_bg</color>
+    <color name="colorPrimaryDark">@color/view_head_bg</color>
+
+    <!--主界面背景-->
+    <color name="main_bg">#f5f5f5</color>
+    <!--主题色-->
+    <color name="view_head_bg">#0c5cad</color>
+    <color name="font_title">#333333</color>
+    <color name="font_content">#666666</color>
+    <color name="font_source">#999999</color>
+    <!--白色背景的分割线-->
+    <color name="line_bg_white">#f0f0f0</color>
+
+    <color name="color_shape_tab_line_end_color">#157be2</color>
+    <color name="color_shape_tab_line_start_color">#0c94eb</color>
+    <color name="gray">#ddd</color>
+    <color name="color_track_on_bg">#9ac1da</color>
+</resources>

@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:foreground="?android:attr/selectableItemBackground"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ellipsize="end"
+        android:gravity="center_vertical"
+        android:maxLines="1"
+        android:orientation="vertical"
+        android:paddingTop="10dp"
+        android:paddingRight="10dp">
+
+        <LinearLayout
+            android:id="@+id/ll_type"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center|center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/tv_type"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="10dp"
+                android:background="@mipmap/meet_type_bg"
+                android:ellipsize="end"
+                android:gravity="center|left"
+                android:maxLength="15"
+                android:maxLines="1"
+                android:paddingLeft="10dp"
+                android:text=""
+                android:textColor="@color/white"
+                android:textSize="@dimen/font_15" />
+
+            <TextView
+                android:id="@+id/tv_state"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="5dp"
+                android:layout_weight="1"
+                android:ellipsize="end"
+                android:gravity="center|right"
+                android:maxLines="1"
+                android:paddingBottom="5dp"
+                android:text="委员会"
+                android:textColor="@color/zxta_state_red"
+                android:textSize="@dimen/font_small" />
+
+            <com.gavin.giframe.widget.GITextView
+                android:id="@+id/tv_right"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:gravity="center|right"
+                android:maxLines="1"
+                android:paddingBottom="5dp"
+                android:text="@string/font_right"
+                android:textColor="@color/zxta_state_red"
+                android:textSize="@dimen/font_15"
+                app:myStyle="1" />
+        </LinearLayout>
+
+        <com.suncn.ihold_zxztc.view.MenuItemLayout
+            android:id="@+id/tv_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:label="会议名称" />
+         <com.suncn.ihold_zxztc.view.MenuItemLayout
+             android:id="@+id/tv_start_date"
+             android:layout_width="match_parent"
+             android:layout_height="wrap_content"
+             app:label="开始时间"/>
+        <com.suncn.ihold_zxztc.view.MenuItemLayout
+            android:id="@+id/tv_end_date"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:label="结束时间" />
+        <com.suncn.ihold_zxztc.view.MenuItemLayout
+            android:id="@+id/tv_place"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:label="会议地点"/>
+
+        <LinearLayout
+            android:id="@+id/llSeat"
+            style="@style/style_layout_item"
+            android:foreground="@null"
+            android:paddingTop="5dp"
+            android:visibility="gone"
+            android:paddingBottom="10dp">
+
+            <TextView
+                style="@style/style_tv_item_left"
+                android:text="座位信息" />
+
+            <TextView
+                android:id="@+id/tvSeat"
+                style="@style/style_tv_item_right"
+                android:text="" />
+        </LinearLayout>
+
+        <View style="@style/style_line_bg_white" />
+
+        <LinearLayout
+            android:id="@+id/ll_child_detail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:foreground="?android:attr/selectableItemBackground"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp">
+
+            <TextView
+                android:id="@+id/tv_detail"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_weight="1"
+                android:singleLine="true"
+                android:text="查看次会详情"
+                android:textColor="@color/font_source"
+                android:textSize="@dimen/font_small" />
+
+            <com.gavin.giframe.widget.GITextView
+                style="@style/style_arrow"
+                android:layout_marginLeft="10dp"
+                android:textSize="@dimen/font_mini" />
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

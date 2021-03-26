@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="viewModel"
+            type="com.suncn.ihold_zxztc.activity.hot.RobotActivity" />
+    </data>
+
+
+    <RelativeLayout
+        android:id="@+id/content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:fitsSystemWindows="true">
+
+        <include layout="@layout/view_head_white" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/rl_head"
+            android:background="#F6F8F4"
+            android:orientation="vertical">
+
+            <ListView
+                android:id="@+id/recyclerView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="50dp"
+                android:divider="@null"
+                android:dividerHeight="0dp"
+                android:background="@color/transparent"
+                android:listSelector="@android:color/transparent"
+                android:overScrollMode="never"
+                android:scrollbars="none"
+                android:visibility="visible" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_bottom"
+            android:layout_width="match_parent"
+            android:layout_height="180dp"
+            android:layout_alignParentBottom="true"
+            android:background="@color/transparent"
+            android:gravity="bottom"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:id="@+id/rl_mike"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <com.suncn.ihold_zxztc.view.RippleBackground
+                    android:id="@+id/ripple"
+                    android:layout_width="match_parent"
+                    android:layout_height="180dp"
+                    android:layout_alignParentBottom="true"
+                    android:layout_centerHorizontal="true"
+                    app:rb_color="#2cf7e1"
+                    app:rb_duration="3000"
+                    app:rb_radius="15dp"
+                    app:rb_rippleAmount="4"
+                    app:rb_scale="6">
+
+                    <ImageView
+                        android:id="@+id/iv_center"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:contentDescription="TODO"
+                        android:onClick="@{(v)->viewModel.onClick(v)}"
+                        android:src="@mipmap/icon_center_press" />
+                </com.suncn.ihold_zxztc.view.RippleBackground>
+
+                <com.suncn.ihold_zxztc.view.wave.WaveView
+                    android:layout_width="match_parent"
+                    android:layout_height="70dp"
+                    android:layout_alignParentBottom="true"
+                    android:background="@color/transparent"
+                    app:above_wave_color="#ff2e2e"
+                    app:blow_wave_color="@color/white"
+                    app:progress="40"
+                    app:wave_height="large"
+                    app:wave_hz="slow"
+                    app:wave_length="middle" />
+
+                <com.suncn.ihold_zxztc.view.wave.WaveView
+                    android:layout_width="match_parent"
+                    android:layout_height="70dp"
+                    android:layout_alignParentBottom="true"
+                    android:background="@color/transparent"
+                    app:above_wave_color="#f3b91e"
+                    app:blow_wave_color="@color/white"
+                    app:progress="40"
+                    app:wave_height="large"
+                    app:wave_hz="slow"
+                    app:wave_length="large" />
+
+                <com.suncn.ihold_zxztc.view.wave.WaveView
+                    android:layout_width="match_parent"
+                    android:layout_height="70dp"
+                    android:layout_alignParentBottom="true"
+                    android:background="@color/transparent"
+                    app:above_wave_color="#ffffff"
+                    app:blow_wave_color="@color/white"
+                    app:progress="40"
+                    app:wave_height="large"
+                    app:wave_hz="slow"
+                    app:wave_length="little" />
+
+                <com.suncn.ihold_zxztc.view.wave.WaveView
+                    android:layout_width="match_parent"
+                    android:layout_height="70dp"
+                    android:layout_alignParentBottom="true"
+                    android:background="@color/transparent"
+                    app:above_wave_color="#109dff"
+                    app:blow_wave_color="@color/white"
+                    app:progress="40"
+                    app:wave_height="large"
+                    app:wave_hz="slow"
+                    app:wave_length="other" />
+
+                <com.gavin.giframe.widget.GITextView
+                    android:id="@+id/tv_switchInput"
+                    android:layout_width="28dp"
+                    android:layout_height="28dp"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginTop="120dp"
+                    android:background="@drawable/shape_robot_et_bg"
+                    android:gravity="center"
+                    android:onClick="@{(v)->viewModel.onClick(v)}"
+                    android:text="@string/font_keyboard"
+                    android:textColor="#40e0e9"
+                    android:textSize="@dimen/font_15" />
+
+            </RelativeLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_input"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#337b9295"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:padding="10dp"
+                android:visibility="gone">
+
+                <com.gavin.giframe.widget.GITextView
+                    android:id="@+id/tv_switchMike"
+                    android:layout_width="28dp"
+                    android:layout_height="28dp"
+                    android:background="@drawable/shape_robot_et_bg"
+                    android:gravity="center"
+                    android:onClick="@{(v)->viewModel.onClick(v)}"
+                    android:text="@string/font_mike"
+                    android:textColor="@color/font_source"
+                    android:textSize="@dimen/font_15" />
+
+                <com.gavin.giframe.widget.GIEditText
+                    android:id="@+id/et_content"
+                    android:layout_width="0dp"
+                    android:layout_height="28dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/shape_robot_et_bg"
+                    android:hint="@string/string_please_input"
+                    android:inputType=""
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    android:textColor="@color/font_content"
+                    android:textColorHint="@color/font_source"
+                    android:textSize="@dimen/font_small" />
+
+                <TextView
+                    android:id="@+id/tv_send"
+                    android:layout_width="wrap_content"
+                    android:layout_height="28dp"
+                    android:layout_marginLeft="10dp"
+                    android:background="@drawable/shape_robot_et_bg"
+                    android:gravity="center"
+                    android:onClick="@{(v)->viewModel.onClick(v)}"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    android:text="@string/string_send"
+                    android:textColor="@color/font_source"
+                    android:textSize="@dimen/font_small" />
+            </LinearLayout>
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</layout>

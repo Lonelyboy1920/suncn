@@ -1,0 +1,211 @@
+apply plugin: 'com.android.application'
+
+android {
+    signingConfigs {
+        release {
+            keyAlias 'suncn'
+            keyPassword 'suncnkey'
+            storeFile file('F:/suncnkey/suncn.keystore')
+            storePassword 'suncnkey'
+        }
+    }
+    dataBinding {
+        enabled true
+    }
+    flavorDimensions "default"//1
+    compileSdkVersion 28
+    buildToolsVersion '28.0.3'
+    defaultConfig {
+        applicationId "com.suncn.ihold_zxztc"
+        minSdkVersion 21
+        targetSdkVersion 26
+        versionCode 1
+        versionName '4.0'
+        multiDexEnabled true
+    }
+    buildTypes {
+        release {
+            // 不显示Log
+            buildConfigField "boolean", "LOG_DEBUG", "false"
+            //启用混淆代码的功能
+            minifyEnabled false
+            //压缩对齐生成的apk包
+            zipAlignEnabled true
+            //指定混淆规则，需要压缩优化的混淆要把proguard-android.txt换成proguard-android.txt
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            //移除无用的资源文件
+            shrinkResources false
+            ndk {
+                abiFilters = ["armeabi", "armeabi-v7a"]
+            }
+        }
+        debug {
+            ndk {
+                abiFilters = ["armeabi", "armeabi-v7a"]
+            }
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            signingConfig signingConfigs.release
+        }
+    }
+    productFlavors {//2
+        ihold_zxztc {//履职掌中宝
+            versionCode 6
+            versionName '5.0'
+        }
+    }
+    productFlavors.all { flavor -> //3
+        flavor.manifestPlaceholders = [MTA_CHANNEL_VALUE: name]
+    }
+    //自定义APK名称,多渠道打包
+    android.applicationVariants.all { variant ->//4
+        variant.outputs.all { output ->
+            variant.productFlavors.each { flavor ->
+                def separator = "_"
+                def versionName = variant.versionName
+                def versionCode = variant.versionCode
+                def date = new Date()
+                def formattedDate = date.format('yyyyMMdd')
+
+                def apkName = flavor.name + separator + "v" + versionName + "(" + versionCode + ")" + separator + formattedDate + ".apk"
+                output.outputFileName = apkName
+            }
+        }
+    }
+    sourceSets {
+        main {
+            jniLibs.srcDirs = ['libs']
+        }
+    }
+    packagingOptions {
+        pickFirst 'META-INF/*'
+        exclude 'META-INF/MANIFEST.MF'
+
+    }
+    lintOptions {
+        checkReleaseBuilds false
+        abortOnError false
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    repositories {
+        flatDir {
+            dirs 'libs', '../library_chat/libs'
+        }
+    }
+    dependencies {
+        implementation fileTree(include: ['*.jar'], dir: 'libs')
+        implementation files('libs/Msc.jar')
+        implementation files('libs/Sunflower.jar')
+        // 基础框架
+        implementation project(':library_basic')
+        // 轮播图
+//        implementation(name: 'library_convenientbanner-2.0.6', ext: 'aar')
+        implementation project(':library_convenientbanner')
+        // 企达
+        implementation project(':library_chat')
+        // 友盟分享
+        implementation project(':library_share')
+        // 版本更新（github上的有问题，做了调整）
+        implementation(name: 'library_xupdate-1.1.1', ext: 'aar')
+        //对Okhttp的封装框架，xupdate中使用
+        implementation 'com.zhy:okhttputils:2.6.2'
+        implementation(name: 'fsp_sdk', ext: 'aar')
+        implementation 'com.android.support.constraint:constraint-layout:1.1.3'
+        implementation 'com.android.support:cardview-v7:28.0.0'
+        implementation 'com.android.support:multidex:1.0.3'
+
+        //----- 以下为友盟推送相关 -----//
+        // 用户使用情况统计分析
+        implementation 'com.umeng.sdk:analytics:7.5.1'
+        //基础组件库依赖(必须) Push 605版本必须升级新版本Common SDK
+        implementation 'com.umeng.umsdk:common:2.2.2'
+        implementation 'com.umeng.umsdk:utdid:1.5.2'
+        //友盟push相关依赖(必须)
+        implementation 'com.umeng.umsdk:push:6.0.5'
+        // ------------------------
+        implementation 'com.umeng.umsdk:alicloud-httpdns:1.2.5'
+        //com.aliyun.ams:alicloud-android-feedback和com.aliyun.ams:alicloud-android-hotfix中已导入alicloud-utils和alicloud_beacon
+//        implementation 'com.umeng.umsdk:alicloud-utils:1.1.5'
+//        implementation 'com.umeng.umsdk:alicloud_beacon:1.0.1'
+        // ------------------------
+        implementation 'com.umeng.umsdk:agoo-accs:3.3.8.8-open-fix2'
+        implementation 'com.umeng.umsdk:agoo_networksdk:3.5.5'
+        implementation 'com.umeng.umsdk:agoo_tlog:3.0.0.17'
+        implementation 'com.umeng.umsdk:agoo_tnet4android:3.1.14.9'
+        // -----------以下为厂商通道集成-------------
+        //华为Push通道
+        implementation 'com.umeng.umsdk:huawei-basetb:2.6.3.306'
+        implementation 'com.umeng.umsdk:huawei-pushtb:2.6.3.306'
+        implementation 'com.umeng.umsdk:huawei-umengaccs:1.2.4'
+        //小米Push通道
+        implementation 'com.umeng.umsdk:xiaomi-push:3.7.0'
+        implementation 'com.umeng.umsdk:xiaomi-umengaccs:1.1.4'
+        //魅族Push通道
+        implementation 'com.umeng.umsdk:meizu-push:3.8.7'
+        implementation 'com.umeng.umsdk:meizu-umengaccs:1.1.1'
+        //Oppo Push通道
+        implementation 'com.umeng.umsdk:oppo-push:2.0.2'
+        implementation 'com.umeng.umsdk:oppo-umengaccs:1.0.6'
+        //vivo Push通道
+        implementation 'com.umeng.umsdk:vivo-push:2.3.5'
+        implementation 'com.umeng.umsdk:vivo-umengaccs:1.1.0'
+        //----- END -----//
+
+        // 二维码扫描与生成
+        implementation 'cn.bingoogolapple:bga-qrcode-zxing:1.2.1'
+        //仿iOS的AlertViewController
+        implementation 'com.bigkoo:alertview:1.0.3'
+        //下拉刷新,上拉加载
+        implementation 'com.scwang.smartrefresh:SmartRefreshLayout:1.1.2'
+        //没有使用特殊Header，可以不加这行
+        implementation 'com.scwang.smartrefresh:SmartRefreshHeader:1.1.2'
+        //底部tabBar
+        implementation('me.majiajie:pager-bottom-tab-strip:2.2.5') {
+            exclude group: 'com.android.support'
+        }
+        //----- 饺子视频播放器 -----//
+        implementation 'cn.jzvd:jiaozivideoplayer:7.2.3'
+        //exoplayer播放内核，速度比饺子自带的快
+        implementation 'com.google.android.exoplayer:exoplayer:2.7.1'
+        //----- END -----//
+
+        implementation 'com.github.goyourfly:multi_picture_view:1.3.1'
+        implementation 'com.flyco.tablayout:FlycoTabLayout_Lib:2.0.2@aar'
+        implementation 'org.greenrobot:eventbus:3.0.0'
+        implementation 'com.squareup.okhttp3:okhttp:3.10.0'
+        implementation 'cn.bingoogolapple:bga-banner:2.2.7@aar'
+
+        //使用引导
+        implementation('com.github.huburt-Hu:NewbieGuide:v2.4.4') {
+            exclude group: 'com.android.support'
+        }
+        //阿里百川用户反馈
+        implementation('com.aliyun.ams:alicloud-android-feedback:3.3.1') {
+            exclude(module: 'alicloud-android-utdid') // com.umeng.umsdk:utdid:1.5.2中已导入utdid.jar
+        }
+
+        //阿里热修复
+        implementation('com.aliyun.ams:alicloud-android-hotfix:3.2.13') {
+            exclude(module: 'alicloud-android-utdid') // com.umeng.umsdk:utdid:1.5.2中已导入utdid.jar
+        }
+
+        implementation 'com.github.CymChad:BaseRecyclerViewAdapterHelper:3.0.3'
+        implementation 'com.danikula:videocache:2.7.0'
+        implementation 'com.wheat7:gallerycycleimageview:0.0.1'
+        //引入ButterKnife
+        annotationProcessor 'com.jakewharton:butterknife-compiler:10.2.1'
+        api 'com.jakewharton:butterknife:10.2.1'
+
+//        implementation 'com.arialyy.aria:core:3.8.6'
+//        annotationProcessor 'com.arialyy.aria:compiler:3.8.6'
+////                {
+////            transitive = false
+////        }
+    }
+}
+
+dependencies {
+}

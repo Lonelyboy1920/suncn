@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:foreground="?android:attr/selectableItemBackground"
+    android:gravity="center_vertical"
+    android:orientation="horizontal"
+    android:paddingLeft="20dp"
+    android:paddingRight="10dp">
+
+    <TextView
+        android:id="@+id/tv_name"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="5dp"
+        android:layout_weight="1"
+        android:ellipsize="end"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"
+        android:singleLine="true"
+        android:text="待办发文"
+        android:textColor="@color/font_title"
+        android:textSize="@dimen/font_normal" />
+
+    <com.gavin.giframe.widget.GITextView
+        android:id="@+id/tv_check"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:text="&#xe7cd;"
+        android:textColor="@color/view_head_bg"
+        android:textSize="@dimen/font_normal" />
+</LinearLayout>

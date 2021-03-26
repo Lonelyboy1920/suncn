@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.suncn.ihold_zxztc.view.forscrollview.MyExListViewForScrollView
+        android:id="@+id/exListView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/shape_bound_bg_bot"
+        android:childDivider="@color/white"
+        android:divider="@color/line_bg_white"
+        android:dividerHeight="0dp"
+        android:groupIndicator="@null"
+        android:scrollbars="none">
+
+    </com.suncn.ihold_zxztc.view.forscrollview.MyExListViewForScrollView>
+</LinearLayout>

@@ -1,0 +1,288 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="presenter"
+            type="com.suncn.ihold_zxztc.interfaces.Presenter" />
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/main_bg"
+        android:orientation="vertical">
+
+        <include layout="@layout/view_head_white" />
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/line_bg_white"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/main_bg"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:id="@+id/ll_changePwd"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="1dp"
+                        android:background="@color/white"
+                        android:foreground="?android:attr/selectableItemBackground"
+                        android:gravity="center"
+                        android:onClick="@{(v)->presenter.onClick(v)}"
+                        android:orientation="horizontal"
+                        android:padding="15dp">
+
+                        <com.gavin.giframe.widget.GITextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="&#xe61e;"
+                            android:textColor="#4fc2ff"
+                            android:textSize="@dimen/font_medium"
+                            app:myStyle="1" />
+
+                        <TextView
+                            android:id="@+id/tv_changepwd"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="@string/string_change_password"
+                            android:textColor="@color/font_title"
+                            android:textSize="@dimen/font_15" />
+
+                        <com.gavin.giframe.widget.GITextView style="@style/style_arrow" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/ll_message"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="1dp"
+                        android:background="@color/white"
+                        android:foreground="?android:attr/selectableItemBackground"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal"
+                        android:paddingLeft="15dp"
+                        android:paddingRight="10dp">
+
+                        <com.gavin.giframe.widget.GITextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="&#xe61d;"
+                            android:textColor="#33bfb8"
+                            android:textSize="@dimen/font_medium"
+                            app:myStyle="1" />
+
+                        <TextView
+                            android:id="@+id/tv_message"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:paddingTop="15dp"
+                            android:paddingBottom="15dp"
+                            android:text="@string/string_message_push"
+                            android:textColor="@color/font_title"
+                            android:textSize="@dimen/font_15" />
+
+                        <Switch
+                            android:id="@+id/switch_compat"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:thumb="@drawable/thumb_selector"
+                            android:track="@drawable/track_selector"
+                            android:switchMinWidth="50dp" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/ll_finger"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="1dp"
+                        android:background="@color/white"
+                        android:foreground="?android:attr/selectableItemBackground"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal"
+                        android:paddingLeft="15dp"
+                        android:paddingRight="10dp">
+
+                        <com.gavin.giframe.widget.GITextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/font_fingerprint"
+                            android:textColor="@color/view_head_bg"
+                            android:textSize="@dimen/font_medium"
+                            app:myStyle="1" />
+
+                        <TextView
+                            android:id="@+id/tv_finger"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:paddingTop="15dp"
+                            android:paddingBottom="15dp"
+                            android:text="@string/string_fingerprint_recognition"
+                            android:textColor="@color/font_title"
+                            android:textSize="@dimen/font_15" />
+
+                        <Switch
+                            android:id="@+id/switch_finger"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:switchMinWidth="60dp" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/ll_clear_cache"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="1dp"
+                        android:background="@color/white"
+                        android:foreground="?android:attr/selectableItemBackground"
+                        android:gravity="center"
+                        android:onClick="@{(v)->presenter.onClick(v)}"
+                        android:orientation="horizontal"
+                        android:padding="15dp">
+
+                        <com.gavin.giframe.widget.GITextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="&#xe623;"
+                            android:textColor="#ffae00"
+                            android:textSize="@dimen/font_medium"
+                            app:myStyle="1" />
+
+                        <TextView
+                            android:id="@+id/tv_clear_cache"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="@string/string_clear_cache"
+                            android:textColor="@color/font_title"
+                            android:textSize="@dimen/font_15" />
+
+                        <TextView
+                            android:id="@+id/tv_cache"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_marginRight="7dp"
+                            android:text="1.0"
+                            android:textColor="@color/font_content"
+                            android:textSize="@dimen/font_15" />
+
+                        <com.gavin.giframe.widget.GITextView style="@style/style_arrow" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/llChangeSkin"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="1dp"
+                        android:background="@color/white"
+                        android:foreground="?android:attr/selectableItemBackground"
+                        android:gravity="center"
+                        android:onClick="@{(v)->presenter.onClick(v)}"
+                        android:orientation="horizontal"
+                        android:padding="15dp">
+
+                        <com.gavin.giframe.widget.GITextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="&#xe6b3;"
+                            android:textColor="@color/view_head_bg"
+                            android:textSize="@dimen/font_medium"
+                            app:myStyle="1" />
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="@string/string_edit_theme"
+                            android:textColor="@color/font_title"
+                            android:textSize="@dimen/font_15" />
+
+
+                        <com.gavin.giframe.widget.GITextView style="@style/style_arrow" />
+                    </LinearLayout>
+                    <LinearLayout
+                        android:id="@+id/llChangeFontSize"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="10dp"
+                        android:background="@color/white"
+                        android:foreground="?android:attr/selectableItemBackground"
+                        android:gravity="center"
+                        android:onClick="@{(v)->presenter.onClick(v)}"
+                        android:orientation="horizontal"
+                        android:padding="15dp">
+
+                        <com.gavin.giframe.widget.GITextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="&#xe6b4;"
+                            android:textColor="#aaae00"
+                            android:textSize="@dimen/font_medium"
+                            app:myStyle="1" />
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="  字体大小"
+                            android:textColor="@color/font_title"
+                            android:textSize="@dimen/font_15" />
+
+
+                        <com.gavin.giframe.widget.GITextView style="@style/style_arrow" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/ll_loginout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/main_bg"
+                    android:onClick="@{(v)->presenter.onClick(v)}"
+                    android:orientation="horizontal">
+
+                    <Button
+                        android:id="@+id/btn_loginout"
+                        style="@style/Widget.AppCompat.Button.Borderless"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:background="@color/white"
+                        android:foreground="?android:attr/selectableItemBackground"
+                        android:onClick="@{(v)->presenter.onClick(v)}"
+                        android:padding="12dp"
+                        android:text="@string/string_sign_out"
+                        android:textColor="@color/view_head_bg"
+                        android:textSize="@dimen/font_normal" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:visibility="gone" />
+                </LinearLayout>
+            </LinearLayout>
+
+        </ScrollView>
+    </LinearLayout>
+</layout>

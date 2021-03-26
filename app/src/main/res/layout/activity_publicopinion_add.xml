@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical">
+
+    <include layout="@layout/view_head_white" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/ll_btm"
+        android:layout_below="@+id/rl_head">
+
+        <LinearLayout
+
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:gravity="top"
+                android:orientation="horizontal">
+
+                <com.gavin.giframe.widget.GIEditText
+                    android:id="@+id/et_title"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@color/white"
+                    android:hint="请输入信息标题"
+                    android:inputType=""
+                    android:padding="10dp"
+                    app:maxLength="100"
+                    android:textColor="@color/font_title"
+                    android:textColorHint="@color/font_hint"
+                    android:textSize="@dimen/font_normal" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/repeat_et_line" />
+
+            <com.suncn.ihold_zxztc.view.MenuItemEditLayout
+                android:id="@+id/tv_jointMem"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:hint="@string/string_please_select_associate"
+                app:label="@string/string_associate"
+                app:label_color="@color/font_title"
+                app:label_size="@dimen/font_15"
+                app:show_arrow="true" />
+
+            <com.suncn.ihold_zxztc.view.MenuItemEditLayout
+                android:id="@+id/tv_theme"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:hint="@string/string_please_select_theme"
+                app:label="@string/string_theme"
+                app:label_color="@color/font_title"
+                app:label_size="@dimen/font_15"
+                app:show_arrow="true" />
+
+            <View style="@style/style_line_bg_white_margin" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingLeft="10dp">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="信息内容"
+                    android:textColor="@color/font_title"
+                    android:textSize="@dimen/font_normal" />
+
+                <com.gavin.giframe.widget.GITextView
+                    android:id="@+id/tv_mike"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:foreground="?android:attr/selectableItemBackground"
+                    android:padding="10dp"
+                    android:text="@string/font_mike"
+                    android:textColor="@color/font_content"
+                    android:textSize="@dimen/font_medium" />
+            </LinearLayout>
+
+            <com.gavin.giframe.widget.GIEditText
+                android:id="@+id/et_content"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:fadeScrollbars="false"
+                android:gravity="top"
+                android:hint="请输入信息内容"
+                android:minLines="10"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:paddingBottom="10dp"
+                android:scrollbarStyle="outsideOverlay"
+                android:scrollbars="vertical"
+                android:textColor="@color/font_title"
+                android:textColorHint="@color/font_hint"
+                android:textSize="@dimen/font_normal"
+                app:maxLength="3000"/>
+        </LinearLayout>
+    </ScrollView>
+
+    <LinearLayout
+        android:id="@+id/ll_btm"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="10dp">
+
+        <TextView
+            android:id="@+id/tv_confirm"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_weight="1"
+            android:background="@drawable/shape_bg_red_r15"
+            android:gravity="center"
+            android:padding="10dp"
+            android:text="@string/string_submit"
+            android:textColor="@color/white"
+            android:textSize="@dimen/font_16_dp" />
+
+        <TextView
+            android:id="@+id/tv_temp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_weight="1"
+            android:background="@drawable/shape_bg_gray_r15"
+            android:gravity="center"
+            android:text="@string/string_temporary_storage"
+            android:textColor="@color/font_content"
+            android:textSize="@dimen/font_16_dp" />
+    </LinearLayout>
+</RelativeLayout>

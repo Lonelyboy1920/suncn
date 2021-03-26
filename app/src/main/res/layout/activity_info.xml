@@ -1,0 +1,367 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical">
+
+    <include layout="@layout/view_head_white" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/line_bg_white"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/ll_wy_detail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="@color/white"
+                android:orientation="horizontal"
+                android:paddingLeft="20dp"
+                android:paddingTop="5dp"
+                android:paddingRight="10dp"
+                android:paddingBottom="5dp"
+                android:visibility="visible">
+
+                <com.gavin.giframe.widget.RoundImageView
+                    android:id="@+id/iv_head"
+                    style="@style/style_iv_headPhoto"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_gravity="center_vertical"
+                    android:visibility="visible" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="30dp"
+                    android:gravity="center_vertical"
+                    android:orientation="vertical">
+
+                    <com.gavin.giframe.widget.GITextView
+                        android:id="@+id/tv_name"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/font_title"
+                        android:textSize="@dimen/font_normal"
+                        app:myStyle="3"
+                        tools:text="张三" />
+
+                    <com.gavin.giframe.widget.GITextView
+                        android:id="@+id/tv_code"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:textColor="@color/font_source"
+                        android:textSize="@dimen/font_small"
+                        tools:text="14届02次" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_circles"
+                style="@style/style_layout_item"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="1dp">
+
+                <TextView
+                    android:id="@+id/tv_circles_label"
+                    style="@style/style_tv_item_left"
+                    android:text="@string/string_sector" />
+
+                <EditText
+                    android:id="@+id/et_circles"
+                    style="@style/style_tv_item_right"
+                    android:enabled="false"
+                    tools:text="@string/string_sector" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_clan"
+                style="@style/style_layout_item">
+
+                <TextView
+                    style="@style/style_tv_item_left"
+                    android:text="@string/string_partisan" />
+
+                <EditText
+                    android:id="@+id/et_clan"
+                    style="@style/style_tv_item_right"
+                    android:enabled="false"
+                    tools:text="@string/string_partisan" />
+            </LinearLayout>
+
+            <View
+                style="@style/style_line_bg_white"
+                android:layout_marginTop="10dp" />
+
+            <LinearLayout
+                android:id="@+id/ll_unit"
+                style="@style/style_layout_item"
+                android:layout_marginBottom="1dp"
+                android:visibility="gone">
+
+                <TextView
+                    style="@style/style_tv_item_left"
+                    android:text="@string/string_affiliation" />
+
+                <com.gavin.giframe.widget.GIEditText
+                    android:id="@+id/et_unit"
+                    style="@style/style_tv_item_right"
+                    android:layout_marginRight="10dp"
+                    android:layout_weight="1"
+                    android:drawableRight="@mipmap/icon_arrow_list"
+                    android:hint="" />
+
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/ll_unit_type"
+                style="@style/style_layout_item"
+                android:layout_marginBottom="1dp"
+                android:visibility="gone">
+
+                <TextView
+                    style="@style/style_tv_item_left"
+                    android:text="@string/string_affiliation_type" />
+
+                <com.gavin.giframe.widget.GIEditText
+                    android:id="@+id/et_unit_type"
+                    style="@style/style_tv_item_right"
+                    android:layout_marginRight="10dp"
+                    android:layout_weight="1"
+                    android:drawableRight="@mipmap/icon_arrow_list"
+                    android:hint="" />
+
+            </LinearLayout>
+            <LinearLayout style="@style/style_layout_item">
+
+                <TextView
+                    android:id="@+id/tv_job_lab"
+                    style="@style/style_tv_item_left"
+                    android:text="@string/string_job_title_no_line" />
+
+                <com.gavin.giframe.widget.GIEditText
+                    android:id="@+id/et_job"
+                    style="@style/style_tv_item_right"
+                    android:layout_weight="1"
+                    android:drawableRight="@mipmap/icon_arrow_list"
+                    android:hint="@string/string_please_enter_job_title" />
+
+            </LinearLayout>
+
+            <View style="@style/style_line_bg_white" />
+
+            <LinearLayout style="@style/style_layout_item">
+
+                <TextView
+                    android:id="@+id/tv_mobile_lab"
+                    style="@style/style_tv_item_left"
+                    android:text="@string/string_cellphone_number" />
+
+                <com.gavin.giframe.widget.GIEditText
+                    android:id="@+id/et_mobile"
+                    style="@style/style_tv_item_right"
+                    android:layout_weight="1"
+                    android:drawableRight="@mipmap/icon_arrow_list"
+                    android:hint="@string/string_please_enter_the_phone_number"
+                    android:inputType="number" />
+
+            </LinearLayout>
+
+            <View style="@style/style_line_bg_white" />
+
+            <LinearLayout
+                android:id="@+id/ll_manage2"
+                style="@style/style_layout_item"
+                android:visibility="gone">
+
+                <TextView
+                    android:id="@+id/tv_manage2"
+                    style="@style/style_tv_item_left"
+                    android:text="@string/string_manager2" />
+
+                <com.gavin.giframe.widget.GIEditText
+                    android:id="@+id/et_manage2"
+                    style="@style/style_tv_item_right"
+                    android:layout_weight="1"
+                    android:drawableRight="@mipmap/icon_arrow_list"
+                    android:hint="@string/string_please_enter_job_title" />
+
+            </LinearLayout>
+
+            <View style="@style/style_line_bg_white" />
+
+            <LinearLayout
+                android:id="@+id/ll_manage2_tel"
+                style="@style/style_layout_item"
+                android:visibility="gone">
+
+                <TextView
+                    android:id="@+id/tv_manage2_tel"
+                    style="@style/style_tv_item_left"
+                    android:text="@string/string_manager2_mobile_phone_number" />
+
+                <com.gavin.giframe.widget.GIEditText
+                    android:id="@+id/et_manage2_tel"
+                    style="@style/style_tv_item_right"
+                    android:layout_weight="1"
+                    android:drawableRight="@mipmap/icon_arrow_list"
+                    android:hint="@string/string_please_enter_the_phone_number"
+                    android:inputType="number" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_office"
+                style="@style/style_layout_item">
+
+                <TextView
+                    android:id="@+id/tv_tel"
+                    style="@style/style_tv_item_left"
+                    android:text="@string/string_tel_number" />
+
+                <com.gavin.giframe.widget.GIEditText
+                    android:id="@+id/et_tel"
+                    style="@style/style_tv_item_right"
+                    android:layout_weight="1"
+                    android:drawableRight="@mipmap/icon_arrow_list"
+                    android:hint="@string/string_please_enter_the_tel_number"
+                    android:inputType="number" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_link_adress"
+                style="@style/style_layout_item"
+                android:layout_marginTop="1dp">
+
+                <TextView
+                    style="@style/style_tv_item_left"
+                    android:text="@string/string_contact_address" />
+
+                <com.gavin.giframe.widget.GIEditText
+                    android:id="@+id/et_link_adress"
+                    style="@style/style_tv_item_right"
+                    android:layout_weight="1"
+                    android:drawableRight="@mipmap/icon_arrow_list"
+                    android:hint="@string/string_please_enter_contact_address" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_email"
+                style="@style/style_layout_item"
+                android:layout_marginTop="1dp">
+
+                <TextView
+                    style="@style/style_tv_item_left"
+                    android:text="@string/string_email" />
+
+                <com.gavin.giframe.widget.GIEditText
+                    android:id="@+id/et_email"
+                    style="@style/style_tv_item_right"
+                    android:layout_weight="1"
+                    android:drawableRight="@mipmap/icon_arrow_list"
+                    android:hint="@string/string_please_enter_your_email"
+                    android:inputType="textEmailAddress" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_fax"
+                style="@style/style_layout_item"
+                android:layout_marginTop="1dp">
+
+                <TextView
+                    style="@style/style_tv_item_left"
+                    android:text="@string/string_fax" />
+
+                <com.gavin.giframe.widget.GIEditText
+                    android:id="@+id/et_fax"
+                    style="@style/style_tv_item_right"
+                    android:layout_weight="1"
+                    android:drawableRight="@mipmap/icon_arrow_list"
+                    android:hint="@string/string_please_enter_you_fax"
+                    android:inputType="textEmailAddress" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_code"
+
+                style="@style/style_layout_item"
+                android:layout_marginTop="1dp">
+
+                <TextView
+                    style="@style/style_tv_item_left"
+                    android:text="@string/string_code" />
+
+                <com.gavin.giframe.widget.GIEditText
+                    android:id="@+id/et_code"
+                    style="@style/style_tv_item_right"
+                    android:layout_weight="1"
+                    android:drawableRight="@mipmap/icon_arrow_list"
+                    android:hint="@string/string_please_enter_your_code"
+                    android:inputType="textEmailAddress" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_code_check"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingLeft="10dp"
+                android:layout_marginTop="1dp"
+                android:paddingTop="5dp"
+                android:paddingRight="10dp"
+                android:paddingBottom="5dp"
+                android:visibility="gone">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="10dp"
+                    android:text="@string/string_code_if"
+                    android:textColor="@color/font_source"
+                    android:textSize="@dimen/font_normal" />
+
+                <RadioGroup
+                    android:id="@+id/rg_code"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <RadioButton
+                        android:id="@+id/rb_yes"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:buttonTint="@color/radiobutton_selector"
+                        android:text="@string/string_yes"
+                        android:textColor="@color/font_title"
+                        android:textSize="@dimen/font_15" />
+
+                    <RadioButton
+                        android:id="@+id/rb_no"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:buttonTint="@color/radiobutton_selector"
+                        android:text="@string/string_no"
+                        android:textColor="@color/font_title"
+                        android:textSize="@dimen/font_15" />
+                </RadioGroup>
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

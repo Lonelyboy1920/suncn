@@ -1,0 +1,397 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/main_bg"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.scwang.smartrefresh.layout.SmartRefreshLayout
+            android:id="@+id/refreshlayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@+id/ll_edit">
+
+            <androidx.coordinatorlayout.widget.CoordinatorLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/main_bg">
+
+                <com.google.android.material.appbar.AppBarLayout
+                    android:id="@+id/layout_appbar"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/main_bg"
+                    app:elevation="0dp">
+
+                    <com.google.android.material.appbar.CollapsingToolbarLayout
+                        android:id="@+id/collapsing_toolbar"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:contentScrim="@color/transparent"
+                        app:layout_scrollFlags="scroll|exitUntilCollapsed">
+
+                        <LinearLayout
+                            android:id="@+id/detail_page_above_container"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="bottom"
+                            android:layout_marginTop="71dp"
+                            android:background="@color/white"
+                            android:orientation="vertical">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="12dp"
+                                android:layout_marginBottom="10dp"
+                                android:gravity="center_vertical"
+                                android:orientation="horizontal">
+
+                                <com.gavin.giframe.widget.RoundImageView
+                                    android:id="@+id/detail_page_userLogo"
+                                    style="@style/style_iv_headPhoto"
+                                    android:layout_width="50dp"
+                                    android:layout_height="50dp"
+                                    android:layout_marginLeft="10dp" />
+
+                                <LinearLayout
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="6dp"
+                                    android:layout_weight="1"
+                                    android:orientation="vertical">
+
+                                    <TextView
+                                        android:id="@+id/detail_page_userName"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:textColor="@color/font_comment_username"
+                                        android:textSize="@dimen/font_normal"
+                                        tools:text="沐风" />
+
+                                    <LinearLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginTop="5dp"
+                                        android:orientation="horizontal">
+
+                                        <TextView
+                                            android:id="@+id/tv_duty"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_marginRight="10dp"
+                                            android:textColor="@color/font_source"
+                                            android:textSize="@dimen/font_mini"
+                                            android:singleLine="true"
+                                            tools:text="" />
+
+                                    </LinearLayout>
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:id="@+id/ll_notice"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="match_parent"
+                                    android:gravity="center_vertical"
+                                    android:paddingLeft="5dp"
+                                    android:paddingRight="10dp"
+                                    android:paddingBottom="10dp">
+
+                                    <ImageView
+                                        android:id="@+id/iv_notice"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:contentDescription="TODO"
+                                        android:src="@mipmap/not_notice_icon" />
+
+                                    <TextView
+                                        android:id="@+id/detail_page_focus"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="关注"
+                                        android:textColor="@color/zxta_state_red"
+                                        android:textSize="@dimen/font_small" />
+                                </LinearLayout>
+
+                            </LinearLayout>
+
+                            <TextView
+                                android:id="@+id/detail_page_title"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="10dp"
+                                android:layout_marginRight="10dp"
+                                android:layout_marginBottom="10dp"
+                                android:textColor="@color/font_title"
+                                android:textSize="@dimen/font_15"
+                                tools:text="诗和远方" />
+
+                            <com.goyourfly.multi_picture.MultiPictureView
+                                android:id="@+id/mv_pic"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="10dp"
+                                android:background="@null"
+                                android:paddingLeft="10dp"
+                                android:paddingRight="10dp"
+                                android:visibility="gone"
+                                app:editable="false"
+                                app:imageLayoutMode="DYNAMIC"
+                                app:max="9"
+                                app:space="5dp"
+                                app:span="3" />
+
+                            <RelativeLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content">
+
+                                <ImageView
+                                    android:id="@+id/iv_simple_image"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="10dp"
+                                    android:layout_marginTop="10dp"
+                                    android:layout_marginRight="10dp"
+                                    android:scaleType="fitStart"
+                                    android:visibility="visible" />
+
+                                <com.gavin.giframe.widget.GITextView
+                                    android:id="@+id/tv_play"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_centerInParent="true"
+                                    android:text="@string/font_robot_play"
+                                    android:textColor="@color/white"
+                                    android:textSize="35sp"
+                                    android:textStyle="bold"
+                                    android:visibility="gone" />
+                            </RelativeLayout>
+
+                            <View style="@style/style_line_bg_white" />
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="5dp"
+                                android:layout_marginRight="5dp"
+                                android:baselineAligned="false"
+                                android:gravity="center_vertical"
+                                android:padding="10dp">
+
+                                <LinearLayout
+                                    android:id="@+id/ll_comment"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:gravity="center_vertical">
+
+                                    <com.gavin.giframe.widget.GITextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="@string/font_comment"
+                                        android:textColor="@color/font_source"
+                                        android:textSize="@dimen/font_medium"
+                                        app:myStyle="1" />
+
+                                    <com.gavin.giframe.widget.GITextView
+                                        android:id="@+id/tv_comment_count"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginLeft="5dp"
+                                        android:textColor="@color/font_source"
+                                        android:textSize="@dimen/font_small"
+                                        tools:text="100" />
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:id="@+id/ll_zan"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:gravity="center">
+
+                                    <com.gavin.giframe.widget.GITextView
+                                        android:id="@+id/tv_zan_icon"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="@string/font_zan"
+                                        android:textColor="@color/font_source"
+                                        android:textSize="@dimen/font_medium"
+                                        app:myStyle="1" />
+
+                                    <com.gavin.giframe.widget.GITextView
+                                        android:id="@+id/tv_zan_count"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginLeft="5dp"
+                                        android:textColor="@color/font_source"
+                                        android:textSize="@dimen/font_small"
+                                        tools:text="100" />
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:id="@+id/ll_share"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:gravity="right|center_vertical">
+
+                                    <com.gavin.giframe.widget.GITextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="@string/font_share"
+                                        android:textColor="@color/font_source"
+                                        android:textSize="@dimen/font_medium"
+                                        app:myStyle="1" />
+
+                                    <com.gavin.giframe.widget.GITextView
+                                        android:id="@+id/tv_share_count"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginLeft="5dp"
+                                        android:text="100"
+                                        android:textColor="@color/font_source"
+                                        android:textSize="@dimen/font_small"
+                                        android:visibility="gone" />
+                                </LinearLayout>
+                            </LinearLayout>
+
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height="9dp"
+                                android:background="@color/main_bg" />
+                        </LinearLayout>
+
+                        <androidx.appcompat.widget.Toolbar
+                            android:id="@+id/toolbar"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            app:contentInsetStart="0dp"
+                            app:layout_collapseMode="pin">
+
+                            <include layout="@layout/view_head_white" />
+                        </androidx.appcompat.widget.Toolbar>
+                    </com.google.android.material.appbar.CollapsingToolbarLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="1dp"
+                        android:layout_marginBottom="0.5dp"
+                        android:background="@color/white"
+                        android:gravity="center_vertical"
+                        android:padding="10dp">
+
+                        <com.gavin.giframe.widget.GITextView
+                            android:id="@+id/tv_comment_count_two"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="评论"
+                            android:textColor="@color/font_title"
+                            android:textSize="@dimen/font_small"
+                            app:myStyle="3"
+                            tools:text="评论(100)" />
+
+                        <LinearLayout
+                            android:id="@+id/ll_sort"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center_vertical">
+
+                            <com.gavin.giframe.widget.GITextView
+                                android:id="@+id/tv_sort_icon"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/font_sort_down"
+                                android:textColor="@color/font_title"
+                                android:textSize="@dimen/font_medium" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="5dp"
+                                android:text="@string/string_by_time"
+                                android:textColor="@color/font_title"
+                                android:textSize="@dimen/font_small" />
+                        </LinearLayout>
+                    </LinearLayout>
+                </com.google.android.material.appbar.AppBarLayout>
+
+                <androidx.core.widget.NestedScrollView
+                    android:id="@+id/scrollView"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:fillViewport="true"
+                    app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:paddingBottom="5dp">
+
+                        <com.suncn.ihold_zxztc.view.forscrollview.MyExListViewForScrollView
+                            android:id="@+id/detail_page_lv_comment"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:childDivider="@null"
+                            android:divider="@null"
+                            android:groupIndicator="@null"
+                            android:scrollbars="none" />
+
+                        <include
+                            layout="@layout/view_erv_empty"
+                            android:visibility="gone" />
+                    </LinearLayout>
+                </androidx.core.widget.NestedScrollView>
+            </androidx.coordinatorlayout.widget.CoordinatorLayout>
+        </com.scwang.smartrefresh.layout.SmartRefreshLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_edit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginTop="0.5dp"
+            android:background="@android:color/white"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingLeft="10dp"
+            android:paddingTop="5dp"
+            android:paddingBottom="5dp">
+
+            <TextView
+                android:id="@+id/detail_page_do_comment"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/shape_et_comment_bg"
+                android:focusable="false"
+                android:gravity="center_vertical"
+                android:hint="@string/string_friendly_commen_is_the_starting_point_of_communication"
+                android:padding="10dp"
+                android:textColor="@color/font_title"
+                android:textColorHint="@color/font_source"
+                android:textCursorDrawable="@null"
+                android:textSize="@dimen/font_14_dp" />
+
+            <TextView
+                android:id="@+id/tv_commit"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:text="@string/string_public"
+                android:textColor="@color/font_source"
+                android:textSize="@dimen/font_16_dp" />
+        </LinearLayout>
+    </RelativeLayout>
+</LinearLayout>

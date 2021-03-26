@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <com.gavin.giframe.widget.GITextView
+        android:id="@+id/tv_current_node"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="10dp"
+        android:paddingTop="5dp"
+        android:paddingBottom="5dp"
+        android:text="初审意见"
+        android:textColor="@color/font_title"
+        android:textSize="@dimen/font_small"
+        app:myStyle="3" />
+
+    <LinearLayout
+        android:id="@+id/ll_check"
+        style="@style/style_layout_item"
+        android:paddingTop="5dp"
+        android:paddingBottom="5dp">
+
+        <TextView
+            android:id="@+id/tv_tag"
+            style="@style/style_tv_item_left"
+            android:layout_width="wrap_content"
+            android:text="审核人员"
+            android:textSize="@dimen/font_small" />
+
+        <TextView
+            android:id="@+id/tv_name"
+            style="@style/style_tv_item_right"
+            android:layout_weight="1"
+            android:text="张三三"
+            android:textSize="@dimen/font_small" />
+
+        <TextView
+            style="@style/style_tv_item_left"
+            android:layout_width="wrap_content"
+            android:text="审核时间"
+            android:textSize="@dimen/font_small" />
+
+        <TextView
+            android:id="@+id/tv_date"
+            style="@style/style_tv_item_right"
+            android:layout_weight="1"
+            android:text="2018-8-8"
+            android:textSize="@dimen/font_small" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_unit"
+        style="@style/style_layout_item"
+        android:paddingTop="5dp"
+        android:paddingBottom="5dp">
+
+        <TextView
+            style="@style/style_tv_item_left"
+            android:layout_width="wrap_content"
+            android:text="承办单位"
+            android:textSize="@dimen/font_small" />
+
+        <TextView
+            android:id="@+id/tv_unit"
+            style="@style/style_tv_item_right"
+            android:text="xxx单位"
+            android:textSize="@dimen/font_small" />
+    </LinearLayout>
+
+    <LinearLayout
+        style="@style/style_layout_item"
+        android:paddingTop="5dp"
+        android:paddingBottom="5dp">
+
+        <TextView
+            android:id="@+id/tv_result_label"
+            style="@style/style_tv_item_left"
+            android:layout_width="wrap_content"
+            android:text="审核结果"
+            android:textSize="@dimen/font_small" />
+
+        <TextView
+            android:id="@+id/tv_result"
+            style="@style/style_tv_item_right"
+            android:text="通过"
+            android:textSize="@dimen/font_small" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_reason"
+        style="@style/style_layout_item"
+        android:paddingTop="5dp"
+        android:paddingBottom="5dp"
+        android:visibility="gone">
+
+        <TextView
+            style="@style/style_tv_item_left"
+            android:layout_width="wrap_content"
+            android:text="不予立案理由"
+            android:textSize="@dimen/font_small" />
+
+        <TextView
+            android:id="@+id/tv_reason"
+            style="@style/style_tv_item_right"
+            android:text=""
+            android:textSize="@dimen/font_small" />
+    </LinearLayout>
+    <LinearLayout
+        style="@style/style_layout_item"
+        android:paddingTop="5dp"
+        android:paddingBottom="5dp">
+
+        <TextView
+            style="@style/style_tv_item_left"
+            android:layout_width="wrap_content"
+            android:text="具体意见"
+            android:textSize="@dimen/font_small" />
+
+        <TextView
+            android:id="@+id/tv_idea"
+            style="@style/style_tv_item_right"
+            android:text="审核意见"
+            android:textSize="@dimen/font_small" />
+    </LinearLayout>
+</LinearLayout>

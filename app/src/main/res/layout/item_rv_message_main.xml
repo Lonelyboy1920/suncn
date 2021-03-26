@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:foreground="?android:attr/selectableItemBackground"
+    android:gravity="center_vertical"
+    android:orientation="horizontal"
+    android:padding="10dp">
+
+    <com.gavin.giframe.widget.RoundImageView
+        android:id="@+id/iv_header"
+        android:layout_width="45dp"
+        android:layout_height="45dp"
+        android:src="@mipmap/icon_xxtx" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <com.gavin.giframe.widget.GITextView
+                android:id="@+id/tv_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/font_title"
+                android:textSize="@dimen/font_normal"
+                app:myStyle="2"
+                tools:text="张三" />
+
+            <ImageView
+                android:id="@+id/iv_top"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:src="@mipmap/top_icon"
+                android:visibility="gone" />
+
+            <com.gavin.giframe.widget.GITextView
+                android:id="@+id/tv_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="right"
+                android:textColor="@color/font_source"
+                android:textSize="@dimen/font_mini"
+                app:myStyle="1"
+                tools:text="07-09" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <com.gavin.giframe.widget.GITextView
+                android:id="@+id/tv_message"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:ellipsize="end"
+                android:singleLine="true"
+                android:textColor="@color/font_source"
+                android:textSize="@dimen/font_mini"
+                tools:text="消息内容" />
+
+            <ImageView
+                android:id="@+id/iv_notice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_not_disturb"
+                android:visibility="visible" />
+
+            <com.gavin.giframe.widget.GITextView
+                android:id="@+id/tv_unread_count"
+                style="@style/style_count"
+                android:layout_marginStart="5dp"
+                app:myStyle="1"
+                tools:text="9" />
+
+            <TextView
+                android:id="@+id/tv_unread"
+                android:layout_width="5dp"
+                android:layout_height="5dp"
+                android:background="@drawable/shape_bg_count"
+                android:gravity="center"
+                android:textColor="@color/white"
+                android:textSize="8dp"
+                android:visibility="gone" />
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

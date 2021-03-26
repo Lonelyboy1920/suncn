@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:foreground="?android:attr/selectableItemBackground"
+    android:orientation="vertical"
+    android:padding="10dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center|top"
+            android:orientation="vertical"
+            android:paddingRight="5dp"
+            android:paddingBottom="5dp">
+
+            <ImageView
+                android:id="@+id/ivCaseNo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@id/tv_caseNo"
+                android:paddingLeft="10dp"
+                android:src="@mipmap/bg_number" />
+
+            <com.gavin.giframe.widget.GITextView
+                android:id="@+id/tv_caseNo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:paddingLeft="12dp"
+                android:paddingRight="12dp"
+                android:text="0001"
+                android:textSize="@dimen/font_17"
+                android:textStyle="bold" />
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <com.gavin.giframe.widget.GITextView
+                android:id="@+id/tv_good"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_marginRight="5dp"
+                android:background="@drawable/shape_good"
+                android:paddingLeft="5dp"
+                android:paddingTop="4dp"
+                android:paddingRight="5dp"
+                android:paddingBottom="2dp"
+                android:text="优秀"
+                android:textColor="@color/white"
+                android:textSize="@dimen/font_10"
+                android:visibility="gone" />
+
+            <com.gavin.giframe.widget.GITextView
+                android:id="@+id/tv_focus"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                android:layout_marginRight="5dp"
+                android:layout_toRightOf="@id/tv_good"
+                android:background="@drawable/shape_focus_on"
+                android:paddingLeft="5dp"
+                android:paddingTop="4dp"
+                android:paddingRight="5dp"
+                android:paddingBottom="2dp"
+                android:text="重点"
+                android:textColor="@color/white"
+                android:textSize="@dimen/font_10"
+                android:visibility="gone" />
+        </LinearLayout>
+
+        <com.gavin.giframe.widget.GITextView
+            android:id="@+id/tv_title"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="1"
+            android:gravity="center_vertical"
+            android:paddingTop="4dp"
+            android:paddingBottom="4dp"
+            android:textColor="@color/font_title"
+            android:textSize="@dimen/font_normal" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/shape_r5_bg_f5f5f5"
+        android:orientation="vertical"
+        android:padding="10dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <com.gavin.giframe.widget.GITextView
+                android:id="@+id/tvItemNameAndSectorAndDate"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:paddingTop="4dp"
+                android:paddingBottom="4dp"
+                android:singleLine="true"
+                android:text="提案人 中共 经济界 20200609"
+                android:textColor="@color/font_source"
+                android:textSize="@dimen/font_mini"
+                app:myStyle="1" />
+
+            <com.gavin.giframe.widget.GITextView
+                android:id="@+id/tvItemCaseStatus"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="待接收"
+                android:textColor="@color/view_head_bg"
+                android:textSize="@dimen/font_normal" />
+
+        </LinearLayout>
+
+        <com.gavin.giframe.widget.GITextView
+            android:id="@+id/tv_unit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="10dp"
+            android:paddingBottom="5dp"
+            android:text="单位"
+            android:textColor="@color/font_source"
+            android:textSize="@dimen/font_mini" />
+    </LinearLayout>
+</LinearLayout>

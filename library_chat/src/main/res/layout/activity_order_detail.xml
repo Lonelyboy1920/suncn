@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorWhite">
+
+    <include
+        android:id="@+id/view_od_title"
+        layout="@layout/title_bar"/>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/view_od_title"
+        android:layout_above="@+id/btn_od_preview"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginStart="@dimen/dimen_margin_16"
+            android:layout_marginEnd="@dimen/dimen_margin_16">
+
+            <TextView
+                android:id="@+id/tv_od_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/colorBlack"
+                android:textSize="@dimen/text_view_size_focused"
+                android:singleLine="true"
+                android:ellipsize="end" />
+
+            <TextView
+                android:id="@+id/tv_od_sender_info"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:textSize="10sp"
+                android:textColor="@color/colorTextUnFocused"
+                />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="2dp"
+                >
+
+                <TextView
+                    android:id="@+id/tv_od_date"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:textSize="10sp"
+                    android:textColor="@color/colorTextUnFocused"
+                    />
+
+                <TextView
+                    android:id="@+id/tv_od_count"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="10sp"
+                    android:textColor="#3394EC"
+                    />
+            </LinearLayout>
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/colorLine"
+                android:layout_marginTop="10dp"/>
+
+            <TextView
+                android:id="@+id/tv_od_content"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:layout_marginTop="20dp"
+                android:padding="3dp"
+                android:textSize="12sp"
+                android:textColor="@color/colorBlack"
+                />
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/colorLine"
+                android:layout_marginTop="10dp"/>
+
+            <TextView
+                android:id="@+id/tv_od_file_tag"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:textColor="@color/colorTextUnFocused"
+                android:textSize="@dimen/text_view_size_focused" />
+
+            <LinearLayout
+                android:id="@+id/ll_od_attach_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"/>
+
+        </LinearLayout>
+    </ScrollView>
+
+    <Button
+        android:id="@+id/btn_od_preview"
+        android:layout_width="match_parent"
+        android:layout_height="37dp"
+        android:layout_marginBottom="10dp"
+        android:layout_marginLeft="@dimen/dimen_margin_16"
+        android:layout_marginRight="@dimen/dimen_margin_16"
+        android:background="@drawable/ic_rounded_rectangle_btn"
+        android:text="@string/im_text_order_preview"
+        android:textColor="@color/colorWhite"
+        android:textSize="@dimen/text_view_size_focused"
+        android:layout_alignParentBottom="true"
+        />
+
+
+</RelativeLayout>

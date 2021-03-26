@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorWhite">
+
+    <include
+        android:id="@+id/view_fd_title"
+        layout="@layout/title_bar"/>
+
+    <ImageView
+        android:layout_below="@id/view_fd_title"
+        android:layout_width="match_parent"
+        android:layout_height="10dp"
+        android:background="@color/colorActivityBackground"/>
+
+    <LinearLayout
+        android:id="@+id/ll_fd_done_layout"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginTop="10dp"
+        android:layout_below="@+id/view_fd_title">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center">
+
+            <TextView
+                android:id="@+id/tv_fd_done"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="已完成"
+                android:textColor="@color/colorBlack"
+                android:textSize="14sp"
+                android:drawableStart="@drawable/ic_round_unselected"
+                android:gravity="center_vertical"
+                android:drawablePadding="10dp"
+                />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center">
+
+            <TextView
+                android:id="@+id/tv_fd_undone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="未完成"
+                android:textColor="@color/colorBlack"
+                android:textSize="14sp"
+                android:drawableStart="@drawable/ic_round_unselected"
+                android:gravity="center_vertical"
+                android:drawablePadding="10dp"
+                />
+        </LinearLayout>
+    </LinearLayout>
+
+
+    <EditText
+        android:id="@+id/et_fd_edit"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:background="@android:drawable/editbox_background_normal"
+        android:layout_below="@+id/ll_fd_done_layout"
+        android:layout_marginLeft="@dimen/dimen_margin_16"
+        android:layout_marginRight="@dimen/dimen_margin_16"
+        android:hint="@string/im_text_order_feedback_hint"
+        android:textColorHint="@color/colorTextUnFocused"
+        android:textSize="14sp"
+        android:textColor="@color/colorBlack"
+        android:gravity="top"
+        />
+
+    <TextView
+        android:id="@+id/tv_fd_tag"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="选择附件"
+        android:textSize="14sp"
+        android:textColor="@color/colorBlack"
+        android:layout_below="@+id/et_fd_edit"
+        android:layout_marginLeft="@dimen/dimen_margin_16"
+        android:layout_marginRight="@dimen/dimen_margin_16"
+        android:layout_marginTop="10dp"
+        android:drawableRight="@drawable/ic_order_add"
+        android:gravity="center_vertical"
+        android:background="@drawable/im_qa_menu_pop_bg"
+        android:padding="5dp"
+        />
+
+    <LinearLayout
+        android:id="@+id/ll_fd_attach_layout"
+        android:layout_below="@+id/tv_fd_tag"
+        android:layout_above="@+id/btn_fd_feedback"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginTop="10dp" />
+
+    <Button
+        android:id="@+id/btn_fd_feedback"
+        android:layout_width="match_parent"
+        android:layout_height="37dp"
+        android:layout_marginBottom="10dp"
+        android:layout_marginLeft="@dimen/dimen_margin_16"
+        android:layout_marginRight="@dimen/dimen_margin_16"
+        android:background="@drawable/ic_rounded_rectangle_btn"
+        android:text="@string/im_text_order_feedback"
+        android:textColor="@color/colorWhite"
+        android:textSize="@dimen/text_view_size_focused"
+        android:layout_alignParentBottom="true"
+        />
+</RelativeLayout>

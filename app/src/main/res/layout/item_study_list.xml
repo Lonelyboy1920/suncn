@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:gravity="center_vertical"
+    android:paddingLeft="10dp"
+    android:paddingTop="5dp"
+    android:paddingRight="10dp"
+    android:paddingBottom="5dp">
+
+    <ImageView
+        android:id="@+id/iv_img"
+        style="@style/style_iv_itemImage"
+        android:layout_marginLeft="0dp"
+        android:layout_marginRight="5dp"
+        android:scaleType="centerCrop"
+        android:src="@mipmap/img_error"
+        android:visibility="gone" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="5dp">
+
+            <com.gavin.giframe.widget.GITextView
+                android:id="@+id/tv_file"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="5dp"
+                android:text="&#xe69b;"
+                android:textColor="#999999"
+                android:textSize="@dimen/font_normal"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/tv_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:maxLines="2"
+                android:text="1312"
+                android:textColor="@color/font_title"
+                android:textSize="@dimen/font_normal" />
+        </LinearLayout>
+
+
+        <RelativeLayout
+            android:id="@+id/ll_video_img"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:background="#660000"
+            android:visibility="gone">
+
+            <ImageView
+                android:id="@+id/iv_video_img"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="fitCenter"
+                android:src="@mipmap/img_error" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:scaleType="center"
+                android:src="@mipmap/icon_play"
+                android:textSize="@dimen/font_large" />
+        </RelativeLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="5dp">
+
+            <com.gavin.giframe.widget.GITextView
+                android:id="@+id/tv_date"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:maxLines="2"
+                android:text="20190805"
+                android:textColor="@color/font_source"
+                android:textSize="@dimen/font_mini" />
+
+            <com.gavin.giframe.widget.GITextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/font_eays"
+                android:textColor="@color/font_source"
+                android:textSize="@dimen/font_mini" />
+
+            <com.gavin.giframe.widget.GITextView
+                android:id="@+id/tv_count"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:text="12"
+                android:textColor="@color/font_source"
+                android:textSize="@dimen/font_mini" />
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

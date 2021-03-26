@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorActivityBackground"
+    android:orientation="vertical">
+
+    <include
+        android:id="@+id/view_fh_title"
+        layout="@layout/title_bar"/>
+
+    <include
+        android:id="@+id/view_fh_info"
+        layout="@layout/user_info_bar"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dimen_margin_16"
+        android:text="@string/friend_invite_tag"
+        android:textSize="14sp"
+        android:textColor="@color/colorTextUnFocused"
+        android:layout_marginTop="15dp"
+        />
+
+    <TextView
+        android:id="@+id/tv_fh_desc"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/view_round_edit"
+        android:layout_marginStart="@dimen/dimen_margin_16"
+        android:layout_marginEnd="@dimen/dimen_margin_16"
+        android:padding="10dp"
+        android:layout_marginTop="10dp"
+        android:maxEms="50"
+        android:textSize="14sp"
+        />
+
+    <TextView
+        android:id="@+id/tv_fh_info"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="14sp"
+        android:textColor="@color/colorTextUnFocused"
+        android:gravity="center"
+        android:layout_marginTop="5dp"/>
+
+    <Button
+        android:id="@+id/btn_fh_agree"
+        android:layout_width="match_parent"
+        android:layout_height="37dp"
+        android:layout_marginStart="@dimen/dimen_margin_16"
+        android:layout_marginEnd="@dimen/dimen_margin_16"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/ic_rounded_rectangle_btn"
+        android:text="@string/friend_invite_agree"
+        android:textColor="@color/colorWhite"
+        android:textSize="@dimen/text_view_size_focused" />
+
+    <Button
+        android:id="@+id/btn_fh_refuse"
+        android:layout_width="match_parent"
+        android:layout_height="37dp"
+        android:layout_marginStart="@dimen/dimen_margin_16"
+        android:layout_marginEnd="@dimen/dimen_margin_16"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/ic_rounded_rectangle_gray_btn"
+        android:text="@string/friend_invite_refuse"
+        android:textColor="@color/colorWhite"
+        android:textSize="@dimen/text_view_size_focused" />
+
+
+</LinearLayout>

@@ -1,0 +1,223 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.qd.longchat">
+
+    <!--用于申请调用A-GPS模块-->
+    <uses-permission android:name="android.permission.ACCESS_LOCATION_EXTRA_COMMANDS" />
+
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.REQUEST_INSTALL_PACKAGES" />
+
+    <uses-feature android:name="android.hardware.camera" />
+    <uses-feature android:name="android.hardware.camera.autofocus" />
+
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+
+    <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS" />
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <!--//网络权限，当禁用后，无法进行检索等相关业务-->
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <!--//读取设备硬件信息，统计数据-->
+    <uses-permission android:name="com.android.launcher.permission.READ_SETTINGS" />
+    <!--//读取系统信息，包含系统版本等信息，用作统计-->
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <!--//获取设备的网络状态，鉴权所需网络代理-->
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <!--//允许sd卡写权限，需写入地图数据，禁用后无法显示地图-->
+    <uses-permission
+        android:name="android.permission.WRITE_SETTINGS"
+        tools:ignore="ProtectedPermissions" />
+    <!--//获取统计数据-->
+    <uses-permission android:name="android.permission.GET_TASKS" />
+    <!--//鉴权所需该权限获取进程列表-->
+    <uses-permission android:name="android.permission.CAMERA" />
+    <!--//使用步行AR导航，配置Camera权限-->
+
+    <!-- 这个权限用于进行网络定位-->
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <!-- 这个权限用于访问GPS定位-->
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <!-- 用于访问wifi网络信息，wifi信息会用于进行网络定位-->
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <!-- 获取运营商信息，用于支持提供运营商信息相关的接口-->
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <!-- 这个权限用于获取wifi的获取权限，wifi信息会用来进行网络定位-->
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <!-- SD卡读取权限，用户写入离线定位数据-->
+    <uses-permission
+        android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS"
+        tools:ignore="ProtectedPermissions" />
+
+    <!-- 接收PUSH TOKEN的广播以及PUSH消息需要定义该权限 ${PACKAGE_NAME} 要替换上您应用的包名 -->
+    <permission
+        android:name="${applicationId}.permission.PROCESS_PUSH_MSG"
+        android:protectionLevel="signatureOrSystem" />
+
+    <!--接收PUSH TOKEN的广播以及PUSH消息需要定义该权限 ${PACKAGE_NAME} 要替换上您应用的包名 -->
+    <uses-permission android:name="${applicationId}.permission.PROCESS_PUSH_MSG" />
+
+    <uses-permission android:name="com.huawei.android.launcher.permission.CHANGE_BADGE" />
+    <!--华为角标-->
+
+    <!-- 多媒体相关 -->
+    <uses-permission android:name="android.permission.BLUETOOTH" />
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
+
+    <application
+        android:allowBackup="true"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        android:windowSoftInputMode="stateHidden|adjustResize"
+        tools:ignore="GoogleAppIndexingWarning">
+
+        <activity android:name=".activity.QDLoginSettingActivity" />
+
+        <activity
+            android:name=".activity.QDWebActivity"
+            android:hardwareAccelerated="true" />
+        <activity
+            android:name=".activity.QDPersonChatActivity"
+            android:windowSoftInputMode="adjustUnspecified|stateHidden"
+            android:launchMode="singleTask"/>
+        <activity
+            android:name=".activity.QDGroupChatActivity"
+            android:launchMode="singleTask"
+            android:windowSoftInputMode="adjustResize|stateHidden" />
+        <activity
+            android:name=".activity.QDChatActivity"
+            android:windowSoftInputMode="adjustResize|stateHidden" />
+        <activity android:name=".activity.QDGroupActivity" />
+        <activity android:name=".activity.QDContactActivity" />
+        <activity android:name=".activity.QDUserDetailActivity" />
+        <activity android:name=".activity.QDPersonInfoActivity"
+            android:windowSoftInputMode="stateAlwaysHidden"/>
+        <activity android:name=".activity.QDGroupInfoActivity" />
+        <activity android:name=".activity.QDGroupMemberActivity" />
+        <activity android:name="com.qd.longchat.activity.QDCreateGroupActivity" />
+        <activity android:name=".activity.QDModifyInfoActivity" />
+        <activity android:name=".activity.QDSelfDetailActivity" />
+        <activity android:name=".activity.QDSelectPhotoActivity" />
+        <activity android:name=".activity.QDFriendInviteActivity" />
+        <activity android:name=".activity.QDFriendInviteHandleActivity" />
+        <activity android:name=".activity.QDFileActivity" />
+        <activity android:name=".activity.QDShootActivity" />
+        <activity android:name=".activity.QDPlayerVideoActivity" />
+        <activity android:name=".activity.QDFileDisplayActivity" />
+        <activity android:name=".activity.QDPicActivity" />
+        <activity android:name=".activity.QDBaiduLocationActivity" />
+        <activity android:name=".activity.QDBaiduLocationInfoActivity" />
+        <activity android:name=".activity.QDSelectedMemberListActivity" />
+        <activity android:name=".activity.QDSelectContactActivity" />
+        <activity android:name=".activity.QDSearchActivity" />
+        <activity android:name=".activity.QDSearchDetailActivity" />
+        <activity android:name=".activity.QDCollectActivity" />
+        <activity android:name=".activity.QDCollectDetailActivity" />
+        <activity android:name=".activity.QDGraffitiActivity" />
+        <activity android:name=".activity.QDSetMsgTextSizeActivity" />
+        <activity android:name=".activity.QDAboutActivity" />
+        <activity android:name=".activity.QDMsgRemindActivity" />
+        <activity
+            android:name="com.QDAudioActivity"
+            android:hardwareAccelerated="true"
+            android:screenOrientation="portrait" />
+
+        <service android:name="com.longchat.base.service.QDIMService" />
+
+        <receiver android:name="com.longchat.base.receiver.QDNetworkChangeReceiver" />
+
+        <!--百度地图 start-->
+        <service
+            android:name="com.baidu.location.f"
+            android:enabled="true"
+            android:process=":remote">
+            <intent-filter>
+                <action android:name="com.baidu.location.service_v2.2" />
+            </intent-filter>
+        </service>
+
+        <meta-data
+            android:name="com.baidu.lbsapi.API_KEY"
+            android:value="yuMaaCwRY0Ay6cKCDGhTLh0sGRCYXlyO" /> <!-- http://lbsyun.baidu.com/apiconsole/key -->
+        <!--百度地图 end-->
+
+
+        <!--7.0文件兼容-->
+
+
+        <activity android:name=".activity.QDModifyPasswordActivity" />
+        <activity android:name=".activity.QDGroupNoticeActivity" />
+        <activity android:name=".activity.QDGroupFileActivity" />
+        <activity android:name=".activity.QDAddFriendActivity" />
+        <activity android:name=".activity.QDSelfFileActivity" />
+        <activity android:name="com.qd.longchat.activity.QDAVActivity" />
+        <activity android:name=".activity.QDGroupNotifyActivity" />
+        <activity android:name=".activity.QDGroupIconActivity" />
+        <activity android:name=".sign.QDSignActivity" />
+        <activity android:name=".sign.QDLocationActivity" />
+        <activity android:name=".sign.QDSignSuccessActivity" />
+        <activity android:name=".sign.QDSignListActivity" />
+        <activity android:name=".sign.QDSignReportActivity" />
+        <activity android:name=".cloud.activity.QDCloudFileActivity" />
+        <activity android:name=".cloud.activity.QDCloudSearchActivity" />
+        <activity android:name=".cloud.activity.QDCloudMainActivity" />
+        <activity android:name=".activity.QDModifyNoteActivity" />
+        <activity android:name=".activity.QDGroupNoticeListActivity" />
+        <activity android:name=".activity.QDSelectLinkManActivity" />
+        <activity android:name=".activity.QDPicShowActivity" />
+        <activity android:name=".acc.activity.QDAccSelfActivity" />
+        <activity android:name=".acc.activity.QDAccListActivity" />
+        <activity android:name=".acc.activity.QDAccDetailActivity" />
+        <activity android:name=".acc.activity.QDAccHistoryActivity" />
+        <activity android:name=".acc.activity.QDAccChatActivity" />
+        <activity android:name=".order.activity.QDOrderActivity" />
+        <activity android:name=".order.activity.QDOrderSendActivity" />
+        <activity android:name=".order.activity.QDOrderDetailActivity" />
+        <activity android:name=".order.activity.QDOrderPreviewDetailActivity" />
+        <activity android:name=".order.activity.QDOrderFeedbackListActivity" />
+        <activity android:name=".order.activity.QDOrderFeedbackActivity" />
+        <activity android:name=".order.activity.QDOrderFeedbackDetailActivity" />
+        <activity android:name=".activity.QDOrderSearchActivity" />
+
+
+        <meta-data
+            android:name="com.longchat.base.ENCRYPT_TYPE"
+            android:value="4" />
+
+        <!--<receiver-->
+            <!--android:name=".receiver.QDWeixinReceiver"-->
+            <!--android:permission="com.tencent.mm.plugin.permission.SEND">-->
+            <!--<intent-filter>-->
+                <!--<action android:name="com.tencent.mm.plugin.openapi.Intent.ACTION_REFRESH_WXAPP" />-->
+            <!--</intent-filter>-->
+        <!--</receiver>-->
+
+        <activity
+            android:name=".wxapi.WXEntryActivity"
+            android:exported="true"
+            android:label="@string/app_name"
+            android:launchMode="singleTask"
+            android:taskAffinity="net.sourceforge.simcpux"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+        <activity android:name=".activity.QDGaoDeLocationActivity" />
+        <activity android:name=".activity.QDGaodeLocationInfoActivity" />
+        <activity android:name=".activity.QDPlayMusicActivity" />
+        <activity android:name=".activity.QDScanCodeLoginActivity" />
+        <activity android:name=".activity.QDMassChatActivity" />
+        <activity android:name=".activity.QDSecretActivity" />
+        <activity android:name=".activity.QDNoticeActivity" />
+        <activity android:name=".activity.QDAddActivity" />
+
+
+        <!--高德地图 start-->
+        <meta-data
+            android:name="com.amap.api.v2.apikey"
+            android:value="ac0926eca19e767fe9a6690a043d8281" />
+
+        <service android:name="com.amap.api.location.APSService" />
+        <!--高德地图 end-->
+    </application>
+
+</manifest>

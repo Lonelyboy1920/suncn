@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorWhite"
+    android:paddingTop="10dp"
+    android:paddingBottom="10dp"
+    >
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/iv_record_photo"
+        android:layout_width="@dimen/dimen_big_photo_size"
+        android:layout_height="@dimen/dimen_big_photo_size"
+        android:layout_marginLeft="@dimen/dimen_margin_16"
+        />
+
+    <LinearLayout
+        android:id="@+id/ll_tag"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_toEndOf="@+id/iv_record_photo"
+        android:layout_marginStart="10dp"
+        >
+
+        <TextView
+            android:id="@+id/tv_record_name"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textColor="@color/colorBlack"
+            android:textSize="@dimen/text_view_size_focused"
+            android:layout_marginEnd="10dp"
+            />
+
+        <TextView
+            android:id="@+id/tv_record_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/dimen_margin_16"
+            android:textColor="@color/colorBlack"
+            android:textSize="@dimen/text_view_size_focused"
+            />
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tv_record_address"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/ll_tag"
+        android:layout_below="@+id/ll_tag"
+        android:layout_marginTop="10dp"
+        android:textColor="@color/colorTextUnFocused"
+        android:textSize="14sp"
+        android:layout_marginEnd="@dimen/dimen_margin_16"
+        />
+
+    <ImageView
+        android:id="@+id/iv_record_img"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_below="@+id/tv_record_address"
+        android:scaleType="fitXY"
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="@dimen/dimen_margin_16"
+        />
+
+    <TextView
+        android:id="@+id/tv_record_note"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/iv_record_img"
+        android:textColor="@color/colorTextUnFocused"
+        android:textSize="14sp"
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="@dimen/dimen_margin_16"
+        />
+
+    <TextView
+        android:id="@+id/tv_record_receivers"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_record_note"
+        android:textColor="@color/colorTextUnFocused"
+        android:textSize="14sp"
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="@dimen/dimen_margin_16"
+        />
+</RelativeLayout>

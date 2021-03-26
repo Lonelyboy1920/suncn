@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <include
+        android:id="@+id/view_cf_title"
+        layout="@layout/title_bar"/>
+
+    <ImageView
+        android:id="@+id/iv_cf_icon"
+        android:layout_width="@dimen/dimen_large_photo_size"
+        android:layout_height="@dimen/dimen_large_photo_size"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="120dp"/>
+
+    <TextView
+        android:id="@+id/tv_cf_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:textSize="16sp"
+        android:textColor="@color/colorBlack"
+        android:layout_below="@+id/iv_cf_icon"
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="@dimen/dimen_margin_16"
+        android:layout_marginEnd="@dimen/dimen_margin_16"
+        />
+
+    <TextView
+        android:id="@+id/tv_cf_size"
+        android:layout_below="@+id/tv_cf_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="14sp"
+        android:textColor="@color/colorTextUnFocused"
+        android:layout_marginTop="10dp"
+        android:layout_centerHorizontal="true"/>
+
+    <ProgressBar
+        android:id="@+id/pb_cf_bar"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+        android:layout_below="@+id/tv_cf_name"
+        android:layout_marginTop="10dp"
+        android:layout_centerHorizontal="true"
+        android:visibility="invisible"/>
+
+    <Button
+        android:id="@+id/btn_cf_btn"
+        android:layout_below="@+id/pb_cf_bar"
+        android:layout_width="200dp"
+        android:layout_height="35dp"
+        android:background="@drawable/ic_rounded_rectangle_btn"
+        android:layout_marginTop="80dp"
+        android:textColor="@color/colorWhite"
+        android:textSize="16sp"
+        android:text="@string/cloud_file_download"
+        android:layout_centerHorizontal="true"
+        />
+</RelativeLayout>

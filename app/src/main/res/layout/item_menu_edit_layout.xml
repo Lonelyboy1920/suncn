@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:gravity="center_vertical"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/ll_type"
+        android:layout_marginTop="0.5dp"
+        android:background="@color/white"
+        android:foreground="?android:attr/selectableItemBackground"
+        android:gravity="center_vertical"
+        android:padding="10dp">
+
+        <TextView
+            android:id="@+id/tv_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="开始日期"
+            android:textColor="@color/font_title"
+            android:textSize="@dimen/font_normal" />
+
+        <TextView
+            android:id="@+id/tv_value"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="right|center_vertical"
+            android:text="2019-09-09"
+            android:textColor="@color/font_title"
+            android:textSize="@dimen/font_normal" />
+
+        <com.gavin.giframe.widget.GITextView
+            android:id="@+id/tv_arrow"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:text="@string/font_arrow"
+            android:textColor="@color/font_source"
+            android:textSize="@dimen/font_medium" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_line"
+        style="@style/style_line_bg_white_margin"
+        android:orientation="vertical" />
+
+</LinearLayout>

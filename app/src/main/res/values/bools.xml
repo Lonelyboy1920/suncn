@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <bool name="IS_OPEN_IM">true</bool> <!--是否开启启达IM聊天功能-->
+    <bool name="IS_OPEN_MEETING">true</bool> <!--是否开始启达视频会议功能-->
+    <bool name="IS_OPEN_SPLASH_ROBOT">true</bool> <!--是否开启启动页的机器人动画-->
+    <bool name="IS_OPEN_ROBOT">false</bool> <!--是否开启机器人助手功能-->
+
+    <bool name="IS_SHOW_CIRCLE_LOGINBTN">true</bool><!--是否显示圆形登录按钮（false为显示正常的长方形按钮）-->
+    <bool name="IS_OPEN_VISITOR">true</bool> <!--是否开启游客模式-->
+</resources>

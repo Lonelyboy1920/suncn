@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#f5f5f5"
+    android:gravity="center">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="vertical"
+        tools:ignore="UselessParent">
+
+        <ImageView
+            android:id="@+id/customactivityoncrash_error_activity_image"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:contentDescription="@null"
+            android:src="@mipmap/bg_crash" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="@string/customactivityoncrash_error_activity_error_occurred_explanation"
+            android:textColor="@color/font_title"
+            android:textSize="18sp" />
+
+        <Button
+            android:id="@+id/customactivityoncrash_error_activity_restart_button"
+            style="@style/style_btn_submit"
+            android:layout_width="wrap_content"
+            android:layout_height="35dp"
+            android:layout_marginTop="20dp"
+            android:text="@string/customactivityoncrash_error_activity_close_app"
+            android:textSize="@dimen/font_small" />
+
+        <Button
+            android:id="@+id/customactivityoncrash_error_activity_more_info_button"
+            style="?borderlessButtonStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:text="@string/customactivityoncrash_error_activity_error_details"
+            android:textColor="?colorPrimary" />
+    </LinearLayout>
+</RelativeLayout>

@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:id="@+id/item_location_root"
+    android:paddingLeft="16dp"
+    android:paddingRight="16dp"
+    android:layout_height="60dp">
+
+    <ImageView
+        android:id="@+id/item_location_select"
+        android:layout_width="16dp"
+        android:layout_height="16dp"
+        android:layout_centerVertical="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="16dp"
+        android:src="@android:drawable/presence_online"
+        android:scaleType="centerCrop"/>
+
+    <TextView
+        android:id="@+id/item_location_detail_text"
+        android:layout_width="match_parent"
+        android:layout_height="24dp"
+        android:gravity="center_vertical"
+        android:textAppearance="@style/TextAppearance.AppCompat.Light.SearchResult.Subtitle"
+        android:layout_alignParentBottom="true"
+        android:lines="1"
+        android:ellipsize="middle"
+        />
+
+    <TextView
+        android:id="@+id/item_location_sample_text"
+        android:layout_width="match_parent"
+        android:layout_height="36dp"
+        android:gravity="center_vertical"
+        android:textAppearance="@style/TextAppearance.AppCompat.Light.SearchResult.Title"
+        android:layout_above="@+id/item_location_detail_text"
+        android:layout_toLeftOf="@+id/item_location_select"
+        android:layout_marginRight="10dp"
+        android:lines="1"
+        android:ellipsize="middle"
+        />
+
+
+</RelativeLayout>

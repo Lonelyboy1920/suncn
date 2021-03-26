@@ -1,0 +1,232 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/ll_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/main_bg"
+    android:orientation="vertical">
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="25dp"
+        android:background="@color/white" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:background="@mipmap/bg_top_info"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:paddingBottom="5dp"
+        android:visibility="visible">
+
+        <com.gavin.giframe.widget.GITextView
+            android:id="@+id/btn_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="left"
+            android:background="?android:attr/selectableItemBackground"
+            android:padding="10dp"
+            android:text="@string/font_back"
+            android:textColor="@color/font_title"
+            android:textSize="@dimen/font_large"
+            android:visibility="visible"
+            app:myStyle="1" />
+
+        <com.gavin.giframe.widget.RoundImageView
+            android:id="@+id/iv_head"
+            style="@style/style_iv_headPhoto"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:gravity="center"
+            android:visibility="visible" />
+
+        <com.gavin.giframe.widget.GITextView
+            android:id="@+id/tv_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="2dp"
+            android:gravity="center"
+            android:textColor="@color/font_title"
+            android:textSize="@dimen/font_medium"
+            app:myStyle="3"
+            tools:text="张三" />
+
+        <TextView
+            android:id="@+id/et_clan"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="50dp"
+            android:layout_marginRight="50dp"
+            android:gravity="center"
+            android:textColor="@color/font_content"
+            android:textSize="@dimen/font_13"
+            tools:text="党派" />
+
+        <TextView
+            android:id="@+id/et_circles"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="50dp"
+            android:layout_marginRight="50dp"
+            android:layout_marginBottom="20dp"
+            android:gravity="center"
+            android:textColor="@color/font_content"
+            android:textSize="@dimen/font_13"
+            tools:text="界别" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/line_bg_white"
+        android:orientation="vertical">
+
+        <LinearLayout
+            style="@style/style_layout_item"
+            android:layout_marginBottom="1dp">
+
+            <TextView
+                style="@style/style_tv_item_left"
+                android:text="手        机" />
+
+            <TextView
+                android:id="@+id/et_mobile"
+                style="@style/style_tv_item_right"
+                android:layout_weight="1"
+                tools:text="13812345678" />
+
+            <com.gavin.giframe.widget.GITextView
+                android:id="@+id/tv_message"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/font_message"
+                android:textColor="#89b4f4"
+                android:textSize="@dimen/font_normal"
+                app:myStyle="1" />
+
+            <com.gavin.giframe.widget.GITextView
+                android:id="@+id/tv_call"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="5dp"
+                android:text="@string/font_call"
+                android:textColor="#89b4f4"
+                android:textSize="@dimen/font_normal"
+                app:myStyle="1" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_telephone"
+            style="@style/style_layout_item"
+            android:layout_marginBottom="1dp">
+
+            <TextView
+                style="@style/style_tv_item_left"
+                android:text="办公电话" />
+
+            <TextView
+                android:id="@+id/tv_telephone"
+                style="@style/style_tv_item_right"
+                android:layout_weight="1"
+                tools:text="13812345678" />
+
+            <com.gavin.giframe.widget.GITextView
+                android:id="@+id/tv_call_telephone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="5dp"
+                android:text="@string/font_call"
+                android:textColor="#89b4f4"
+                android:textSize="@dimen/font_normal"
+                app:myStyle="1" />
+        </LinearLayout>
+
+
+        <LinearLayout
+            style="@style/style_layout_item"
+            android:layout_marginBottom="1dp">
+
+            <TextView
+                android:id="@+id/tv_email_tag"
+                style="@style/style_tv_item_left"
+                android:text="邮        箱" />
+
+            <TextView
+                android:id="@+id/et_email"
+                style="@style/style_tv_item_right"
+                tools:text="suncndev@suncn.com.cnsuncndev@suncn.com.cnsuncndev@suncn.com.cn" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_address"
+            style="@style/style_layout_item"
+            android:layout_marginBottom="1dp"
+            android:visibility="gone">
+
+            <TextView
+                style="@style/style_tv_item_left"
+                android:text="联系地址" />
+
+            <TextView
+                android:id="@+id/tv_address"
+                style="@style/style_tv_item_right"
+                tools:text="星空之路999号" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_job"
+            style="@style/style_layout_item">
+
+            <TextView
+                android:id="@+id/tv_job_label"
+                style="@style/style_tv_item_left"
+                android:text="单位及职务" />
+
+            <TextView
+                android:id="@+id/et_job"
+                style="@style/style_tv_item_right"
+                tools:text="安徽商信政通信息技术股份有限公司安徽商信政通信息技术股份有限公司安徽商信政通信息技术股份有限公司" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="@color/main_bg" />
+
+    <LinearLayout
+        android:id="@+id/ll_send"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@mipmap/bg_send_msg"
+        android:foreground="?android:attr/selectableItemBackground"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <com.gavin.giframe.widget.GITextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingRight="2dp"
+            android:text="@string/font_font_chat"
+            android:textColor="@color/white"
+            android:textSize="@dimen/font_large"
+            app:myStyle="1" />
+
+        <com.gavin.giframe.widget.GITextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingLeft="2dp"
+            android:text="发消息"
+            android:textColor="@color/white"
+            android:textSize="@dimen/font_normal"
+            app:myStyle="2" />
+    </LinearLayout>
+</LinearLayout>

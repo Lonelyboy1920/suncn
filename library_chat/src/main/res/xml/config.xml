@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<widget id="com.intraminds.sdk_527meeting" version="0.0.1" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
+    <feature name="Permissions">
+        <param name="android-package" value="com.android.plugins.Permissions" />
+    </feature>
+    <feature name="Device">
+        <param name="android-package" value="org.apache.cordova.device.Device" />
+    </feature>
+    <feature name="File">
+        <param name="android-package" value="org.apache.cordova.file.FileUtils" />
+        <param name="onload" value="true" />
+    </feature>
+    <feature name="FileTransfer">
+        <param name="android-package" value="org.apache.cordova.filetransfer.FileTransfer" />
+    </feature>
+    <feature name="Insomnia">
+        <param name="android-package" value="nl.xservices.plugins.Insomnia" />
+    </feature>
+    <feature name="Whitelist">
+        <param name="android-package" value="org.apache.cordova.whitelist.WhitelistPlugin" />
+        <param name="onload" value="true" />
+    </feature>
+    <feature name="AndroidFullScreen">
+        <param name="android-package" value="com.mesmotronic.plugins.FullScreenPlugin" />
+    </feature>
+    <feature name="CDVOrientation">
+        <param name="android-package" value="cordova.plugins.screenorientation.CDVOrientation" />
+    </feature>
+    <feature name="Clipboard">
+        <param name="android-package" value="com.verso.cordova.clipboard.Clipboard" />
+    </feature>
+    <feature name="AudioTogglePlugin">
+        <param name="android-package" value="com.dooble.audiotoggle.AudioTogglePlugin" />
+    </feature>
+    <feature name="HeadsetDetection">
+        <param name="android-package" value="nl.xservices.plugins.HeadsetDetection" />
+    </feature>
+    <feature name="Keyboard">
+        <param name="android-package" value="io.ionic.keyboard.IonicKeyboard" />
+        <param name="onload" value="true" />
+    </feature>
+    <feature name="PhoneCallTrap">
+        <param name="android-package" value="io.gvox.phonecalltrap.PhoneCallTrap" />
+    </feature>
+    <feature name="Camera">
+        <param name="android-package" value="org.apache.cordova.camera.CameraLauncher" />
+    </feature>
+    <feature name="WebRTCPlugin">
+        <param name="android-package" value="com.intraminds.webrtc.WebRTCPlugin" />
+    </feature>
+    <feature name="DecryptResource">
+        <param name="android-package" value="com.tkyaji.cordova.DecryptResource" />
+        <param name="onload" value="true" />
+    </feature>
+    <feature name="broadcaster">
+        <param name="android-package" value="org.bsc.cordova.CDVBroadcaster" />
+    </feature>
+    <name>527轻会议</name>
+    <description>
+        The application adapted to conference online.
+    </description>
+    <author email="info@intraminds.com" href="https://www.527meeting.com">
+        TeLin Team
+    </author>
+    <content src="index.html" />
+    <access origin="*" />
+    <allow-intent href="http://*/*" />
+    <allow-intent href="https://*/*" />
+    <allow-intent href="tel:*" />
+    <allow-intent href="sms:*" />
+    <allow-intent href="mailto:*" />
+    <allow-intent href="geo:*" />
+    <allow-intent href="blob:*" />
+    <allow-navigation href="*" />
+    <allow-intent href="market:*" />
+    <preference name="DisallowOverscroll" value="true" />
+    <preference name="EnableViewportScale" value="true" />
+</widget>

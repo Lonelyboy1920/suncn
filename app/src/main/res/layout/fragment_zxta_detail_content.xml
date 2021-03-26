@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/main_bg"
+    android:orientation="vertical">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fadingEdge="none"
+        android:overScrollMode="never">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:orientation="vertical"
+            android:padding="5dp">
+
+            <LinearLayout
+                android:id="@+id/ll_reason"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingTop="5dp"
+                android:paddingBottom="5dp"
+                android:visibility="visible">
+
+                <ImageView
+                    android:layout_width="5dp"
+                    android:layout_height="17dp"
+                    android:background="@color/view_head_bg"
+                    android:contentDescription="TODO" />
+
+                <TextView
+                    android:id="@+id/tv_reason_tag"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:text="@string/string_situation_analysis"
+                    android:textColor="@color/font_title"
+                    android:textSize="@dimen/font_15" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tv_reason"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:lineSpacingExtra="5dp"
+                android:lineSpacingMultiplier="1.2"
+                android:text=""
+                android:textColor="@color/font_content"
+                android:textSize="@dimen/font_15" />
+
+            <LinearLayout
+                android:id="@+id/ll_way"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingTop="5dp"
+                android:paddingBottom="5dp"
+                android:visibility="visible">
+
+                <ImageView
+                    android:layout_width="5dp"
+                    android:layout_height="17dp"
+                    android:background="@color/view_head_bg"
+                    android:contentDescription="TODO" />
+
+                <TextView
+                    android:id="@+id/tv_way_tag"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:text="@string/string_specific_suggestions"
+                    android:textColor="@color/font_title"
+                    android:textSize="@dimen/font_15" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tv_way"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:lineSpacingExtra="5dp"
+                android:lineSpacingMultiplier="1.2"
+                android:text=""
+                android:textColor="@color/font_content"
+                android:textSize="@dimen/font_15" />
+
+            <ImageView
+                android:id="@+id/tv_empty"
+                style="@style/style_iv_empty" />
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

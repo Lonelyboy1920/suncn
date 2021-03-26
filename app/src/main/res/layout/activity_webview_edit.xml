@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#c20a0a"
+    android:gravity="center_horizontal"
+    android:hardwareAccelerated="true"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical">
+
+    <View
+        android:id="@+id/view_white"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/statusBar_height"
+        android:visibility="gone" />
+
+    <include layout="@layout/view_head_white" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/rl_head">
+
+        <WebView
+            android:id="@+id/webview"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+        <TextView
+            android:id="@+id/tv_gotoApp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="20dp"
+            android:alpha="0.7"
+            android:background="@drawable/shape_btn_circle_add_bg"
+            android:foreground="?android:attr/selectableItemBackground"
+            android:paddingLeft="20dp"
+            android:paddingTop="5dp"
+            android:paddingRight="20dp"
+            android:paddingBottom="5dp"
+            android:text="进入系统>>"
+            android:textColor="@color/white"
+            android:textSize="@dimen/font_normal"
+            android:visibility="gone" />
+    </RelativeLayout>
+
+
+</LinearLayout>

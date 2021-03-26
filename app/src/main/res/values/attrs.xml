@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <attr name="lineWidth" format="dimension|reference" />
+    <attr name="lineColor" format="color|reference" />
+
+    <declare-styleable name="DashView">
+        <attr name="dashWidth" format="dimension" />
+        <attr name="lineWidth" />
+        <attr name="lineColor" />
+        <attr name="lineHeight" format="dimension" />
+        <attr name="dashOrientation" format="integer" />
+
+    </declare-styleable>
+
+    <!--仿微信(支付宝)字体大小调整 FontSizeView-->
+    <declare-styleable name="FontSizeView">
+        <attr name="lineWidth" />
+        <attr name="lineColor" />
+        <attr name="totalCount" format="integer" />
+        <attr name="circleColor" format="color|reference" />
+        <attr name="circleRadius" format="dimension|reference" />
+
+        <attr name="textFontColor" format="color|reference" />
+        <attr name="smallSize" format="integer" />
+        <attr name="standerSize" format="integer" />
+        <attr name="bigSize" format="integer" />
+        <attr name="defaultPosition" format="integer" />
+    </declare-styleable>
+    <declare-styleable name="WrapLinearlayout">
+        <attr name="grivate" format="enum"><!--对齐方式 !-->
+            <enum name="right" value="0" />
+            <enum name="left" value="1" />
+            <enum name="center" value="2" />
+        </attr>
+        <attr name="horizontal_Space" format="dimension" />
+        <attr name="vertical_Space" format="dimension" />
+        <attr name="isFull" format="boolean" />
+    </declare-styleable>
+    <declare-styleable name="ClearEditText">
+        <attr name="isVisibleMike" format="boolean" />
+    </declare-styleable>
+    <declare-styleable name="RatioImageView">
+        <attr name="ratio" format="float" />
+    </declare-styleable>
+
+    <declare-styleable name="NineGridLayout">
+        <attr name="sapcing" format="dimension" />
+    </declare-styleable>
+    <!-- 以下为mvvmhabit框架需要添加的代码 -->
+    <declare-styleable name="TwinklingRefreshLayout">
+        <attr name="tr_wave_height" format="dimension" />
+        <attr name="tr_head_height" format="dimension" />
+        <attr name="tr_bottom_height" format="dimension" />
+        <attr name="tr_overscroll_height" format="dimension" />
+        <attr name="tr_enable_loadmore" format="boolean" />
+        <attr name="tr_pureScrollMode_on" format="boolean" />
+        <attr name="tr_show_overlay_refreshview" format="boolean" />
+        <attr name="tr_headerView" format="dimension" />
+        <attr name="tr_bottomView" format="dimension" />
+        <attr name="onRefreshCommand" format="reference" />
+        <attr name="onLoadMoreCommand" format="reference" />
+    </declare-styleable>
+    <declare-styleable name="RippleBackground">
+        <attr name="rb_color" format="color" />
+        <attr name="rb_strokeWidth" format="dimension" />
+        <attr name="rb_radius" format="dimension" />
+        <attr name="rb_duration" format="integer" />
+        <attr name="rb_rippleAmount" format="integer" />
+        <attr name="rb_scale" format="float" />
+        <attr name="rb_type" format="enum">
+            <enum name="fillRipple" value="0" />
+            <enum name="strokeRipple" value="1" />
+        </attr>
+    </declare-styleable>
+
+    <declare-styleable name="WaveView">
+        <attr name="above_wave_color" format="color" />
+        <attr name="blow_wave_color" format="color" />
+        <attr name="progress" format="integer" />
+        <attr name="wave_length" format="enum">
+            <enum name="large" value="1" />
+            <enum name="middle" value="2" />
+            <enum name="little" value="3" />
+            <enum name="other" value="4" />
+        </attr>
+        <attr name="wave_height" format="enum">
+            <enum name="large" value="1" />
+            <enum name="middle" value="2" />
+            <enum name="little" value="3" />
+        </attr>
+        <attr name="wave_hz" format="enum">
+            <enum name="fast" value="1" />
+            <enum name="normal" value="2" />
+            <enum name="slow" value="3" />
+        </attr>
+    </declare-styleable>
+
+    <declare-styleable name="Themes">
+        <attr name="waveViewStyle" format="reference" />
+    </declare-styleable>
+
+    <declare-styleable name="BubbleView">
+        <attr name="arrowWidth" format="dimension" />
+        <attr name="angle" format="dimension" />
+        <attr name="arrowHeight" format="dimension" />
+        <attr name="arrowPosition" format="dimension" />
+        <attr name="bubbleColor" format="color" />
+        <attr name="arrowLocation" format="enum">
+            <enum name="left" value="0x00" />
+            <enum name="right" value="0x01" />
+            <enum name="top" value="0x02" />
+            <enum name="bottom" value="0x03" />
+        </attr>
+    </declare-styleable>
+
+    <!-- 按钮自定义属性 -->
+    <declare-styleable name="StateButton">
+        <!--text color-->
+        <attr name="normalTextColor" format="color|reference" />
+        <attr name="pressedTextColor" format="color|reference" />
+        <attr name="unableTextColor" format="color|reference" />
+
+        <!--stroke width and color, dash width, dash gap-->
+        <attr name="strokeDashWidth" format="dimension|reference" />
+        <attr name="strokeDashGap" format="dimension|reference" />
+        <attr name="normalStrokeWidth" format="dimension|reference" />
+        <attr name="pressedStrokeWidth" format="dimension|reference" />
+        <attr name="unableStrokeWidth" format="dimension|reference" />
+        <attr name="normalStrokeColor" format="color|reference" />
+        <attr name="pressedStrokeColor" format="color|reference" />
+        <attr name="unableStrokeColor" format="color|reference" />
+
+        <!--background color-->
+        <attr name="normalBackgroundColor" format="color|reference" />
+        <attr name="pressedBackgroundColor" format="color|reference" />
+        <attr name="unableBackgroundColor" format="color|reference" />
+
+        <!--background radius-->
+        <attr name="radiuss" format="dimension|reference" />
+        <attr name="round" format="boolean|reference" />
+
+        <!--animation duration-->
+        <attr name="animationDuration" format="integer|reference" />
+    </declare-styleable>
+    <declare-styleable name="SliderLayout">
+        <attr name="slider_pic" format="reference" />
+    </declare-styleable>
+    <attr name="label" format="string|integer" />
+    <attr name="hint" format="string|integer" />
+    <attr name="value" format="string|integer" />
+    <attr name="label_size" format="dimension" />
+    <attr name="value_size" format="dimension" />
+    <attr name="label_color" format="color" />
+    <attr name="value_color" format="color" />
+    <attr name="right_icon" format="string" />
+    <attr name="show_arrow" format="boolean"/>
+    <attr name="show_line" format="boolean" />
+    <declare-styleable name="MenuItemLayout">
+        <attr name="label" />
+        <attr name="hint" />
+        <attr name="value" />
+        <attr name="label_size" />
+        <attr name="value_size" />
+        <attr name="label_color" />
+        <attr name="value_color" />
+        <attr name="show_arrow" />
+        <attr name="show_line" />
+    </declare-styleable>
+    <declare-styleable name="MenuItemEditLayout">
+        <attr name="label" />
+        <attr name="hint" />
+        <attr name="value" />
+        <attr name="label_size" />
+        <attr name="value_size" />
+        <attr name="label_color" />
+        <attr name="value_color" />
+        <attr name="right_icon" />
+        <attr name="show_line" />
+        <attr name="show_arrow" />
+    </declare-styleable>
+
+</resources>

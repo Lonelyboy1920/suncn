@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:foreground="?android:attr/selectableItemBackground"
+    android:gravity="center_vertical"
+    android:orientation="horizontal"
+    android:padding="10dp">
+
+    <com.gavin.giframe.widget.RoundImageView
+        android:id="@+id/iv_head"
+        style="@style/style_iv_headPhoto"
+        android:layout_marginRight="10dp"
+        android:visibility="visible" />
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tv_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="left|center_vertical"
+            android:layout_weight="1"
+            android:text="张三"
+            android:textColor="@color/font_title"
+            android:textSize="@dimen/font_15" />
+
+        <com.gavin.giframe.widget.GITextView
+            android:id="@+id/tv_mobile"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="left|center_vertical"
+            android:layout_marginTop="5dp"
+            android:layout_weight="1"
+            android:text="13812345678"
+            android:textColor="@color/font_source"
+            android:textSize="@dimen/font_small"
+            android:visibility="gone"
+            app:myStyle="1" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tv_attend"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:paddingLeft="8dp"
+        android:paddingTop="4dp"
+        android:paddingRight="8dp"
+        android:paddingBottom="4dp"
+        android:text="出席"
+        android:textColor="@color/zxta_state_green"
+        android:textSize="@dimen/font_small" />
+
+    <com.gavin.giframe.widget.GITextView
+        android:id="@+id/tv_arrow"
+        style="@style/style_arrow"
+        android:layout_marginRight="5dp" />
+</LinearLayout>

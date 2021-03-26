@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:foreground="?android:attr/selectableItemBackground"
+    android:gravity="center_vertical"
+    android:orientation="horizontal">
+
+    <!-- 此层LinearLayout不可删除，TreeListViewAdapter中会覆盖顶层的padding -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <com.gavin.giframe.widget.RoundImageView
+                android:id="@+id/iv_head"
+                style="@style/style_iv_headPhoto"
+                android:layout_marginRight="10dp"
+                android:visibility="visible" />
+
+            <com.gavin.giframe.widget.GITextView
+                android:id="@+id/tv_contact_state"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_alignBottom="@+id/iv_head"
+                android:layout_marginRight="10dp"
+                android:layout_marginBottom="0dp"
+                android:alpha="0.6"
+                android:background="@drawable/shape_circle_contact"
+                android:gravity="center"
+                android:text="@string/string_notAvailable"
+                android:textColor="@color/white"
+                android:textSize="10dp"
+                android:visibility="gone" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tv_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                tools:text="张三"
+                android:textColor="@color/font_title"
+                android:textSize="@dimen/font_normal" />
+
+            <com.gavin.giframe.widget.GITextView
+                android:id="@+id/tv_gradeName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tv_name"
+                android:layout_marginTop="2dp"
+                android:gravity="center"
+                android:textColor="@color/font_source"
+                android:textSize="@dimen/font_mini"
+                android:visibility="gone"
+                tools:text="党派" />
+
+            <com.gavin.giframe.widget.GITextView
+                android:id="@+id/tv_source"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tv_name"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="2dp"
+                android:layout_toRightOf="@id/tv_gradeName"
+                android:gravity="center"
+                android:textColor="@color/font_source"
+                android:textSize="@dimen/font_mini"
+                android:visibility="gone"
+                tools:text="界别" />
+        </RelativeLayout>
+
+        <Button
+            android:id="@+id/btn_invitation"
+            style="@style/style_btn_submit"
+            android:layout_width="45dp"
+            android:layout_height="25dp"
+            android:layout_marginRight="10dp"
+            android:text="@string/string_invitation"
+            android:textSize="@dimen/font_10"
+            android:visibility="gone" />
+
+        <com.gavin.giframe.widget.GITextView
+            android:id="@+id/tv_check"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="@string/font_checkbox_check"
+            android:textColor="@color/view_head_bg"
+            android:textSize="@dimen/font_normal"
+            android:visibility="gone"
+            app:myStyle="1" />
+    </LinearLayout>
+</LinearLayout>

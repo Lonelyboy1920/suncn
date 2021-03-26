@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="@dimen/dimen_margin_16"
+    app:contentPaddingBottom="2dp"
+    app:cardElevation="2dp"
+    app:cardPreventCornerOverlap="false">
+
+    <RelativeLayout
+        android:id="@+id/rl_self_info_layout"
+        android:layout_width="match_parent"
+        android:layout_height="160dp">
+
+        <TextView
+            android:id="@+id/tv_self_company"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dimen_margin_16"
+            android:layout_marginTop="5dp"
+            android:textSize="12sp"
+            android:textColor="@color/colorTextUnFocused"
+            />
+
+        <TextView
+            android:id="@+id/tv_self_name"
+            android:layout_below="@+id/tv_self_company"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dimen_margin_16"
+            android:layout_marginTop="@dimen/dimen_margin_16"
+            android:textSize="18sp"
+            android:textColor="@color/colorBlack"
+            android:textStyle="bold"
+            />
+
+        <TextView
+            android:id="@+id/tv_self_dept"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_self_name"
+            android:layout_alignStart="@+id/tv_self_name"
+            android:textColor="@color/colorTextUnFocused"
+            android:textSize="14sp"
+            android:layout_marginTop="15dp"
+            />
+
+        <TextView
+            android:id="@+id/tv_self_mobile"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_self_dept"
+            android:layout_alignStart="@+id/tv_self_name"
+            android:textColor="@color/colorTextUnFocused"
+            android:textSize="14sp"
+            android:layout_marginTop="15dp"
+            />
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/iv_self_icon"
+            android:layout_width="75dp"
+            android:layout_height="75dp"
+            android:layout_alignParentEnd="true"
+            android:scaleType="centerCrop"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="35dp"
+            />
+    </RelativeLayout>
+
+</androidx.cardview.widget.CardView>

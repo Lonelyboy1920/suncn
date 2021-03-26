@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+ <LinearLayout
+     android:id="@+id/ll_main"
+     android:layout_width="wrap_content"
+     android:layout_height="wrap_content"
+     android:orientation="vertical"
+     android:gravity="center"
+     android:background="@drawable/checked">
+     <TextView
+         android:id="@+id/tv_count"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:text="789"
+         android:textColor="@color/view_head_bg"
+         android:textSize="@dimen/font_24_dp"
+         android:textStyle="bold" />
+
+     <TextView
+         android:id="@+id/tv_name"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:text="全部(件)"
+         android:textColor="@color/font_source"
+         android:textSize="@dimen/font_14_dp" />
+ </LinearLayout>
+
+</LinearLayout>

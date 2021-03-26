@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical">
+
+    <include
+        android:id="@+id/view_warn_tilte"
+        layout="@layout/title_bar"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="扫描结果"
+        android:textStyle="bold"
+        android:textColor="@color/colorTextUnFocused"
+        android:textSize="14sp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="100dp"
+        />
+
+    <TextView
+        android:id="@+id/tv_warn_result"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:minWidth="220dp"
+        android:layout_gravity="center_horizontal"
+        android:gravity="center"
+        android:padding="5dp"
+        android:layout_marginTop="10dp"
+        android:textColor="@color/colorBlack"
+        android:textSize="@dimen/text_view_size_focused"
+        android:layout_marginLeft="@dimen/dimen_margin_16"
+        android:layout_marginRight="@dimen/dimen_margin_16"
+        android:background="@drawable/im_qa_menu_pop_bg"
+        android:singleLine="true"
+        android:ellipsize="end"
+        />
+
+</LinearLayout>

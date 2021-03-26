@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorActivityBackground"
+    android:fitsSystemWindows="true">
+
+    <include
+        android:id="@+id/view_sc_title"
+        layout="@layout/title_bar" />
+
+    <include
+        android:id="@+id/view_sc_search"
+        layout="@layout/search_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/view_sc_title" />
+
+    <RelativeLayout
+        android:id="@+id/rl_sc_contact"
+        android:layout_width="match_parent"
+        android:layout_height="54dp"
+        android:layout_below="@+id/view_sc_search"
+        android:background="@color/colorWhite">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/iv_sc_contact"
+            android:layout_width="@dimen/dimen_normal_photo_size"
+            android:layout_height="@dimen/dimen_normal_photo_size"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="@dimen/dimen_margin_16"
+            android:src="@mipmap/im_contact_item_company" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="@dimen/dimen_margin_16"
+            android:layout_toEndOf="@+id/iv_sc_contact"
+            android:text="@string/main_contact"
+            android:textColor="@color/colorBlack"
+            android:textSize="16sp" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="@dimen/dimen_margin_16"
+            android:src="@mipmap/im_arrow_right" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl_sc_group"
+        android:layout_width="match_parent"
+        android:layout_height="54dp"
+        android:layout_below="@+id/rl_sc_contact"
+        android:layout_marginTop="1dp"
+        android:background="@color/colorWhite"
+        android:visibility="gone">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/iv_sc_group"
+            android:layout_width="@dimen/dimen_normal_photo_size"
+            android:layout_height="@dimen/dimen_normal_photo_size"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="@dimen/dimen_margin_16"
+            android:src="@mipmap/im_contact_item_group" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="@dimen/dimen_margin_16"
+            android:layout_toEndOf="@+id/iv_sc_group"
+            android:text="@string/group_title"
+            android:textColor="@color/colorBlack"
+            android:textSize="16sp" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="@dimen/dimen_margin_16"
+            android:src="@mipmap/im_arrow_right" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl_sc_linkman"
+        android:layout_width="match_parent"
+        android:layout_height="54dp"
+        android:layout_below="@+id/rl_sc_group"
+        android:layout_marginTop="1dp"
+        android:background="@color/colorWhite"
+        android:visibility="gone">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/iv_sc_linkman"
+            android:layout_width="@dimen/dimen_normal_photo_size"
+            android:layout_height="@dimen/dimen_normal_photo_size"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="@dimen/dimen_margin_16"
+            android:src="@mipmap/im_contact_item_linkman" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="@dimen/dimen_margin_16"
+            android:layout_toEndOf="@+id/iv_sc_linkman"
+            android:text="联系人"
+            android:textColor="@color/colorBlack"
+            android:textSize="16sp" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="@dimen/dimen_margin_16"
+            android:src="@mipmap/im_arrow_right" />
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/tv_sc_tag"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/rl_sc_linkman"
+        android:layout_marginStart="@dimen/dimen_margin_16"
+        android:layout_marginTop="5dp"
+        android:text="最近聊天"
+        android:textColor="@color/colorTextUnFocused"
+        android:textSize="12sp" />
+
+
+    <ListView
+        android:id="@+id/lv_sc_list"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/rl_contact_bottom_layout"
+        android:layout_below="@+id/tv_sc_tag"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="5dp"
+        android:divider="@null"
+        android:scrollbars="none" />
+
+
+    <RelativeLayout
+        android:id="@+id/rl_contact_bottom_layout"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:background="@color/colorWhite"
+        android:visibility="gone">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/colorLine" />
+
+        <TextView
+            android:id="@+id/tv_contact_count"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="@dimen/dimen_margin_16"
+            android:text="@string/contact_had_count"
+            android:textColor="@color/colorBlack"
+            android:textSize="14sp" />
+
+        <Button
+            android:id="@+id/btn_contact_sure"
+            android:layout_width="100dp"
+            android:layout_height="35dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="@dimen/dimen_margin_16"
+            android:background="@drawable/ic_rounded_rectangle_btn"
+            android:text="@string/contact_sure"
+            android:textColor="@color/colorWhite"
+            android:textSize="16sp" />
+    </RelativeLayout>
+</RelativeLayout>

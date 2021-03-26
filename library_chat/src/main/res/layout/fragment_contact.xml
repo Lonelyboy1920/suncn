@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/fl_contact_parent_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorWhite"
+    android:orientation="vertical">
+
+   <ListView
+       android:id="@+id/lv_contact_list"
+       android:layout_width="match_parent"
+       android:layout_height="match_parent"
+       android:divider="@null" />
+
+   <com.qd.longchat.view.QDSideBar
+       android:id="@+id/side_bar"
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+       android:paddingEnd="8dp"
+       app:sidebar_max_offset="80dp"
+       app:sidebar_lazy_respond="false"
+       app:sidebar_text_color="@color/colorTextUnFocused"
+       app:sidebar_text_size="16sp"
+       app:sidebar_text_alignment="center"
+       android:visibility="visible"
+       />
+
+</FrameLayout>

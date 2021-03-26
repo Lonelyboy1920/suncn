@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/main_bg"
+    android:gravity="center_horizontal"
+    android:orientation="vertical">
+
+    <include layout="@layout/view_head_white" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:orientation="vertical"
+        android:padding="10dp">
+
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/font_title"
+            android:textSize="@dimen/font_normal"
+            tools:text="提案详情标题提案详情标题提案详情标题提案详情标题提案详情标题提案详情标题提案详情标题" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:orientation="horizontal">
+
+            <com.gavin.giframe.widget.GITextView
+                android:id="@+id/tv_caseNo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/zxta_state_orange"
+                android:textSize="@dimen/font_small"
+                tools:text="第十四届二次会议" />
+
+            <com.gavin.giframe.widget.GITextView
+                android:id="@+id/tv_date"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:textColor="@color/font_source"
+                android:textSize="@dimen/font_small"
+                tools:text="2019-01-01" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <skin.support.design.widget.SkinMaterialTabLayout
+        android:id="@+id/tabLayout"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/global_tablayout_height"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="0.5dp"
+        android:background="@color/white"
+        app:tabIndicatorColor="@color/view_head_bg"
+        app:tabIndicatorFullWidth="true"
+        app:tabIndicatorHeight="2dp"
+        app:tabMinWidth="20dp"
+        app:tabMode="fixed"
+        app:tabPaddingEnd="10dp"
+        app:tabPaddingStart="10dp"
+        app:tabTextColor="@color/font_content"
+        app:tabSelectedTextColor="@color/view_head_bg"
+        app:tabTextAppearance="@style/style_tabLayoutText" />
+
+    <androidx.viewpager.widget.ViewPager
+        android:id="@+id/pager"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent" />
+</LinearLayout>
+
+
+
+
+
+
+
+
+
+
+

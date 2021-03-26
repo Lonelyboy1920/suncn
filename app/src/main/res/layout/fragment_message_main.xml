@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/main_bg"
+    android:orientation="vertical">
+
+    <include layout="@layout/view_head" />
+
+    <com.scwang.smartrefresh.layout.SmartRefreshLayout
+        android:id="@+id/refreshlayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/ll_edit">
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:id="@+id/ll_xxtx"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white"
+                    android:foreground="?android:attr/selectableItemBackground"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:padding="10dp">
+
+                    <com.gavin.giframe.widget.RoundImageView
+                        android:layout_width="45dp"
+                        android:layout_height="45dp"
+                        android:src="@mipmap/icon_xxtx" />
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginStart="10dp"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <com.gavin.giframe.widget.GITextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/string_message_notice"
+                            android:textColor="@color/font_title"
+                            android:textSize="@dimen/font_17"
+                            app:myStyle="2" />
+
+                        <TextView
+                            android:id="@+id/tv_xxtx"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="5dp"
+                            android:ellipsize="end"
+                            android:maxLines="1"
+                            android:textColor="@color/font_source"
+                            android:textSize="@dimen/font_mini"
+                            tools:text="" />
+                    </LinearLayout>
+
+                    <com.gavin.giframe.widget.GITextView
+                        android:id="@+id/tv_xxtx_count"
+                        style="@style/style_count"
+                        android:layout_marginStart="5dp"
+                        android:visibility="gone"
+                        app:myStyle="1"
+                        tools:text="9" />
+                </LinearLayout>
+
+                <View style="@style/style_line_bg_white_margin" />
+
+                <LinearLayout
+                    android:id="@+id/ll_tzgg"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white"
+                    android:foreground="?android:attr/selectableItemBackground"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:padding="10dp">
+
+                    <com.gavin.giframe.widget.RoundImageView
+                        android:layout_width="45dp"
+                        android:layout_height="45dp"
+                        android:src="@mipmap/icon_tzgg" />
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginStart="10dp"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <com.gavin.giframe.widget.GITextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/string_notice_announcement"
+                            android:textColor="@color/font_title"
+                            android:textSize="@dimen/font_normal"
+                            app:myStyle="2" />
+
+                        <TextView
+                            android:id="@+id/tv_tzgg"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="5dp"
+                            android:ellipsize="end"
+                            android:maxLines="1"
+                            android:textColor="@color/font_source"
+                            android:textSize="@dimen/font_mini"
+                            tools:text="" />
+                    </LinearLayout>
+
+                    <com.gavin.giframe.widget.GITextView
+                        android:id="@+id/tv_tzgg_count"
+                        style="@style/style_count"
+                        android:layout_marginStart="5dp"
+                        android:visibility="gone"
+                        app:myStyle="1"
+                        tools:text="9" />
+                </LinearLayout>
+
+                <View style="@style/style_line_bg_white_margin" />
+
+                <LinearLayout
+                    android:id="@+id/ll_sphy"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:foreground="?android:attr/selectableItemBackground"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/white"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal"
+                        android:padding="10dp">
+
+                        <com.gavin.giframe.widget.RoundImageView
+                            android:layout_width="45dp"
+                            android:layout_height="45dp"
+                            android:src="@mipmap/icon_sphy" />
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginStart="10dp"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+
+                            <com.gavin.giframe.widget.GITextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/string_video_meeting"
+                                android:textColor="@color/font_title"
+                                android:textSize="@dimen/font_normal"
+                                app:myStyle="2" />
+
+                            <TextView
+                                android:id="@+id/tv_sphy"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="5dp"
+                                android:ellipsize="end"
+                                android:maxLines="1"
+                                android:textColor="@color/font_source"
+                                android:textSize="@dimen/font_mini"
+                                tools:text="" />
+                        </LinearLayout>
+
+                        <com.gavin.giframe.widget.GITextView
+                            android:id="@+id/tv_sphy_count"
+                            style="@style/style_count"
+                            android:layout_marginStart="5dp"
+                            android:visibility="gone"
+                            app:myStyle="1"
+                            tools:text="9" />
+                    </LinearLayout>
+
+                    <View style="@style/style_line_bg_white_margin" />
+                </LinearLayout>
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/recyclerView"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@color/white"
+                    android:overScrollMode="never"
+                    android:scrollbars="none" />
+            </LinearLayout>
+        </androidx.core.widget.NestedScrollView>
+    </com.scwang.smartrefresh.layout.SmartRefreshLayout>
+</LinearLayout>

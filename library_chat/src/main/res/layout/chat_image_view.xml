@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <com.github.siyamed.shapeimageview.RoundedImageView
+        android:id="@+id/iv_chat_img_right"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:adjustViewBounds="true"
+        android:maxWidth="80dp"
+        android:maxHeight="150dp"
+        app:siRadius="2dp"/>
+    
+    <!--<com.github.siyamed.shapeimageview.mask.PorterShapeImageView-->
+        <!--android:id="@+id/iv_chat_img_right"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:adjustViewBounds="true"-->
+        <!--android:maxWidth="80dp"-->
+        <!--android:maxHeight="150dp"-->
+        <!--app:siShape="@mipmap/im_chat_msg_item_content_right_normal"-->
+        <!--/>-->
+
+    <com.github.siyamed.shapeimageview.RoundedImageView
+        android:id="@+id/iv_chat_img_left"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:adjustViewBounds="true"
+        android:maxWidth="80dp"
+        android:maxHeight="150dp"
+        app:siRadius="2dp"
+        app:siBorderColor="@color/colorWhite"/>
+
+    <!--<com.github.siyamed.shapeimageview.mask.PorterShapeImageView-->
+        <!--android:id="@+id/iv_chat_img_left"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:adjustViewBounds="true"-->
+        <!--android:maxWidth="80dp"-->
+        <!--android:maxHeight="150dp"-->
+        <!--app:siShape="@mipmap/im_chat_msg_item_content_left_normal"-->
+        <!--/>-->
+
+</RelativeLayout>

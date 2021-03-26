@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorActivityBackground"
+    android:orientation="vertical">
+
+    <include
+        android:id="@+id/view_ad_title"
+        layout="@layout/title_bar" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:layout_marginTop="@dimen/dimen_margin_16"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/iv_ad_icon"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_gravity="center_vertical"
+            android:layout_marginStart="@dimen/dimen_margin_16"
+            android:contentDescription="@null"
+            android:scaleType="centerCrop" />
+
+        <TextView
+            android:id="@+id/tv_ad_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dimen_margin_16"
+            android:layout_marginEnd="@dimen/dimen_margin_16"
+            android:singleLine="true"
+            android:textColor="@color/colorBlack"
+            android:textSize="18sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:background="@color/colorWhite"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/dimen_margin_16"
+            android:layout_weight="3"
+            android:text="@string/acc_desc"
+            android:textColor="@color/colorBlack"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/tv_ad_desc"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="10dp"
+            android:layout_weight="7"
+            android:textColor="@color/colorTextUnFocused"
+            android:textSize="14sp" />
+
+    </LinearLayout>
+
+    <!--<ImageView-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="1dp"-->
+        <!--android:background="@color/colorLine" />-->
+
+    <!--<LinearLayout-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:background="@color/colorWhite"-->
+        <!--android:gravity="center_vertical"-->
+        <!--android:orientation="horizontal">-->
+
+        <!--<TextView-->
+            <!--android:layout_width="0dp"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_margin="@dimen/dimen_margin_16"-->
+            <!--android:layout_weight="3"-->
+            <!--android:text="@string/acc_dept"-->
+            <!--android:textColor="@color/colorBlack"-->
+            <!--android:textSize="16sp" />-->
+
+        <!--<TextView-->
+            <!--android:id="@+id/tv_ad_dept"-->
+            <!--android:layout_width="0dp"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_marginEnd="10dp"-->
+            <!--android:layout_weight="7"-->
+            <!--android:textColor="@color/colorTextUnFocused"-->
+            <!--android:textSize="14sp" />-->
+
+    <!--</LinearLayout>-->
+
+    <LinearLayout
+        android:id="@+id/ll_ad_fetch_history"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/bg_list_item"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/dimen_margin_16"
+            android:layout_weight="3"
+            android:text="@string/acc_fetch_history"
+            android:textColor="@color/colorBlack"
+            android:textSize="16sp" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/dimen_margin_16"
+            android:src="@mipmap/im_arrow_right" />
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btn_ad_into_acc"
+        android:layout_width="match_parent"
+        android:layout_height="37dp"
+        android:layout_marginStart="@dimen/dimen_margin_32"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="@dimen/dimen_margin_32"
+        android:background="@drawable/ic_rounded_rectangle_btn"
+        android:text="@string/acc_into_acc"
+        android:textColor="@color/colorWhite"
+        android:textSize="16sp" />
+
+    <Button
+        android:id="@+id/btn_ad_follow"
+        android:layout_width="match_parent"
+        android:layout_height="37dp"
+        android:layout_marginStart="@dimen/dimen_margin_32"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="@dimen/dimen_margin_32"
+        android:background="@drawable/ic_rounded_rectangle_btn"
+        android:text="@string/acc_follow"
+        android:textColor="@color/colorWhite"
+        android:textSize="16sp" />
+
+</LinearLayout>

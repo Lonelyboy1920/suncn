@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/main_bg"
+    android:gravity="center_horizontal"
+    android:orientation="vertical">
+
+    <include layout="@layout/view_head" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:gravity="center_vertical"
+        android:layout_marginBottom="5dp"
+        android:padding="10dp">
+
+        <TextView
+            android:id="@+id/tv_date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_weight="1"
+            android:text="2018/08/12"
+            android:textColor="@color/font_content"
+            android:textSize="@dimen/font_small" />
+
+        <TextView
+            android:id="@+id/tv_date_icon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="&#xe607;"
+            android:textSize="25sp" />
+    </LinearLayout>
+
+    <WebView
+        android:id="@+id/webview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <TextView
+        android:id="@+id/tv_empty"
+        android:layout_width="wrap_content"
+        android:layout_height="140dp"
+        android:layout_marginTop="150dp"
+        android:background="@mipmap/bg_empty"
+        android:gravity="center"
+        android:text=""
+        android:visibility="gone" />
+</LinearLayout>

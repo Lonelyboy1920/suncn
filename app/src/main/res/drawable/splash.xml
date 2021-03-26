@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@+id/splash_bg">
+        <bitmap android:src="@mipmap/splash_bg" />
+    </item>
+    <item
+        android:id="@+id/splash_center"
+        android:gravity="top|center_horizontal"
+        android:top="80dp">
+        <bitmap android:src="@mipmap/splash_top" />
+    </item>
+    <item
+        android:id="@+id/splash_bottom"
+        android:bottom="40dp"
+        android:gravity="bottom|center_horizontal">
+        <bitmap android:src="@mipmap/splash_bottom" />
+    </item>
+</layer-list>

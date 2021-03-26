@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="@dimen/dimen_margin_16"
+        android:layout_marginRight="@dimen/dimen_margin_16"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/ic_order_shadow"
+        >
+
+        <TextView
+            android:id="@+id/tv_item_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:maxWidth="300dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="5dp"
+            android:textColor="@color/colorTextUnFocused"
+            />
+
+        <!--<TextView-->
+            <!--android:id="@+id/tv_item_status"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_toRightOf="@+id/tv_item_title"-->
+            <!--android:layout_alignBottom="@+id/tv_item_title"-->
+            <!--android:background="@drawable/ic_order_status"-->
+            <!--android:textSize="8sp"-->
+            <!--android:paddingLeft="5dp"-->
+            <!--android:paddingRight="5dp"-->
+            <!--android:paddingTop="2dp"-->
+            <!--android:paddingBottom="2dp"-->
+            <!--android:textColor="@color/colorDividerLine"-->
+            <!--android:layout_marginLeft="5dp"-->
+            <!--android:visibility="gone"-->
+            <!--/>-->
+
+        <TextView
+            android:id="@+id/tv_item_info"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_item_title"
+            android:layout_alignStart="@+id/tv_item_title"
+            android:textColor="@color/colorTextUnFocused"
+            android:textSize="12sp"
+            android:layout_marginTop="3dp"
+            />
+
+        <ImageView
+            android:id="@+id/iv_item_line"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_below="@+id/tv_item_info"
+            android:background="@color/colorLine"
+            android:layout_marginTop="5dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            />
+
+        <TextView
+            android:id="@+id/tv_item_content"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_below="@+id/iv_item_line"
+            android:layout_marginTop="15dp"
+            android:textColor="@color/colorTextUnFocused"
+            android:maxLines="3"
+            android:ellipsize="end"
+            android:layout_marginBottom="20dp"
+            />
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/tv_item_unread"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:background="@drawable/ic_order_unread"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="10dp"
+        android:layout_marginTop="3dp"
+        android:text="未读"
+        android:textSize="8sp"
+        android:textColor="@color/colorWhite"
+        android:gravity="center"
+        android:visibility="gone"
+        />
+
+</RelativeLayout>

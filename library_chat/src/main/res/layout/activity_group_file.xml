@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorActivityBackground">
+
+    <include
+        android:id="@+id/view_gf_title"
+        layout="@layout/title_bar"/>
+
+    <com.baoyz.swipemenulistview.SwipeMenuListView
+        android:id="@+id/lv_gf_list"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+</LinearLayout>

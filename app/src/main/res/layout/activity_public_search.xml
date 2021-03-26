@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/main_bg"
+    android:orientation="vertical">
+
+    <include layout="@layout/view_head_white" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/ll_btn"
+        android:layout_below="@+id/rl_head">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:orientation="vertical">
+
+            <com.suncn.ihold_zxztc.view.MenuItemEditLayout
+                android:id="@+id/tv_year"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:label="年份"
+                app:show_arrow="true"
+                app:show_line="true" />
+
+            <com.suncn.ihold_zxztc.view.MenuItemEditLayout
+                android:id="@+id/tv_state"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:label="状态"
+                app:show_arrow="true"
+                app:show_line="true" />
+
+            <com.suncn.ihold_zxztc.view.MenuItemEditLayout
+                android:id="@+id/tv_kwtype"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:label="刊物类型"
+                app:show_arrow="true"
+                app:show_line="true" />
+
+            <com.suncn.ihold_zxztc.view.MenuItemEditLayout
+                android:id="@+id/tv_pstype"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:label="批示类型"
+                app:show_arrow="true"
+                app:show_line="true" />
+
+            <com.suncn.ihold_zxztc.view.MenuItemEditLayout
+                android:id="@+id/tv_fyrtype"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:label="反映人类型"
+                app:show_arrow="true"
+                app:show_line="true" />
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="@color/white"
+                android:orientation="vertical"
+                android:padding="10dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="5dp"
+                    android:text="反映人" />
+
+                <EditText
+                    android:id="@+id/et_fyr"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/corners_edit_source"
+                    android:hint="请输入反映人"
+                    android:minLines="2"
+                    android:padding="5dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="5dp"
+                    android:text="信息标题" />
+
+                <EditText
+                    android:id="@+id/et_title"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/corners_edit_source"
+                    android:hint="请输入信息标题"
+                    android:minLines="2"
+                    android:padding="5dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="5dp"
+                    android:text="内容" />
+
+                <EditText
+                    android:id="@+id/et_content"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/corners_edit_source"
+                    android:hint="请输入内容"
+                    android:minLines="2"
+                    android:padding="5dp" />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+
+    <LinearLayout
+        android:id="@+id/ll_btn"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="10dp">
+
+        <TextView
+            android:id="@+id/tv_confirm"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_weight="1"
+            android:background="@drawable/shape_bg_red_r15"
+            android:gravity="center"
+            android:text="查询"
+            android:textColor="@color/white" />
+
+        <TextView
+            android:id="@+id/tv_clear"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_weight="1"
+            android:background="@drawable/shape_bg_gray_r15"
+            android:gravity="center"
+            android:text="重置"
+            android:textColor="@color/font_title" />
+    </LinearLayout>
+</RelativeLayout>

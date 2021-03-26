@@ -1,0 +1,20 @@
+<resources>
+    <string name="app_name">library_GIFrame</string>
+    <string name="volley_server_down">服务器链接超时，请稍后再试！</string>
+    <string name="volley_server_error">服务器异常，请稍后再试！</string>
+    <string name="volley_no_internet">网络异常，请检查！</string>
+    <string name="volley_host_error">无法连接到服务器，请检查服务器配置！</string>
+    <string name="volley_error">请求异常</string>
+    <string name="data_error">数据返回异常！</string>
+
+
+    <string name="customactivityoncrash_error_activity_error_occurred_explanation">发生意外错误。\n抱歉，给您带来不便。</string>
+    <string name="customactivityoncrash_error_activity_restart_app">重新启动</string>
+    <string name="customactivityoncrash_error_activity_close_app">关闭程序</string>
+    <string name="customactivityoncrash_error_activity_error_details">错误日志</string>
+    <string name="customactivityoncrash_error_activity_error_details_title">错误详情</string>
+    <string name="customactivityoncrash_error_activity_error_details_close">关闭</string>
+    <string name="customactivityoncrash_error_activity_error_details_copy">复制日志</string>
+    <string name="customactivityoncrash_error_activity_error_details_copied">复制日志</string>
+    <string name="customactivityoncrash_error_activity_error_details_clipboard_label">错误信息</string>
+</resources>

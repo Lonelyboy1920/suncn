@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <include layout="@layout/view_head_white" />
+
+    <LinearLayout
+        android:id="@+id/ll_search_bt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginBottom="5dp"
+        android:background="@drawable/shape_et_search_bg_gray"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:visibility="visible">
+
+        <com.gavin.giframe.widget.GITextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="3dp"
+            android:text="@string/font_search"
+            android:textColor="@color/font_source"
+            android:textSize="@dimen/font_normal" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <com.suncn.ihold_zxztc.view.ClearEditText
+                android:id="@+id/et_search_mem"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@null"
+                android:gravity="center_vertical"
+                android:hint="@string/string_please_enter_search_keywords"
+                android:imeOptions="actionSearch"
+                android:padding="5dp"
+                android:singleLine="true"
+                android:textColor="@color/font_title"
+                android:textColorHint="@color/font_source"
+                android:textSize="14sp" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <com.suncn.ihold_zxztc.view.MyTabLayout
+        android:id="@+id/tabLayout"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:background="@color/white"
+        app:tabIndicatorColor="@color/view_head_bg"
+        app:tabIndicatorHeight="1dp"
+        app:tabMode="fixed"
+        app:tabPaddingBottom="-1dp"
+        app:tabPaddingEnd="-1dp"
+        app:tabPaddingStart="-1dp"
+        app:tabPaddingTop="-1dp"
+        app:tabSelectedTextColor="@color/view_head_bg"
+        app:tabTextAppearance="@style/style_tabLayoutText"
+        app:tabTextColor="#777777" />
+
+    <androidx.viewpager.widget.ViewPager
+        android:id="@+id/viewPager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="visible" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbarStyle="outsideOverlay" />
+</LinearLayout>

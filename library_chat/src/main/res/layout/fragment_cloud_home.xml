@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include
+        android:id="@+id/view_cloud_title"
+        layout="@layout/title_bar"/>
+
+    <include
+        android:id="@+id/view_cloud_person"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        layout="@layout/item_cloud"/>
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/colorLine"
+        />
+
+    <include
+        android:id="@+id/view_cloud_company"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        layout="@layout/item_cloud"/>
+
+    <ImageView
+        android:id="@+id/iv_cloud_line"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/colorLine"
+        />
+
+</LinearLayout>

@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--本地文件存放路径-->
+    <string-array name="folder_name" translatable="false">
+        <item>消息文件</item>
+        <item>图片</item>
+        <item>应用文件</item>
+        <item>临时文件</item>
+        <item>语音文件</item>
+        <item>小视频</item>
+        <item>表情</item>
+        <item>收藏</item>
+        <item>头像</item>
+        <item>云盘</item>
+        <item>升级</item>
+    </string-array>
+
+    <string-array name="im_chat_function_item_info">
+        <!--<item>签收消息</item>-->
+        <item>拍照</item>
+        <item>图片</item>
+        <item>文件</item>
+        <item>小视频</item>
+        <!--<item>语音</item>-->
+        <!--<item>视频</item>-->
+        <!--<item>退出签收消息</item>-->
+        <!--<item>位置</item>-->
+        <item>投票</item>
+        <!--<item>发送名片</item>-->
+        <!--<item>我的收藏</item>-->
+    </string-array>
+
+    <string-array name="smiley_array" translatable="false">
+        <item>"/:wx"</item>
+        <item>"/:dx"</item>
+        <item>"/:ka"</item>
+        <item>"/:tp"</item>
+        <item>"/:cy"</item>
+        <item>"/:hx"</item>
+        <item>"/:pz"</item>
+        <item>"/:bx"</item>
+        <item>"/:sq"</item>
+        <item>"/:fn"</item>
+        <item>"/:wq"</item>
+        <item>"/:ng"</item>
+        <item>"/:lb"</item>
+        <item>"/:tk"</item>
+        <item>"/:jiong"</item>
+        <item>"/:sm"</item>
+        <item>"/:tu"</item>
+        <item>"/:heix"</item>
+        <item>"/:han"</item>
+        <item>"/:kh"</item>
+        <item>"/:hj"</item>
+        <item>"/:yx"</item>
+        <item>"/:kb"</item>
+        <item>"/:ot"</item>
+        <item>"/:bk"</item>
+        <item>"/:zj"</item>
+        <item>"/:xu"</item>
+        <item>"/:kl"</item>
+        <item>"/:yw"</item>
+        <item>"/:sj"</item>
+        <item>"/:se"</item>
+        <item>"/:tq"</item>
+        <item>"/:aw"</item>
+        <item>"/:sb"</item>
+        <item>"/:bz"</item>
+        <item>"/:tx"</item>
+        <item>"/:fh"</item>
+        <item>"/:dm"</item>
+        <item>"/:kx"</item>
+        <item>"/:lt"</item>
+        <item>"/:kun"</item>
+        <item>"/:shuai"</item>
+        <item>"/:ax"</item>
+        <item>"/:xs"</item>
+        <item>"/:hua"</item>
+        <item>"/:dg"</item>
+        <item>"/:lw"</item>
+        <item>"/:ch"</item>
+        <item>"/:yew"</item>
+        <item>"/:ty"</item>
+        <item>"/:kf"</item>
+        <item>"/:ws"</item>
+        <item>"/:qiang"</item>
+        <item>"/:ruo"</item>
+        <item>"/:sl"</item>
+        <item>"/:ok"</item>
+        <item>"/:rmb"</item>
+        <item>"/:yy"</item>
+    </string-array>
+</resources>

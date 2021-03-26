@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include layout="@layout/view_head_white" />
+
+    <com.gavin.giframe.widget.GITextView
+        android:id="@+id/tv_username"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:gravity="center_horizontal"
+        android:textColor="@color/font_title"
+        android:textSize="20sp"
+        app:myStyle="3"
+        tools:text="张三" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center_horizontal"
+        android:orientation="vertical">
+
+        <com.gavin.giframe.widget.GITextView
+            android:id="@+id/tv_fingerprint"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:background="@color/white"
+            android:focusable="false"
+            android:foreground="?android:attr/selectableItemBackground"
+            android:text="@string/font_fingerprint"
+            android:textColor="@color/view_head_bg"
+            android:textSize="50sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:background="@color/white"
+            android:foreground="?android:attr/selectableItemBackground"
+            android:text="点击验证指纹"
+            android:textColor="@color/view_head_bg"
+            android:textSize="@dimen/font_small" />
+    </LinearLayout>
+</LinearLayout>

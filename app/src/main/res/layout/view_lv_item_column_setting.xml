@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/rl_info"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="10dp"
+    android:background="@drawable/shape_item_column_normal_bg"
+    android:foreground="?android:attr/selectableItemBackground"
+    android:padding="5dp">
+
+    <LinearLayout
+        android:id="@+id/ll_main"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <com.gavin.giframe.widget.GITextView
+            android:id="@+id/tv_icon"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginRight="5dp"
+            android:gravity="center"
+            android:text="@string/font_add"
+            android:textColor="@color/font_source"
+            android:textSize="@dimen/font_12_dp"
+            app:myStyle="1" />
+
+        <com.gavin.giframe.widget.GITextView
+            android:id="@+id/tv_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:gravity="center"
+            android:maxLines="1"
+            android:paddingTop="3dp"
+            android:paddingBottom="3dp"
+            android:text="名称"
+            android:textColor="@color/font_title"
+            android:textSize="@dimen/font_14_dp"
+            app:myStyle="3" />
+
+    </LinearLayout>
+
+    <com.gavin.giframe.widget.GITextView
+        android:id="@+id/tv_delete"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentRight="true"
+        android:text="@string/font_robot_close"
+        android:textColor="@color/font_source"
+        android:textSize="@dimen/font_8"
+        app:myStyle="1" />
+</RelativeLayout>

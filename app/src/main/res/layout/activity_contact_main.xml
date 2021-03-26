@@ -1,0 +1,122 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:gravity="center_horizontal"
+    android:orientation="vertical">
+
+    <include layout="@layout/view_head_white" />
+
+    <LinearLayout
+        android:id="@+id/ll_search_bt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginBottom="5dp"
+        android:background="@drawable/shape_et_search_bg_gray"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:visibility="gone">
+
+        <com.gavin.giframe.widget.GITextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="3dp"
+            android:text="@string/font_search"
+            android:textColor="@color/font_source"
+            android:textSize="@dimen/font_normal" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <com.suncn.ihold_zxztc.view.ClearEditText
+                android:id="@+id/et_search_bt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@null"
+                android:gravity="center_vertical"
+                android:hint="@string/string_enter_member_name"
+                android:imeOptions="actionSearch"
+                android:padding="5dp"
+                android:singleLine="true"
+                android:textColor="@color/font_title"
+                android:textColorHint="@color/font_source"
+                android:textSize="14sp" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <ListView
+        android:id="@+id/lv_search"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:divider="@color/line_bg_white"
+        android:dividerHeight="0.5dp"
+        android:fadingEdge="none"
+        android:visibility="gone" />
+
+    <ListView
+        android:id="@+id/lv_recent_contact"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:divider="@color/line_bg_white"
+        android:dividerHeight="0.5dp"
+        android:fadingEdge="none"
+        android:visibility="gone" />
+
+    <RelativeLayout
+        android:id="@+id/rl_contact"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:visibility="visible">
+
+        <com.suncn.ihold_zxztc.view.forscrollview.MyScrollExpandableListView
+            android:id="@+id/exListview"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:childDivider="@color/main_bg"
+            android:divider="@color/main_bg"
+            android:dividerHeight="0.5dp"
+            android:fadingEdge="none"
+            android:groupIndicator="@null"
+            android:listSelector="@null"
+            android:overScrollMode="never"
+            android:scrollbarStyle="outsideOverlay" />
+
+        <TextView
+            android:id="@+id/tv_float_group"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:background="@color/main_bg"
+            android:paddingLeft="10dp"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
+            android:text="中共"
+            android:textColor="@color/font_title"
+            android:textSize="@dimen/font_13"
+            android:visibility="gone" />
+
+        <com.suncn.ihold_zxztc.view.MyLetterView
+            android:id="@+id/myLetterView"
+            android:layout_width="20dp"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:padding="5dp"
+            android:visibility="gone" />
+    </RelativeLayout>
+
+    <ImageView
+        android:id="@+id/tv_empty"
+        style="@style/style_iv_empty" />
+</LinearLayout>

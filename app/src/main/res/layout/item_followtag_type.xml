@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:gravity="center_vertical"
+    android:padding="10dp">
+
+    <TextView
+        android:id="@+id/tv_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="所有界别"
+        android:textColor="@color/font_title"
+        android:textSize="@dimen/font_normal" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/string_click_the_tag_to_follow_and_click_again_to_unfollow"
+        android:textColor="#F27D72"
+        android:layout_marginLeft="10dp"
+        android:textSize="@dimen/font_mini" />
+</LinearLayout>

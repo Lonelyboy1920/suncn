@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorActivityBackground"
+    android:orientation="vertical">
+
+    <include
+        android:id="@+id/view_setting_title"
+        layout="@layout/title_bar"/>
+
+    <include
+        android:id="@+id/view_setting_modify_pwd"
+        layout="@layout/item_base_info"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_marginTop="15dp"/>
+
+    <include
+        android:id="@+id/view_setting_msg_remind"
+        layout="@layout/item_base_info"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_marginTop="15dp"/>
+
+    <include
+        android:id="@+id/view_setting_hook"
+        layout="@layout/item_base_info"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_marginTop="15dp"/>
+
+    <include
+        android:id="@+id/view_setting_clear_all_msg"
+        layout="@layout/item_base_info"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_marginTop="15dp"/>
+
+    <include
+        android:id="@+id/view_setting_text_size"
+        layout="@layout/item_base_info"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_marginTop="15dp"/>
+
+    <include
+        android:id="@+id/view_setting_about"
+        layout="@layout/item_base_info"
+        android:layout_width="match_parent"
+        android:layout_height="48dp" />
+
+    <TextView
+        android:id="@+id/tv_setting_logout"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_marginTop="15dp"
+        android:background="@color/colorWhite"
+        android:textColor="@color/colorRed"
+        android:gravity="center"
+        android:text="@string/setting_logout"
+        android:textSize="16sp"/>
+
+</LinearLayout>

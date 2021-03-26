@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/main_bg"
+    android:orientation="vertical">
+
+    <include layout="@layout/view_head_white" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <com.gavin.giframe.widget.GIEditText
+            android:id="@+id/et_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:gravity="top"
+            android:hint="@string/string_please_enter_title"
+            android:inputType=""
+            android:paddingLeft="10dp"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
+            android:textColor="@color/font_title"
+            android:textColorHint="@color/font_hint"
+            android:textSize="@dimen/font_normal" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/repeat_et_line" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:background="@color/white"
+            android:orientation="vertical"
+            android:paddingBottom="10dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="10dp">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/string_body_content"
+                    android:textColor="@color/font_title"
+                    android:textSize="@dimen/font_normal" />
+
+                <com.gavin.giframe.widget.GITextView
+                    android:id="@+id/tv_mike"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:foreground="?android:attr/selectableItemBackground"
+                    android:padding="10dp"
+                    android:text="@string/font_mike"
+                    android:textColor="@color/font_content"
+                    android:textSize="@dimen/font_medium" />
+            </LinearLayout>
+
+            <com.gavin.giframe.widget.GIEditText
+                android:id="@+id/et_content"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:background="@null"
+                android:fadeScrollbars="false"
+                android:gravity="top"
+                android:hint="@string/string_please_enter_the_text"
+                android:inputType=""
+                android:scrollbars="vertical"
+                android:textColor="@color/font_title"
+                android:textColorHint="@color/font_hint"
+                android:textSize="@dimen/font_normal" />
+        </LinearLayout>
+
+    </LinearLayout>
+</LinearLayout>

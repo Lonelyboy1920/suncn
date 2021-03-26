@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/main_bg"
+    android:gravity="center_horizontal"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginBottom="5dp"
+        android:layout_width="match_parent"
+        android:layout_height="130dp"
+        android:background="@drawable/shape_bg_border_white_r5"
+        android:elevation="3dp"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        android:padding="10dp">
+
+
+        <TextView
+            android:id="@+id/tv_meet_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="十三届三次会议"
+            android:textColor="@color/font_title"
+            android:textSize="@dimen/font_medium" />
+
+        <TextView
+            android:id="@+id/tv_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="8:30发车"
+            android:textColor="@color/font_source"
+            android:textSize="@dimen/font_mini" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical">
+
+            <TextView
+                android:id="@+id/tv_start_place"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:maxLines="2"
+                android:text="贵州"
+                android:textColor="@color/font_content"
+                android:textSize="@dimen/font_15" />
+
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:layout_weight="2"
+                android:gravity="center_vertical">
+
+                <com.gavin.giframe.widget.GITextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/font_dot"
+                    android:textColor="#B3B3B3"
+                    android:textSize="@dimen/font_10" />
+
+                <TextView
+                    android:layout_width="20dp"
+                    android:layout_height="1dp"
+                    android:layout_weight="1"
+                    android:background="#B3B3B3" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">InfoCheckListServlet
+
+                    <com.gavin.giframe.widget.GITextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/font_car"
+                        android:textColor="#B3B3B3"
+                        android:textSize="@dimen/font_huge" />
+                </LinearLayout>
+
+
+                <TextView
+                    android:layout_width="20dp"
+                    android:layout_height="1dp"
+                    android:layout_weight="1"
+                    android:background="#B3B3B3" />
+
+                <com.gavin.giframe.widget.GITextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/font_dot"
+                    android:textColor="#B3B3B3"
+                    android:textSize="@dimen/font_10" />
+            </LinearLayout>
+
+
+            <TextView
+                android:id="@+id/tv_end_place"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:maxLines="2"
+                android:text="贵州皇冠国际大酒店"
+                android:textColor="@color/font_content"
+                android:textSize="@dimen/font_15" />
+
+
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

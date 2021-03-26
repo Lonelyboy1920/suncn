@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#f5f5f5">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@mipmap/changerolebg">
+
+        <com.gavin.giframe.widget.GITextView
+            android:id="@+id/tv_close"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="50dp"
+            android:layout_marginRight="10dp"
+            android:text="@string/font_robot_close"
+            android:textSize="@dimen/font_large" />
+
+        <com.gavin.giframe.widget.RoundImageView
+            android:id="@+id/iv_head"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="60dp"
+            android:src="@mipmap/img_person" />
+
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/iv_head"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp"
+            android:text="张三欢迎您登录使用"
+            android:textColor="@color/font_title"
+            android:textSize="@dimen/font_large" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_title"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="5dp"
+            android:text="请选择您当前的角色身份"
+            android:textColor="@color/font_source"
+            android:textSize="@dimen/font_small" />
+    </RelativeLayout>
+
+    <ListView
+        android:id="@+id/listview"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="2"
+        android:layout_marginTop="20dp"
+        android:divider="@null"
+        android:dividerHeight="10dp"
+        android:listSelector="@android:color/transparent" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="0.5"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/ll_check"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center">
+
+            <com.gavin.giframe.widget.GITextView
+                android:id="@+id/tv_check"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/font_c_uncheck"
+                android:textColor="@color/font_content"
+                android:textSize="@dimen/font_normal" />
+
+            <com.gavin.giframe.widget.GITextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="不再提醒"
+                android:layout_marginLeft="5dp"
+                android:textColor="@color/font_title"
+                android:textSize="@dimen/font_normal" />
+        </LinearLayout>
+
+
+        <ImageView
+            android:id="@+id/iv_confirm"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:src="@mipmap/role_confirm" />
+    </LinearLayout>
+
+</LinearLayout>

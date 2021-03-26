@@ -1,0 +1,761 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.suncn.ihold_zxztc">
+
+
+    <!-- 以下为需要的基本权限，需要自行添加至您的AndroidManifest文件中 start-->
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.BROADCAST_PACKAGE_ADDED" />
+    <uses-permission android:name="android.permission.BROADCAST_PACKAGE_CHANGED" />
+    <uses-permission android:name="android.permission.BROADCAST_PACKAGE_INSTALL" />
+    <uses-permission android:name="android.permission.BROADCAST_PACKAGE_REPLACED" />
+    <uses-permission android:name="android.permission.GET_TASKS" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <!-- 以下为需要的基本权限，需要自行添加至您的AndroidManifest文件中 end-->
+
+    <uses-permission android:name="android.permission.CALL_PHONE" /><!-- 打电话-->
+    <uses-permission android:name="android.permission.USE_FINGERPRINT" /> <!-- 指纹识别 -->
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" /> <!-- 系统弹框 -->
+    <uses-permission android:name="android.permission.CAMERA" /> <!-- 相机 -->
+    <uses-permission android:name="android.permission.RECORD_AUDIO" /> <!-- 录音 -->
+    <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS" />
+    <!--    <uses-permission android:name="android.permission.WAKE_LOCK" /> &lt;!&ndash; 防止设备休眠 &ndash;&gt;-->
+    <uses-permission android:name="android.permission.KILL_BACKGROUND_PROCESSES" />
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
+    <!--    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />-->
+    <uses-permission android:name="android.permission.REQUEST_INSTALL_PACKAGES" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" /> <!-- 这个权限用于进行网络定位 -->
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" /> <!-- 这个权限用于访问GPS定位 -->
+    <!--    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />  &lt;!&ndash; 用于访问wifi网络信息，wifi信息会用于进行网络定位 &ndash;&gt;-->
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" /> <!-- 这个权限用于获取wifi的获取权限，wifi信息会用来进行网络定位 -->
+    <!--    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" /> &lt;!&ndash; 获取运营商信息，用于支持提供运营商信息相关的接口 &ndash;&gt;-->
+    <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE" />
+    <!--    <uses-permission android:name="android.permission.READ_PHONE_STATE" /> &lt;!&ndash; 用于读取手机当前的状态 &ndash;&gt;-->
+    <!--    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" /> &lt;!&ndash; 写入扩展存储，向扩展卡写入数据，用于写入离线定位数据 &ndash;&gt;-->
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <!--    <uses-permission android:name="android.permission.INTERNET" /> &lt;!&ndash; 访问网络，网络定位需要上网 &ndash;&gt;-->
+
+
+    <uses-permission android:name="android.permission.KILL_BACKGROUND_PROCESSES" />
+    <uses-permission
+        android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS"
+        tools:ignore="ProtectedPermissions" />
+
+    <uses-sdk tools:overrideLibrary="com.github.CymChad:BaseRecyclerViewAdapterHelper" />
+    <application
+        android:name="com.suncn.ihold_zxztc.SophixStubApplication"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:largeHeap="true"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        tools:replace="android:allowBackup">
+        <!-- 以下为基本配置信息，需要自行添加至您的AndroidManifest文件中 start-->
+        <service
+            android:name="com.taobao.accs.ChannelService"
+            android:exported="true"
+            android:process=":channel">
+            <intent-filter>
+                <action android:name="com.taobao.accs.intent.action.SERVICE" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="com.taobao.accs.intent.action.ELECTION" />
+            </intent-filter>
+        </service>
+
+        <service
+            android:name="com.taobao.accs.data.MsgDistributeService"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="com.taobao.accs.intent.action.RECEIVE" />
+            </intent-filter>
+        </service>
+
+        <receiver
+            android:name="com.taobao.accs.EventReceiver"
+            android:process=":channel">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.PACKAGE_REMOVED" />
+                <data android:scheme="package" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.USER_PRESENT" />
+            </intent-filter>
+        </receiver>
+
+        <receiver
+            android:name="com.taobao.accs.ServiceReceiver"
+            android:process=":channel">
+            <intent-filter>
+                <action android:name="com.taobao.accs.intent.action.COMMAND" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="com.taobao.accs.intent.action.START_FROM_AGOO" />
+            </intent-filter>
+        </receiver>
+
+        <service
+            android:name="com.taobao.accs.internal.AccsJobService"
+            android:permission="android.permission.BIND_JOB_SERVICE"
+            android:process=":channel" />
+
+        <service
+            android:name="com.taobao.accs.ChannelService$KernelService"
+            android:process=":channel" />
+
+        <service
+            android:name="org.android.agoo.accs.AgooService"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="com.taobao.accs.intent.action.RECEIVE" />
+            </intent-filter>
+        </service>
+
+        <service
+            android:name="com.umeng.message.UmengIntentService"
+            android:exported="true"
+            android:process=":channel">
+            <intent-filter>
+                <action android:name="org.agoo.android.intent.action.RECEIVE" />
+            </intent-filter>
+        </service>
+
+        <service
+            android:name="com.umeng.message.XiaomiIntentService"
+            android:exported="true"
+            android:process=":channel">
+            <intent-filter>
+                <action android:name="org.agoo.android.intent.action.RECEIVE" />
+            </intent-filter>
+        </service>
+
+        <receiver
+            android:name="com.taobao.agoo.AgooCommondReceiver"
+            android:exported="true"
+            android:process=":channel">
+            <intent-filter>
+                <action android:name="${applicationId}.intent.action.COMMAND" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.PACKAGE_REMOVED" />
+                <data android:scheme="package" />
+            </intent-filter>
+        </receiver>
+
+        <service
+            android:name="com.umeng.message.UmengMessageIntentReceiverService"
+            android:exported="true"
+            android:process=":channel">
+            <intent-filter>
+                <action android:name="org.android.agoo.client.MessageReceiverService" />
+            </intent-filter>
+        </service>
+
+        <receiver
+            android:name="com.umeng.message.NotificationProxyBroadcastReceiver"
+            android:exported="false" />
+
+        <service
+            android:name="com.umeng.message.UmengMessageCallbackHandlerService"
+            android:exported="false"
+            android:permission="android.permission.BIND_JOB_SERVICE">
+            <intent-filter>
+                <action android:name="com.umeng.messge.registercallback.action" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="com.umeng.message.enablecallback.action" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="com.umeng.message.disablecallback.action" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="com.umeng.message.message.handler.action" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="com.umeng.message.message.sendmessage.action" />
+            </intent-filter>
+        </service>
+        <service android:name="com.qd.longchat.service.QDNotificationService" />
+        <service
+            android:name="com.umeng.message.UmengDownloadResourceService"
+            android:exported="false"
+            android:permission="android.permission.BIND_JOB_SERVICE" />
+
+        <provider
+            android:name="com.umeng.message.provider.MessageProvider"
+            android:authorities="${applicationId}.umeng.message"
+            android:exported="false">
+            <grant-uri-permission android:pathPattern=".*" />
+        </provider>
+        <!-- 以下为基本配置信息，需要自行添加至您的AndroidManifest文件中 end-->
+
+        <!--魅族push应用定义消息receiver声明 -->
+        <receiver android:name="${applicationId}.MeizuTestReceiver">
+            <intent-filter>
+                <!-- 接收push消息 -->
+                <action android:name="com.meizu.flyme.push.intent.MESSAGE" />
+                <!-- 接收register消息 -->
+                <action android:name="com.meizu.flyme.push.intent.REGISTER.FEEDBACK" />
+                <!-- 接收unregister消息-->
+                <action android:name="com.meizu.flyme.push.intent.UNREGISTER.FEEDBACK" />
+                <!-- 兼容低版本Flyme3推送服务配置 -->
+                <action android:name="com.meizu.c2dm.intent.REGISTRATION" />
+                <action android:name="com.meizu.c2dm.intent.RECEIVE" />
+
+                <category android:name="${applicationId}"></category>
+            </intent-filter>
+        </receiver>
+
+        <meta-data
+            android:name="com.huawei.hms.client.appid"
+            android:value="appid=100402115" />
+
+        <meta-data
+            android:name="MTA_CHANNEL"
+            android:value="${MTA_CHANNEL_VALUE}" />
+
+        <meta-data
+            android:name="com.taobao.android.hotfix.IDSECRET"
+            android:value="@string/sophix_AppId" />
+
+        <meta-data
+            android:name="com.taobao.android.hotfix.APPSECRET"
+            android:value="@string/sophix_AppSecret" />
+
+        <meta-data
+            android:name="com.taobao.android.hotfix.RSASECRET"
+            android:value="@string/sophix_RSA" />
+
+        <service
+            android:name="com.baidu.location.f"
+            android:enabled="true"
+            android:permission=""
+            android:process=":remote">
+            <intent-filter>
+                <action android:name="com.baidu.location.service_v2.2" />
+            </intent-filter>
+        </service>
+
+        <activity
+            android:name=".activity.SplashActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:theme="@style/theme_splash">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".activity.SplashWebViewActivity"
+            android:label="H5启动页"
+            android:screenOrientation="portrait"
+            android:theme="@style/theme_fullScreen" />
+        <activity
+            android:name=".activity.LoginActivity"
+            android:label="登陆"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.ForgetPwdActivity"
+            android:label="忘记密码"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.MainActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden"
+            android:label="主界面"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".activity.my.InfoActivity"
+            android:label="个人信息"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize|stateHidden" />
+        <activity
+            android:name=".activity.my.ModifyPwdActivity"
+            android:label="修改密码"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan|stateHidden" />
+        <activity
+            android:name=".activity.my.FeedBackActivity"
+            android:label="意见反馈"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize|stateHidden" />
+        <activity
+            android:name=".activity.global.WebViewActivity"
+            android:label="Webview"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".activity.hot.NewsDetailActivity"
+            android:label="新闻详情"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize|stateAlwaysHidden|stateHidden">
+            <intent-filter>
+                <action android:name="${applicationId}.NewsDetailActivity" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".activity.my.CheckFingerActivity"
+            android:screenOrientation="portrait" />
+        <activity android:name=".activity.application.meeting.QRCodeSignInActivity">
+            <intent-filter>
+                <action android:name="com.suncn.ihold_zxztc.activity.application.meeting.qrcodesine.action.DYNAMIC_OPEN" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".activity.my.MyActivity"
+            android:label="我的"
+            android:screenOrientation="portrait">
+            <!--<intent-filter>-->
+            <!--<action android:name="${applicationId}.MyActivity" />-->
+
+            <!--<category android:name="android.intent.category.DEFAULT" />-->
+            <!--</intent-filter>-->
+        </activity>
+        <activity
+            android:name=".activity.hot.RobotActivity"
+            android:label="机器人"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name=".activity.hot.ColumnSettingActivity"
+            android:label="栏目设置"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.circle.Circle_AddDynamicActivity"
+            android:label="圈子发布动态"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan|stateHidden">
+            <intent-filter>
+                <action android:name="com.suncn.ihold_zxztc.activity.circle.action.DYNAMIC_OPEN" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".activity.circle.CirclePersonPageActivity"
+            android:label="圈子个人主页"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.circle.Circle_FocusListActivity"
+            android:label="我的关注/推荐关注"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.circle.Circle_DetailActivity"
+            android:label="圈子详情"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize|stateAlwaysHidden|stateHidden" />
+        <activity
+            android:name=".activity.global.ShowBigImgActivity"
+            android:label="图片查看"
+            android:screenOrientation="portrait"
+            android:theme="@style/theme_fullScreen" />
+        <activity
+            android:name=".activity.duty.MemberDuty_ScoreDetailActivity"
+            android:label="履职得分情况"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.duty.MemberDuty_MainActivity"
+            android:label="履职"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.duty.MemberDuty_RankListActivity"
+            android:label="履职排名"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.duty.MemberDuty_FeedBackActivity"
+            android:label="提交履职反馈"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.my.CollectionListActivity"
+            android:label="我的收藏"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.global.OverSearchListActivity"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="com.suncn.ihold_zxztc.activity.global.action.DYNAMIC_OPEN" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".activity.application.proposal.Proposal_MainActivity"
+            android:label="政协提案列表"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.application.proposal.Proposal_JoinSupportListActivity"
+            android:label="联名人、附议人列表"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.application.proposal.Proposal_AddActivity"
+            android:label="政协提案提交"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize|stateHidden" />
+        <activity
+            android:name=".activity.application.proposal.Choose_UnitActivity"
+            android:label="建议承办单位"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan|stateHidden" />
+        <activity
+            android:name=".activity.application.proposal.Choose_JoinMemActivity"
+            android:label="联名委员"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan|stateHidden" />
+        <activity
+            android:name=".activity.application.proposal.Proposal_JoinAffirmActivity"
+            android:label="联名、附议提交"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan|stateHidden" />
+        <activity
+            android:name=".activity.application.proposal.SimilarProposalsActivity"
+            android:label="相似政协提案列表"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.application.proposal.Proposal_DetailActivity"
+            android:label="政协提案详情"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.application.proposal.Proposal_PublicSearchActivity"
+            android:label="公示提案查询"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan|stateHidden" />
+        <activity
+            android:name=".activity.application.proposal.Proposal_TrackListActivity"
+            android:label="提案追踪"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan|stateHidden" />
+
+        <activity
+            android:name=".activity.application.proposal.Proposal_AuditListActivity"
+            android:label="提案审核列表"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".activity.application.proposal.ProposalManagerListActivity"
+            android:label="提案审核列表"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".activity.application.proposal.ProposalSearchActivity"
+            android:label="提案查询"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize|stateHidden" />
+        <activity
+            android:name=".activity.application.proposal.ProposalSearchResultListActivity"
+            android:label="提案查询结果"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize|stateHidden" />
+        <activity
+            android:name=".activity.application.proposal.ProposalClassificationActivity"
+            android:label="提案分类"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan|stateHidden" />
+        <activity
+            android:name=".activity.application.proposal.Proposal_AuditActivity"
+            android:label="提案审核操作"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize|stateHidden" />
+        <activity
+            android:name=".activity.application.proposal.Proposal_FeedbackActivity"
+            android:label="委员反馈提案"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize|stateHidden" />
+        <activity
+            android:name=".activity.application.publicopinion.PublicOpinion_MainActivity"
+            android:label="社情民意列表"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan|stateHidden" />
+        <activity
+            android:name=".activity.application.publicopinion.PublicOpinion_MoreActivity"
+            android:label="更多刊物"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan|stateHidden" />
+        <activity
+            android:name=".activity.application.publicopinion.PublicOpinion_AddActivity"
+            android:label="社情民意提交"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize|stateHidden" />
+        <activity
+            android:name=".activity.application.meeting.MeetAct_MainActivity"
+            android:label="我的会议、活动列表"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.application.meeting.MeetAct_MangerListActivity"
+            android:label="我的会议、活动管理列表"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.application.meeting.MeetSpeakOpinion_MangerListActivity"
+            android:label="会议发言管理"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.application.meeting.MeetSpeakOpinion_CheckActivity"
+            android:label="会议发言、社情民意审核"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.application.meeting.MeetAct_SignUpActivity"
+            android:label="会议活动签到/修改参与状态"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan|stateHidden" />
+        <activity
+            android:name=".activity.global.FileBrowserActivity"
+            android:label="文件选择"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.application.meeting.MeetAct_DetailActivity"
+            android:label="会议活动详情"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.application.meeting.Activity_ResultActivity"
+            android:label="活动成果列表页面"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.application.meeting.Meet_ChildListActivity"
+            android:label="次会列表"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.application.meeting.MeetAct_AuditLeaveActivity"
+            android:label="请假审核"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.application.meeting.MeetSpeak_MainActivity"
+            android:label="会议发言列表"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.application.meeting.MeetSpeak_AddActivity"
+            android:label="会议发言提交"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan|stateHidden" />
+        <activity
+            android:name=".activity.application.meeting.MeetSpeak_NoticeListActivity"
+            android:label="会议发言征集通知列表"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.application.theme.Theme_ListActivity"
+            android:label="更多主题议政"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan|stateHidden" />
+        <activity
+            android:name=".activity.application.theme.Theme_MainActivity"
+            android:label="主题议政列表"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.application.meeting.SignInActivity"
+            android:label="定位签到"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.application.meeting.SignInResultActivity"
+            android:label="定位签到结果"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.my.SettingActivity"
+            android:label="设置"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.my.ChangeSkinActivity"
+            android:label="主题换肤"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.message.Contact_DetailActivity"
+            android:label="委员详情"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan|stateHidden" />
+        <activity
+            android:name=".activity.message.Contact_MainActivity"
+            android:label="通讯录/委员信息/选择人员"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".activity.message.Chat_AddRoomActivity"
+            android:label="创建群组、群名称、群公告修改"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan|stateHidden" />
+        <activity
+            android:name=".activity.message.Message_RemindActivity"
+            android:label="消息提醒列表"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan|stateHidden" />
+        <activity
+            android:name=".activity.message.Contact_TypeListActivity"
+            android:label="党派界别专委会分类下的通讯录（沟通）"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan|stateHidden" />
+        <activity
+            android:name=".activity.message.Message_NoticeActivity"
+            android:label="通知公告"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.application.proposal.Proposal_DelayAuditActivity"
+            android:label="延期审核"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan|stateHidden" />
+        <activity
+            android:name=".activity.application.proposal.Proposal_DealActivity"
+            android:label="提案，社情民意的办理"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan|stateHidden" />
+        <activity
+            android:name=".activity.application.proposal.ProposalHandlerListActivity"
+            android:label="提案交办列表"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan|stateHidden" />
+        <activity
+            android:name=".activity.application.proposal.Proposal_HandleActivity"
+            android:label="提案交办操作"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan|stateHidden" />
+        <activity
+            android:name=".activity.application.proposal.Proposal_DelayApplyActivity"
+            android:label="提案延期申请"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan|stateHidden" />
+        <activity
+            android:name=".activity.application.meeting.QRCodeCheckActivity"
+            android:label="扫描签到"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="com.suncn.ihold_zxztc.activity.application.meeting.action.DYNAMIC_OPEN" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".activity.application.meeting.SignConfirmActivity"
+            android:label="扫描确认"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".activity.plenarymeeting.PlenaryMeetingGuideActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.plenarymeeting.HYRCListActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.plenarymeeting.RoomArrangeActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.plenarymeeting.MenuListActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.plenarymeeting.RideArrangeListActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.ChooseListActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.hot.UnitDetailActivty"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.hot.UnitListActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.ChangeRoleActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.MipushTestActivity"
+            android:exported="true"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:theme="@style/theme_splash" />
+        <activity
+            android:name=".activity.global.FileListActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.circle.FollowSettingActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.SplashGuideActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.circle.ReminNoticeListActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.global.ShowVideoActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden"
+            android:hardwareAccelerated="true"
+            android:theme="@style/theme_fullScreen" />
+        <activity
+            android:name=".activity.H5WebViewActivity"
+            android:label="送礼等H5"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.study.StudyActivity"
+            android:label="学习园地"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.study.VideoWebViewActivity"
+            android:label="学习园地视频播放" />
+        <activity
+            android:name=".activity.GiftWebViewActivity"
+            android:label="积分祝福" />
+        <activity
+            android:name=".activity.hot.IntegralWebViewActivity"
+            android:label="积分" />
+        <activity
+            android:name=".activity.SplashVideoActivity"
+            android:label="视频启动页"
+            android:theme="@style/theme_fullScreen" />
+        <activity
+            android:name=".activity.my.ChangeFontSizeActivity"
+            android:label="设置字体大小" />
+        <activity
+            android:name=".activity.application.meeting.MeetActApplyLeaveActivity"
+            android:label="会议活动请假申请" />
+        <activity
+            android:name=".activity.application.proposal.NewProposalAddActivity"
+            android:label="政协提案提交"
+            android:windowSoftInputMode="adjustResize|stateHidden" />
+        <activity
+            android:name=".activity.application.publicopinion.PublicOpinion_ListActivity"
+            android:label="社情民意列表" />
+        <activity
+            android:name=".activity.application.proposal.ProposalMemberFeedbackActivity"
+            android:label="委员反馈提案"
+            android:windowSoftInputMode="adjustResize|stateHidden" />
+        <activity
+            android:name=".activity.application.publicopinion.PublicOpinion_ManageListActivity"
+            android:label="社情民意列表机关" />
+        <activity
+            android:name=".activity.application.publicopinion.PublicSearchActivity"
+            android:label="社情民意机关高级搜索" />
+        <activity
+            android:name=".activity.application.publicopinion.PublicSearchResultListActivity"
+            android:label="社情民意机关高级搜索列表" />
+        <activity android:name=".activity.ConfirmLoginActivity" />
+        <activity
+            android:name=".activity.netmeet.NetMeetListActivity"
+            android:label="视频会议列表"
+            android:windowSoftInputMode="stateAlwaysHidden" />
+        <activity
+            android:name=".activity.netmeet.MeetAddActivity"
+            android:label="新增视频会议" />
+        <activity
+            android:name=".activity.netmeet.NetMeetDetailActivity"
+            android:label="视频会议详情" />
+        <activity
+            android:name=".hst.MainMeetActivity"
+            android:label="视频会议主界面" />
+        <activity
+            android:name=".hst.MeetUserListActivity"
+            android:label="视频会议参会人"
+            android:theme="@style/MyDialogStyleBottom" />
+        <activity
+            android:name=".activity.application.publicopinion.SimilarOpinionActivity"
+            android:label="相似社情民意" />
+    </application>
+</manifest>

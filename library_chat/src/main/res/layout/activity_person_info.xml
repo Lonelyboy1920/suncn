@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/main_bg"
+    android:orientation="vertical">
+
+    <include
+        android:id="@+id/view_pi_title"
+        layout="@layout/title_bar"/>
+
+    <RelativeLayout
+        android:id="@+id/rl_pi_user"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:background="@color/colorWhite">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/iv_pi_icon"
+            android:layout_width="@dimen/dimen_big_photo_size"
+            android:layout_height="@dimen/dimen_big_photo_size"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="@dimen/dimen_margin_16"/>
+
+        <TextView
+            android:id="@+id/tv_pi_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/colorBlack"
+            android:textSize="16sp"
+            android:layout_toEndOf="@+id/iv_pi_icon"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="10dp" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@mipmap/im_arrow_right"
+            android:layout_centerVertical="true"
+            android:layout_alignParentEnd="true"
+            android:visibility="gone"
+            android:layout_marginEnd="@dimen/dimen_margin_16"/>
+    </RelativeLayout>
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="15dp" />
+
+    <include
+        android:id="@+id/view_pi_top"
+        layout="@layout/item_base_info"/>
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="15dp" />
+
+    <include
+        android:id="@+id/view_pi_history"
+        layout="@layout/item_base_info"/>
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="15dp" />
+
+    <include
+        android:id="@+id/view_pi_clear"
+        layout="@layout/item_base_info"/>
+</LinearLayout>

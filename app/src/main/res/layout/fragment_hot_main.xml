@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:gravity="top|center"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/rl_top"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/view_head_bg">
+
+        <View
+            android:id="@+id/view_place"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/statusBar_height" />
+
+        <RelativeLayout
+            android:layout_below="@id/view_place"
+            android:id="@+id/ll_search"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/layout_height_head"
+            android:gravity="top"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/iv_home_top"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10dp"
+                android:contentDescription="TODO"
+                android:src="@mipmap/img_home_top" />
+
+            <LinearLayout
+                android:id="@+id/ll_integral"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_toLeftOf="@id/tv_scan"
+                android:gravity="center"
+                android:paddingRight="10dp">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="积"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/font_8"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="分"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/font_8"
+                        android:textStyle="bold" />
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/tv_integral"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="3dp"
+                    android:text=""
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/font_normal"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+
+            <com.gavin.giframe.widget.GITextView
+                android:id="@+id/tv_robot"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_toLeftOf="@id/tv_search"
+                android:background="?android:attr/selectableItemBackground"
+                android:gravity="center"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:text="@string/font_robot"
+                android:textColor="@color/white"
+                android:textSize="@dimen/font_huge"
+                android:visibility="gone"
+                app:myStyle="1" />
+
+            <com.gavin.giframe.widget.GITextView
+                android:id="@+id/tv_scan"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_toLeftOf="@id/tv_search"
+                android:gravity="center"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:text="@string/font_scan"
+                android:textColor="@color/white"
+                android:textSize="@dimen/font_normal"
+                android:textStyle="bold" />
+
+            <com.gavin.giframe.widget.GITextView
+                android:id="@+id/tv_search"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_toLeftOf="@id/iv_home_person"
+                android:background="?android:attr/selectableItemBackground"
+                android:gravity="center"
+                android:padding="10dp"
+                android:text="@string/font_search"
+                android:textColor="@color/white"
+                android:textSize="@dimen/font_large"
+                app:myStyle="1"
+                android:visibility="gone"/>
+
+            <com.gavin.giframe.widget.RoundImageView
+                android:id="@+id/iv_home_person"
+                style="@style/style_iv_headPhoto"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:src="@mipmap/img_person" />
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl_head_lab"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/global_tablayout_height"
+        android:gravity="center">
+
+        <skin.support.design.widget.SkinMaterialTabLayout
+            android:id="@+id/tabLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_toLeftOf="@id/tv_setting"
+            android:background="@color/bg_news_tab"
+            app:tabIndicatorColor="@color/view_head_bg"
+            app:tabIndicatorFullWidth="false"
+            app:tabIndicatorHeight="2dp"
+            app:tabMinWidth="20dp"
+            app:tabMode="scrollable"
+            app:tabPaddingEnd="10dp"
+            app:tabPaddingStart="10dp"
+            app:tabSelectedTextColor="@color/view_head_bg"
+            app:tabTextAppearance="@style/style_tabLayoutText"
+            app:tabTextColor="@color/font_content" />
+
+        <com.gavin.giframe.widget.GITextView
+            android:id="@+id/tv_setting"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:background="@color/bg_news_tab"
+            android:foreground="?android:attr/selectableItemBackground"
+            android:gravity="center"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:text="&#xe656;"
+            android:textColor="@color/font_content"
+            android:textSize="@dimen/font_18_dp"
+            app:myStyle="1" />
+    </RelativeLayout>
+
+    <!--必须使用LinearLayout套一层，否则切换fragment会崩溃（引入skeleton后出现的问题）-->
+    <LinearLayout
+        android:id="@+id/ll_skeleton"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <androidx.viewpager.widget.ViewPager
+            android:id="@+id/viewPager"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+        <ImageView
+            android:id="@+id/tv_empty"
+            style="@style/style_iv_empty" />
+    </LinearLayout>
+
+</LinearLayout>

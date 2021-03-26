@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/iv_item_icon"
+        android:layout_width="@dimen/dimen_big_photo_size"
+        android:layout_height="@dimen/dimen_big_photo_size"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="5dp"
+        android:layout_centerVertical="true" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toEndOf="@+id/iv_item_icon"
+        android:layout_toStartOf="@+id/iv_item_more"
+        android:layout_centerVertical="true"
+        android:layout_marginStart="10dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tv_item_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/colorBlack"
+            android:textSize="@dimen/text_view_size_focused"
+            android:singleLine="true"
+            />
+
+        <TextView
+            android:id="@+id/tv_item_info"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/colorTextUnFocused"
+            android:textSize="12sp"
+            android:layout_marginTop="13dp"
+            android:visibility="gone"
+            />
+
+        <ProgressBar
+            android:id="@+id/pb_item_progress"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+            android:layout_marginTop="13dp"
+            android:progress="10"
+            android:max="100"
+            android:visibility="gone"
+            />
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/iv_item_more"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_alignParentEnd="true"
+        android:src="@drawable/ic_more"
+        android:layout_centerVertical="true"
+        android:paddingEnd="@dimen/dimen_margin_16"
+        android:paddingStart="10dp"
+        />
+
+    <TextView
+        android:id="@+id/tv_item_size"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_centerVertical="true"
+        android:layout_marginEnd="10dp"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:visibility="gone"
+        />
+
+
+</RelativeLayout>

@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/transparent">
+
+    <ImageView
+        android:id="@+id/iv_chat_check"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginStart="10dp"
+        android:src="@drawable/ic_round_unselected" />
+
+    <TextView
+        android:id="@+id/tv_chat_msg_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="5dp"
+        android:background="@drawable/bg_msg_time"
+        android:padding="5dp"
+        android:textColor="@color/colorWhite"
+        android:textSize="12sp"
+        android:layout_marginStart="45dp"
+        android:layout_marginEnd="45dp"/>
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/iv_chat_icon"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_alignParentEnd="true"
+        android:layout_below="@+id/tv_chat_msg_time"
+        android:layout_marginEnd="10dp"
+        android:layout_marginTop="10dp" />
+
+    <RelativeLayout
+        android:id="@+id/rl_chat_content_layout"
+        android:layout_width="280dp"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/iv_chat_icon"
+        android:layout_marginEnd="10dp"
+        android:layout_toStartOf="@+id/iv_chat_icon">
+
+        <LinearLayout
+            android:id="@+id/ll_chat_container"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:orientation="vertical" />
+
+        <TextView
+            android:id="@+id/tv_burn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/ll_chat_container"
+            android:layout_marginTop="5dp"
+            android:textSize="9sp"
+            android:textColor="@color/colorWhite"
+            android:text="@string/burn_after_read"
+            android:layout_alignEnd="@+id/ll_chat_container"
+            android:background="@drawable/bg_msg_time"
+            android:padding="3dp"
+            android:visibility="gone"
+            />
+
+        <TextView
+            android:id="@+id/tv_chat_status"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/ll_chat_container"
+            android:layout_marginEnd="3dp"
+            android:layout_toStartOf="@+id/ll_chat_container"
+            android:text="未读"
+            android:textColor="@color/colorBtnBlue"
+            android:textSize="9sp" />
+
+        <com.github.ybq.android.spinkit.SpinKitView
+            android:id="@+id/view_chat_progress"
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="3dp"
+            android:layout_toStartOf="@+id/ll_chat_container"
+            app:SpinKit_Color="@color/colorBlack"
+            app:SpinKit_Style="FadingCircle" />
+
+        <ImageView
+            android:id="@+id/iv_chat_failed"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="3dp"
+            android:layout_toStartOf="@+id/ll_chat_container"
+            android:src="@mipmap/im_msg_send_failed"
+            android:visibility="gone"/>
+
+
+    </RelativeLayout>
+
+
+</RelativeLayout>

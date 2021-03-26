@@ -1,0 +1,346 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/main_bg"
+    android:orientation="vertical">
+
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/layout_appbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <com.google.android.material.appbar.CollapsingToolbarLayout
+            android:id="@+id/ctb"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@mipmap/duty_top_bg"
+            android:fitsSystemWindows="true"
+            app:layout_scrollFlags="scroll|exitUntilCollapsed">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="70dp"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:padding="10dp">
+
+                    <com.gavin.giframe.widget.RoundImageView
+                        android:id="@+id/iv_person_head"
+                        style="@style/style_iv_headPhoto"
+                        android:layout_width="60dp"
+                        android:layout_height="60dp" />
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_weight="1"
+                        android:gravity="center_vertical"
+                        android:orientation="vertical">
+
+                        <com.gavin.giframe.widget.GITextView
+                            android:id="@+id/tv_name"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/font_medium"
+                            app:myStyle="3"
+                            tools:text="张三" />
+
+                        <TextView
+                            android:id="@+id/tv_duty"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="2dp"
+                            android:ellipsize="end"
+                            android:maxLines="2"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/font_mini"
+                            tools:text="第十一届政协委员第十一届政协委员第十一届政协委员" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/ll_score"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        >
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <com.gavin.giframe.widget.GITextView
+                                android:id="@+id/tv_score"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:text=""
+                                android:textColor="@color/white"
+                                android:textSize="30dp"
+                                android:textStyle="bold" />
+
+                            <com.gavin.giframe.widget.GITextView
+                                android:id="@+id/tv_score_type"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:background="@mipmap/dengji_bg_btm"
+                                android:gravity="center_horizontal"
+                                android:paddingTop="9dp"
+                                android:text="string/string_duty_grade"
+                                android:textColor="#7f580c"
+                                android:textSize="12dp" />
+                        </LinearLayout>
+
+                        <com.gavin.giframe.widget.GITextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/font_wenhao"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/font_16_dp" />
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:baselineAligned="false"
+                    android:gravity="center"
+                    android:visibility="gone">
+
+                    <LinearLayout
+                        android:id="@+id/ll_submit_proposal"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <com.gavin.giframe.widget.GITextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="&#xe66a;"
+                            android:textColor="@color/white"
+                            android:textSize="35sp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:text="string/string_submit_proposal"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/font_mini" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/ll_submit_opinion"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <com.gavin.giframe.widget.GITextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="&#xe669;"
+                            android:textColor="@color/white"
+                            android:textSize="35sp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:text="@string/string_reflect_social_opinion"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/font_mini" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/ll_submit_file"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <com.gavin.giframe.widget.GITextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="&#xe66b;"
+                            android:textColor="@color/white"
+                            android:textSize="35sp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:text="@string/string_submit_duty_material"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/font_mini" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/ll_feedback_meet_act"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <com.gavin.giframe.widget.GITextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="&#xe66c;"
+                            android:textColor="@color/white"
+                            android:textSize="35sp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:text="@string/string_feedback_meeting_activity"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/font_mini" />
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+            <!--标题-->
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:paddingTop="30dp"
+                app:contentInsetStart="0dp"
+                app:layout_collapseMode="pin">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:gravity="center_vertical"
+                    android:padding="10dp">
+
+                    <LinearLayout
+                        android:id="@+id/ll_year"
+                        android:layout_width="wrap_content"
+                        android:layout_height="30dp"
+                        android:alpha="0.8"
+                        android:background="@drawable/shape_sessioncode_spinner_bg"
+                        android:foreground="?android:attr/selectableItemBackground"
+                        android:gravity="center"
+                        android:paddingLeft="5dp"
+                        android:paddingTop="2dp"
+                        android:paddingRight="5dp"
+                        android:paddingBottom="2dp">
+
+                        <com.gavin.giframe.widget.GITextView
+                            android:id="@+id/tv_year"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="2019"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/font_14_dp"
+                            android:visibility="visible" />
+
+                        <com.gavin.giframe.widget.GITextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="5dp"
+                            android:gravity="center"
+                            android:text="&#xe66d;"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/font_14_dp"
+                            android:visibility="visible" />
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/tv_title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:text="@string/string_my_duty"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/font_20_dp" />
+
+                    <LinearLayout
+                        android:id="@+id/ll_feedback"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentRight="true"
+                        android:gravity="center_vertical">
+
+                        <com.gavin.giframe.widget.GITextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/font_feedback"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/font_16_dp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="5dp"
+                            android:text="@string/string_feedback"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/font_16_dp" />
+                    </LinearLayout>
+
+                    <com.gavin.giframe.widget.GITextView
+                        android:id="@+id/tv_close"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:paddingLeft="5dp"
+                        android:paddingTop="2dp"
+                        android:paddingRight="5dp"
+                        android:paddingBottom="2dp"
+                        android:text="@string/font_robot_close"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/font_normal"
+                        android:visibility="gone" />
+                </RelativeLayout>
+            </androidx.appcompat.widget.Toolbar>
+        </com.google.android.material.appbar.CollapsingToolbarLayout>
+        <!--选项卡-->
+        <com.suncn.ihold_zxztc.view.MyTabLayout
+            android:id="@+id/tabLayout"
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:background="@color/white"
+            app:tabBackground="@color/transparent"
+            app:tabIndicatorColor="@color/view_head_bg"
+            app:tabIndicatorHeight="0dp"
+            app:tabMode="fixed"
+            app:tabPaddingBottom="-1dp"
+            app:tabPaddingEnd="-1dp"
+            app:tabPaddingStart="-1dp"
+            app:tabPaddingTop="-1dp"
+            app:tabRippleColor="@color/transparent" />
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/nestedScrollView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <androidx.viewpager.widget.ViewPager
+            android:id="@+id/viewPager"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+    </androidx.core.widget.NestedScrollView>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

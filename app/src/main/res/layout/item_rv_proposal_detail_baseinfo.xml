@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <View
+        android:id="@+id/block"
+        android:layout_width="match_parent"
+        android:layout_height="10dp"
+        android:background="@color/main_bg"
+        android:visibility="gone" />
+
+    <LinearLayout
+        android:id="@+id/ll_main"
+        style="@style/style_layout_item">
+
+        <TextView
+            android:id="@+id/tv_tag"
+            style="@style/style_tv_item_left"
+            tools:text="" />
+
+        <TextView
+            android:id="@+id/tv_value"
+            style="@style/style_tv_item_right"
+            android:layout_gravity="center"
+            android:layout_marginRight="10dp"
+            android:layout_weight="1"
+            tools:text="" />
+        <WebView
+            android:id="@+id/webview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone"/>
+
+        <LinearLayout
+            android:id="@+id/ll_count"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/tv_count"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginRight="5dp"
+                android:textColor="@color/font_source"
+                android:textSize="@dimen/font_15"
+                tools:text="" />
+
+            <com.gavin.giframe.widget.GITextView
+                android:id="@+id/tv_arrow"
+                style="@style/style_arrow" />
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

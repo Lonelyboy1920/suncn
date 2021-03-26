@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center_vertical"
+    android:padding="12dp">
+
+    <TextView
+        android:id="@+id/tv_state"
+        android:layout_width="10dp"
+        android:layout_height="10dp"
+        android:background="@drawable/shape_dot_online" />
+
+    <TextView
+        android:id="@+id/tv_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:paddingLeft="10dp"
+        android:text="张三"
+        android:textColor="@color/font_title"
+        android:textSize="@dimen/font_normal" />
+
+    <com.gavin.giframe.widget.GITextView
+        android:id="@+id/tv_audio"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:text="@string/font_audio"
+        android:textColor="@color/font_content"
+        android:textSize="@dimen/font_large" />
+
+    <com.gavin.giframe.widget.GITextView
+        android:id="@+id/tv_video"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:text="@string/font_video"
+        android:textColor="@color/font_source"
+        android:textSize="@dimen/font_large" />
+
+    <TextView
+        android:id="@+id/tv_remove"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/shape_bound_bg_grey"
+        android:paddingLeft="5dp"
+        android:paddingTop="3dp"
+        android:paddingRight="5dp"
+        android:paddingBottom="3dp"
+        android:text="移出"
+        android:textColor="@color/view_head_bg"
+        android:visibility="gone" />
+
+    <TextView
+        android:id="@+id/tv_remind"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/shape_bound_bg_grey"
+        android:paddingLeft="5dp"
+        android:paddingTop="3dp"
+        android:paddingRight="5dp"
+        android:paddingBottom="3dp"
+        android:text="提醒"
+        android:textColor="#137cfc"
+        android:visibility="gone" />
+</LinearLayout>

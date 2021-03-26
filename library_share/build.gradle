@@ -1,0 +1,32 @@
+apply plugin: 'com.android.library'
+
+version = "1.0"//aar的版本
+android {
+
+    compileSdkVersion 27
+    defaultConfig {
+        minSdkVersion 21
+        targetSdkVersion 27
+        versionCode 1
+        versionName "1.0"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility = '1.8'
+        targetCompatibility = '1.8'
+    }
+
+}
+
+dependencies {
+    api fileTree(include: ['*.jar'], dir: 'libs')
+    api 'me.weyye.hipermission:library:1.0.7'
+    api 'com.umeng.umsdk:common:1.5.4'  //APP里友盟推送已引用 --- 本来应该引用2.1.0.jar。
+
+}

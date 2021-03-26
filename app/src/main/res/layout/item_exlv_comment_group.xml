@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:gravity="top"
+        android:orientation="horizontal"
+        android:paddingLeft="10dp"
+        android:paddingTop="10dp"
+        android:paddingRight="10dp">
+
+        <com.gavin.giframe.widget.RoundImageView
+            android:id="@+id/comment_item_logo"
+            style="@style/style_iv_headPhoto"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:scaleType="fitXY" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="6dp"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/comment_item_userName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/font_comment_username"
+                    android:textSize="@dimen/font_small"
+                    tools:text="沐风" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/tv_select"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:background="@drawable/shape_focus_on"
+                        android:paddingLeft="5dp"
+                        android:paddingTop="2dp"
+                        android:paddingRight="5dp"
+                        android:paddingBottom="2dp"
+                        android:text="@string/string_featured"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/font_10"
+                        android:visibility="gone" />
+
+                    <com.suncn.ihold_zxztc.view.ShowAllTextView
+                        android:id="@+id/comment_item_content"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:textColor="@color/font_title"
+                        android:textSize="14sp"
+                        app:myStyle="2"
+                        tools:text="         从前有座山，山里有座庙，庙里有个老和尚" />
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="bottom">
+
+                    <com.gavin.giframe.widget.GITextView
+                        android:id="@+id/comment_item_time"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingTop="10dp"
+                        android:textColor="@color/font_time"
+                        android:textSize="@dimen/font_mini"
+                        app:myStyle="1"
+                        tools:text="1小时前" />
+
+                    <LinearLayout
+                        android:id="@+id/ll_reply"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingTop="10dp"
+                        android:paddingRight="20dp">
+
+                        <com.gavin.giframe.widget.GITextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:text="·"
+                            android:textColor="@color/font_title"
+                            android:textSize="@dimen/font_small"
+                            app:myStyle="1" />
+
+                        <com.gavin.giframe.widget.GITextView
+                            android:id="@+id/tv_reply"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="5dp"
+                            android:text="@string/string_reply"
+                            android:textColor="@color/font_title"
+                            android:textSize="@dimen/font_mini"
+                            app:myStyle="1" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <View
+                    android:id="@+id/view_line"
+                    style="@style/style_line_bg_white"
+                    android:layout_marginTop="10dp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_zan"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:gravity="center_vertical"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp">
+
+                <com.gavin.giframe.widget.GITextView
+                    android:id="@+id/comment_item_delete"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    android:text="@string/font_clear_search"
+                    android:textColor="@color/font_source"
+                    android:textSize="@dimen/font_medium"
+                    android:visibility="gone" />
+
+                <com.gavin.giframe.widget.GITextView
+                    android:id="@+id/comment_item_like"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="5dp"
+                    android:text="@string/font_zan"
+                    android:textColor="@color/font_source"
+                    android:textSize="@dimen/font_medium" />
+
+                <com.gavin.giframe.widget.GITextView
+                    android:id="@+id/tv_zan_count"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/font_source"
+                    android:textSize="@dimen/font_mini"
+                    app:myStyle="1"
+                    tools:text="30" />
+            </LinearLayout>
+        </RelativeLayout>
+    </LinearLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:overScrollMode="never"
+        android:scrollbars="none" />
+</LinearLayout>

@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <include
+        android:id="@+id/view_cg_title"
+        layout="@layout/title_bar" />
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/iv_cg_icon"
+        android:layout_width="@dimen/dimen_large_photo_size"
+        android:layout_height="@dimen/dimen_large_photo_size"
+        android:src="@mipmap/im_recent_group_icon"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/view_cg_title"
+        android:layout_marginTop="50dp" />
+
+    <EditText
+        android:id="@+id/et_cg_input"
+        android:layout_width="220dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/iv_cg_icon"
+        android:layout_centerHorizontal="true"
+        android:hint="@string/create_group_hint"
+        android:gravity="center"
+        android:textSize="14sp"
+        android:maxLength="20"
+        android:layout_marginTop="40dp"
+        android:textColorHint="@color/colorTextUnFocused"
+        android:textColor="@color/colorBlack" />
+
+    <Button
+        android:id="@+id/btn_cg_next"
+        android:layout_width="250dp"
+        android:layout_height="40dp"
+        android:background="@drawable/ic_rounded_rectangle_btn"
+        android:layout_below="@+id/et_cg_input"
+        android:layout_marginTop="40dp"
+        android:layout_centerHorizontal="true"
+        android:textSize="16sp"
+        android:textColor="@color/colorWhite"
+        android:text="@string/create_group_next"
+        />
+
+</RelativeLayout>

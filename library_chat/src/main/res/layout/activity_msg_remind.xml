@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorActivityBackground"
+    android:orientation="vertical">
+
+    <include
+        android:id="@+id/view_remind_title"
+        layout="@layout/title_bar"/>
+
+    <include
+        android:id="@+id/view_remind_sound"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        layout="@layout/item_base_info"
+        android:layout_marginTop="20dp"
+        />
+
+    <include
+        android:id="@+id/view_remind_vibrate"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        layout="@layout/item_base_info"
+        />
+
+</LinearLayout>

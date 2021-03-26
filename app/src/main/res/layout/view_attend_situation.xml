@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/line_bg_white"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/ll_attend_situation"
+        style="@style/style_layout_item"
+        android:layout_marginBottom="1dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/tv_situation_tag"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="参加情况"
+            android:textColor="@color/font_source" />
+
+        <TextView
+            android:id="@+id/tv_situation_value"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawableRight="@mipmap/icon_arrow_list"
+            android:gravity="right"
+            android:hint="请选择请假类型"
+            android:textColor="@color/font_title" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_leave_type"
+        style="@style/style_layout_item"
+        android:layout_marginBottom="1dp"
+        android:gravity="center_vertical">
+
+        <TextView
+            style="@style/style_tv_item_left"
+            android:text="请假类型" />
+
+        <TextView
+            android:id="@+id/tv_leave_type_value"
+            style="@style/style_tv_item_right"
+            android:drawableRight="@mipmap/icon_arrow_list"
+            android:gravity="right"
+            android:hint="请选择请假类型" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_leave_reason"
+        style="@style/style_layout_item"
+        android:gravity="center_vertical">
+
+        <TextView
+            style="@style/style_tv_item_left"
+            android:text="请假原因" />
+
+        <TextView
+            android:id="@+id/et_leave_reason"
+            style="@style/style_tv_item_right"
+            android:text="" />
+    </LinearLayout>
+</LinearLayout>

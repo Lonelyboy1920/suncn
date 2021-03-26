@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorWhite">
+
+    <include
+        android:id="@+id/view_fl_title"
+        layout="@layout/title_bar"/>
+
+    <TextView
+        android:id="@+id/tv_fl_tag"
+        android:layout_below="@+id/view_fl_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="反馈内容"
+        android:textColor="@color/colorBlack"
+        android:layout_marginStart="@dimen/dimen_margin_16"
+        android:layout_marginTop="10dp"
+        />
+
+    <ImageView
+        android:id="@+id/iv_fl_line"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginLeft="@dimen/dimen_margin_16"
+        android:layout_marginRight="@dimen/dimen_margin_16"
+        android:background="@color/colorLine"
+        android:layout_below="@+id/tv_fl_tag"
+        android:layout_marginTop="10dp"
+        />
+
+    <ListView
+        android:id="@+id/lv_fl_list"
+        android:layout_above="@+id/btn_fl_feedback"
+        android:layout_below="@+id/iv_fl_line"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="10dp"
+        android:divider="@null"
+        />
+
+    <Button
+        android:id="@+id/btn_fl_feedback"
+        android:layout_width="match_parent"
+        android:layout_height="37dp"
+        android:layout_marginBottom="10dp"
+        android:layout_marginLeft="@dimen/dimen_margin_16"
+        android:layout_marginRight="@dimen/dimen_margin_16"
+        android:background="@drawable/ic_rounded_rectangle_btn"
+        android:text="@string/im_text_order_feedback"
+        android:textColor="@color/colorWhite"
+        android:textSize="@dimen/text_view_size_focused"
+        android:layout_alignParentBottom="true"
+        />
+
+</RelativeLayout>

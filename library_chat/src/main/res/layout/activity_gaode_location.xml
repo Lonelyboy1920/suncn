@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include
+        android:id="@+id/view_bd_title"
+        layout="@layout/title_bar"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#C7C7C7"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        >
+        <com.qd.longchat.view.QDXEditText
+            android:id="@+id/et_search_location"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true"
+            android:drawableStart="@mipmap/im_icon_search"
+            android:layout_marginRight="3dp"
+            android:layout_marginTop="6dp"
+            android:layout_marginBottom="6dp"
+            android:layout_marginLeft="3dp"
+            android:paddingRight="5dp"
+            android:paddingLeft="5dp"
+            android:hint="@string/location_search"
+            android:lines="1"
+            android:imeOptions="actionSearch"
+            android:singleLine="true"
+            android:textColor="@color/colorTextUnFocused"
+            android:textSize="16sp"
+            android:background="@drawable/view_round_white"/>
+
+    </RelativeLayout>
+
+    <com.amap.api.maps.MapView
+        android:id="@+id/view_map"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="3"
+        />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/view_list"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="2"
+        />
+
+</LinearLayout>

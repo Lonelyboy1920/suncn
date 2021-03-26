@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorActivityBackground"
+    android:orientation="vertical">
+
+    <include
+        android:id="@+id/view_self_title"
+        layout="@layout/title_bar" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:id="@+id/rl_self_info_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/colorWhite"
+                android:layout_marginTop="20dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toEndOf="@+id/iv_item_icon"
+                    android:layout_marginStart="10dp"
+                    android:layout_centerVertical="true"
+                    android:textColor="@color/colorBlack"
+                    android:textSize="16sp"
+                    android:text="@string/self_icon"
+                    />
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/iv_self_icon"
+                    android:layout_width="@dimen/dimen_big_photo_size"
+                    android:layout_height="@dimen/dimen_big_photo_size"
+                    android:layout_toStartOf="@+id/iv_self_arrow"
+                    android:layout_margin="10dp"
+                    />
+
+                <ImageView
+                    android:id="@+id/iv_self_arrow"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginEnd="@dimen/dimen_margin_16"
+                    android:src="@mipmap/im_arrow_right"
+                    android:layout_centerVertical="true"
+                    />
+
+            </RelativeLayout>
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="20dp" />
+
+
+            <include
+                android:id="@+id/view_self_name"
+                layout="@layout/item_base_info"/>
+
+            <include
+                android:id="@+id/view_self_sex"
+                layout="@layout/item_base_info"/>
+
+            <include
+                android:id="@+id/view_self_birthday"
+                layout="@layout/item_base_info"/>
+
+            <include
+                android:id="@+id/view_self_scan_code"
+                layout="@layout/item_base_info"/>
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="20dp" />
+
+            <include
+                android:id="@+id/view_self_dept"
+                layout="@layout/item_base_info"/>
+
+            <include
+                android:id="@+id/view_self_job"
+                layout="@layout/item_base_info"/>
+
+            <include
+                android:id="@+id/view_self_mobile"
+                layout="@layout/item_base_info"/>
+
+            <include
+                android:id="@+id/view_self_ophone"
+                layout="@layout/item_base_info"/>
+
+            <include
+                android:id="@+id/view_self_email"
+                layout="@layout/item_base_info"/>
+
+        </LinearLayout>
+    </ScrollView>
+
+
+</LinearLayout>

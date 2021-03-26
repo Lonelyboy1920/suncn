@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:padding="10dp">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:gravity="center_vertical">
+
+        <com.gavin.giframe.widget.RoundImageView
+            android:id="@+id/iv_img"
+            style="@style/style_iv_headPhoto"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/tv_icon"
+            android:layout_width="5dp"
+            android:layout_height="5dp"
+            android:background="@drawable/ic_rounded_rectangle_red_btn"
+            android:visibility="visible" />
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/ll_content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:layout_weight="1"
+            android:gravity="center_vertical"
+            android:paddingLeft="5dp">
+
+            <com.suncn.ihold_zxztc.view.ShowAllTextView
+                android:id="@+id/tv_content"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:maxLines="2"
+                android:text="1111111111  11"
+                android:textColor="@color/font_title"
+                android:textSize="@dimen/font_normal" />
+
+            <TextView
+                android:id="@+id/tv_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="2dp"
+                android:text="1111"
+                android:textColor="@color/font_source"
+                android:textSize="@dimen/font_mini" />
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/ll_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            android:visibility="gone">
+
+            <ImageView
+                android:id="@+id/iv_follow"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:contentDescription="TODO"
+                android:src="@mipmap/not_notice_icon" />
+
+            <com.gavin.giframe.widget.GITextView
+                android:id="@+id/tv_follow"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="4dp"
+                android:text="关注"
+                android:textColor="@color/view_head_bg" />
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

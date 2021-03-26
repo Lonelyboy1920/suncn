@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <FrameLayout
+        android:id="@+id/fl_cloud_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/iv_cloud_line"/>
+
+    <ImageView
+        android:id="@+id/iv_cloud_line"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_above="@+id/ll_cloud_bottom_layout"
+        android:background="@color/colorLine"/>
+
+    <LinearLayout
+        android:id="@+id/ll_cloud_bottom_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_alignParentBottom="true"
+        android:paddingBottom="3dp"
+        android:paddingTop="3dp"
+        android:baselineAligned="false">
+
+        <TextView
+            android:id="@+id/tv_cloud_doc"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="@string/cloud_doc"
+            android:textColor="#449CEA"
+            android:drawableTop="@drawable/ic_cloud_doc_selected"
+            android:drawablePadding="5dp"
+            />
+
+        <TextView
+            android:id="@+id/tv_cloud_tran"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="@string/cloud_tran"
+            android:textColor="#727272"
+            android:drawableTop="@drawable/ic_cloud_tran"
+            android:drawablePadding="5dp"
+            />
+    </LinearLayout>
+
+</RelativeLayout>

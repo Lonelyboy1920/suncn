@@ -1,0 +1,23 @@
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shape="rectangle"
+    android:useLevel="false">
+    <corners android:radius="10dp" />
+    <size
+        android:width="25dp"
+        android:height="8dp" />
+    <padding
+        android:bottom="1dp"
+        android:left="2dp"
+        android:right="2dp"
+        android:top="1dp" />
+
+    <!--实现应用背景颜色渐变-->
+    <gradient
+        android:angle="180"
+        android:endColor="@color/color_shape_tab_line_end_color"
+        android:startColor="@color/color_shape_tab_line_start_color" />
+</shape>
+
+
+
+

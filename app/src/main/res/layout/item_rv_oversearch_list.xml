@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tool="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:foreground="?android:attr/selectableItemBackground"
+    android:orientation="vertical"
+    android:paddingLeft="15dp"
+    android:paddingTop="10dp"
+    android:paddingRight="15dp"
+    android:paddingBottom="10dp">
+
+    <com.gavin.giframe.widget.GITextView
+        android:id="@+id/tv_type"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:maxLines="1"
+        android:text="提案"
+        android:textColor="#454545"
+        android:textSize="@dimen/font_13" />
+
+    <View
+        style="@style/style_line_bg_white"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp" />
+
+    <com.gavin.giframe.widget.GITextView
+        android:id="@+id/tv_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:singleLine="true"
+        android:text="关于房产经济在体制改革中的相关问题的建议"
+        android:textColor="@color/font_title"
+        android:textSize="@dimen/font_15"
+        app:myStyle="3" />
+
+    <TextView
+        android:id="@+id/tv_content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:ellipsize="end"
+        android:maxLines="2"
+        android:text="房子是用来住的，而不是用来炒的，所以在关于房产经济在体制改革中遇到一下问题，我们要继续跟进，继续完善制度继续完善"
+        android:textColor="@color/font_content"
+        android:textSize="@dimen/font_mini" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp">
+
+        <com.gavin.giframe.widget.GITextView
+            android:id="@+id/tv_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:textColor="@color/font_source"
+            android:textSize="@dimen/font_mini"
+            app:myStyle="1"
+            tool:text="张三" />
+
+        <com.gavin.giframe.widget.GITextView
+            android:id="@+id/tv_date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:text="2019-05-24"
+            android:textColor="@color/font_source"
+            android:textSize="@dimen/font_mini"
+            app:myStyle="1" />
+    </LinearLayout>
+</LinearLayout>

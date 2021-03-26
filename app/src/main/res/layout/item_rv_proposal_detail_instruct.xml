@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/line_bg_white"
+    android:orientation="vertical">
+
+    <LinearLayout style="@style/style_layout_item"
+        android:layout_marginBottom="1dp">
+
+        <TextView
+            style="@style/style_tv_item_left"
+            android:text="批示领导" />
+
+        <TextView
+            android:id="@+id/tv_name"
+            style="@style/style_tv_item_right"
+            android:text="名称" />
+    </LinearLayout>
+    <LinearLayout style="@style/style_layout_item"
+        android:layout_marginBottom="1dp">
+
+        <TextView
+            style="@style/style_tv_item_left"
+            android:text="批示类型" />
+
+        <TextView
+            android:id="@+id/tv_type"
+            style="@style/style_tv_item_right"
+            android:text="名称" />
+    </LinearLayout>
+
+    <LinearLayout style="@style/style_layout_item"
+        android:layout_marginBottom="1dp">
+
+        <TextView
+            style="@style/style_tv_item_left"
+            android:text="批示日期" />
+
+        <TextView
+            android:id="@+id/tv_date"
+            style="@style/style_tv_item_right"
+            android:text="状态" />
+    </LinearLayout>
+
+
+    <LinearLayout style="@style/style_layout_item"
+        android:layout_marginBottom="1dp">
+
+        <TextView
+            style="@style/style_tv_item_left"
+            android:text="录 入 人" />
+
+        <TextView
+            android:id="@+id/tv_enter"
+            style="@style/style_tv_item_right"
+            android:text="意见" />
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/ll_opinion"
+        style="@style/style_layout_item"
+        android:orientation="vertical">
+
+        <TextView
+            style="@style/style_tv_item_left"
+            android:text="批示内容" />
+
+        <TextView
+            android:id="@+id/tv_opinion"
+            style="@style/style_tv_item_right"
+            android:layout_marginLeft="0dp"
+            android:layout_marginTop="5dp"
+            android:text="意见" />
+    </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/ll_group"
+        style="@style/style_layout_item"
+        android:paddingTop="15dp"
+        android:paddingBottom="15dp">
+
+        <ImageView
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_gravity="center_vertical"
+            android:contentDescription="TODO"
+            android:src="@mipmap/img_group" />
+
+        <TextView
+            android:id="@+id/tv_group"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:text="@string/string_my_group"
+            android:textColor="@color/font_title"
+            android:textSize="@dimen/font_normal" />
+
+        <TextView
+            android:id="@+id/tv_count"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:textColor="@color/font_title"
+            android:textSize="@dimen/font_normal"
+            tools:text="(1)" />
+    </LinearLayout>
+
+    <View style="@style/style_line_bg_white_margin" />
+
+    <LinearLayout
+        android:id="@+id/ll_sector"
+        style="@style/style_layout_item"
+        android:paddingTop="15dp"
+        android:paddingBottom="15dp">
+
+        <ImageView
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_gravity="center_vertical"
+            android:contentDescription="TODO"
+            android:src="@mipmap/img_type" />
+
+        <TextView
+            android:id="@+id/tv_sector"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:text="@string/string_sector"
+            android:textColor="@color/font_title"
+            android:textSize="@dimen/font_normal" />
+    </LinearLayout>
+
+    <View style="@style/style_line_bg_white_margin" />
+
+    <LinearLayout
+        android:id="@+id/ll_party"
+        style="@style/style_layout_item"
+        android:paddingTop="15dp"
+        android:paddingBottom="15dp">
+
+        <ImageView
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_gravity="center_vertical"
+            android:contentDescription="TODO"
+            android:src="@mipmap/icon_party" />
+
+        <TextView
+            android:id="@+id/tv_party"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:text="@string/string_partisan"
+            android:textColor="@color/font_title"
+            android:textSize="@dimen/font_normal" />
+    </LinearLayout>
+
+    <View style="@style/style_line_bg_white_margin" />
+
+    <LinearLayout
+        android:id="@+id/ll_branch"
+        style="@style/style_layout_item"
+        android:paddingTop="15dp"
+        android:paddingBottom="15dp">
+
+        <ImageView
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_gravity="center_vertical"
+            android:contentDescription="TODO"
+            android:src="@mipmap/icon_zwh" />
+
+        <TextView
+            android:id="@+id/tv_branch"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:text="@string/string_special_committee"
+            android:textColor="@color/font_title"
+            android:textSize="@dimen/font_normal" />
+    </LinearLayout>
+</LinearLayout>

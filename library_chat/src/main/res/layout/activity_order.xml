@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorActivityBackground"
+    android:orientation="vertical">
+
+    <include
+        android:id="@+id/view_order_title"
+        layout="@layout/title_bar"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:background="@color/colorLine"
+        >
+
+        <TextView
+            android:id="@+id/tv_order_type"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:drawableEnd="@drawable/ic_arrow_down"
+            android:text="@string/im_text_order_type"
+            android:padding="10dp"
+            android:textColor="@color/colorTextUnFocused"
+            android:gravity="center"
+            android:background="@color/colorActivityBackground"
+            android:textSize="@dimen/text_view_size_focused"
+            />
+
+        <TextView
+            android:id="@+id/tv_order_level"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:drawableEnd="@drawable/ic_arrow_down"
+            android:text="@string/im_text_order_level"
+            android:padding="10dp"
+            android:textColor="@color/colorTextUnFocused"
+            android:gravity="center"
+            android:background="@color/colorActivityBackground"
+            android:textSize="@dimen/text_view_size_focused"
+            android:layout_marginStart="1dp"/>
+
+        <TextView
+            android:id="@+id/tv_order_status"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:drawableEnd="@drawable/ic_arrow_down"
+            android:text="@string/im_text_order_read_status"
+            android:padding="10dp"
+            android:textColor="@color/colorTextUnFocused"
+            android:gravity="center"
+            android:background="@color/colorActivityBackground"
+            android:textSize="@dimen/text_view_size_focused"
+            android:layout_marginStart="1dp" />
+
+    </LinearLayout>
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/colorLine"/>
+
+    <include
+        android:id="@+id/view_order_search"
+        layout="@layout/search_bar" />
+
+    <com.handmark.pulltorefresh.library.PullToRefreshListView
+        android:id="@+id/lv_order_list"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/colorWhite"
+        android:divider="@null"
+        android:listSelector="@android:color/transparent"
+        />
+
+</LinearLayout>

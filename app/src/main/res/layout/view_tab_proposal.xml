@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.gavin.giframe.widget.GITextView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/tv_tab"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/icon_2_normal"
+    android:gravity="center"
+    android:text="21313"
+    android:textColor="@color/font_source"
+    android:textSize="@dimen/font_12_dp"
+    app:myStyle="3" />
+

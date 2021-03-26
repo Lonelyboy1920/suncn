@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:foreground="?android:attr/selectableItemBackground"
+    android:layout_marginLeft="20dp"
+    android:layout_marginRight="20dp"
+    android:background="@drawable/shape_bg_write_r5">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp">
+
+        <com.gavin.giframe.widget.GITextView
+            android:id="@+id/tv_icon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/font_camera"
+            android:textColor="@color/font_source"
+            android:textSize="@dimen/font_large" />
+
+        <TextView
+            android:id="@+id/tv_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_weight="1"
+            android:text="会议日程"
+            android:textColor="@color/font_title"
+            android:textSize="@dimen/font_normal" />
+
+        <com.gavin.giframe.widget.GITextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/font_arrow" />
+
+    </LinearLayout>
+
+
+</LinearLayout>

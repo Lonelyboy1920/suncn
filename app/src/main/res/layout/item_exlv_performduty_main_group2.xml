@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:foreground="?android:attr/selectableItemBackground"
+    android:orientation="vertical"
+    android:paddingLeft="10dp"
+    android:paddingRight="10dp"
+    android:paddingBottom="10dp">
+
+    <View
+        android:id="@+id/ll_line"
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/main_bg"
+        android:orientation="vertical"
+        android:visibility="gone" />
+
+    <LinearLayout
+        android:id="@+id/ll_meet"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:gravity="center_vertical"
+        android:paddingTop="5dp"
+        android:paddingBottom="5dp">
+        <TextView
+            android:id="@+id/tv_deal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/shape_btn_submit_bg"
+            android:ellipsize="end"
+            android:maxLines="2"
+            android:paddingLeft="5dp"
+            android:paddingTop="2dp"
+            android:paddingRight="5dp"
+            android:paddingBottom="2dp"
+            android:text=""
+            android:textColor="@color/white"
+            android:textSize="@dimen/font_small"
+            android:visibility="gone" />
+        <TextView
+            android:id="@+id/tv_meet_name"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:ellipsize="end"
+            android:maxLines="2"
+            android:paddingRight="10dp"
+            android:text="十三届一次会议十三届一次会议"
+            android:textColor="@color/font_title"
+            android:textSize="@dimen/font_normal" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="right|center_vertical"
+            android:orientation="vertical">
+
+            <com.gavin.giframe.widget.GITextView
+                android:id="@+id/tv_meet_date"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="05-05"
+                android:textColor="@color/font_source"
+                android:textSize="@dimen/font_mini"
+                app:myStyle="1" />
+
+            <com.gavin.giframe.widget.GITextView
+                android:id="@+id/tv_state"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp"
+                android:text="缺席"
+                android:textColor="@color/font_source"
+                android:textSize="@dimen/font_mini"
+                android:visibility="visible"
+                app:myStyle="1" />
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

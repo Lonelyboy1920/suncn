@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/main_bg"
+    android:orientation="vertical">
+
+    <include layout="@layout/view_head_white" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:padding="10dp"
+            android:text="反馈内容"
+            android:textColor="@color/font_title"
+            android:textSize="@dimen/font_normal" />
+
+        <com.gavin.giframe.widget.GITextView
+            android:id="@+id/tv_count"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="right"
+            android:text="0/500"
+            android:textColor="@color/font_source"
+            android:textSize="@dimen/font_small" />
+
+        <com.gavin.giframe.widget.GITextView
+            android:id="@+id/tv_mike"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:foreground="?android:attr/selectableItemBackground"
+            android:gravity="center"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:text="@string/font_mike"
+            android:textColor="@color/font_content"
+            android:textSize="@dimen/font_normal"
+            app:myStyle="1" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white">
+
+        <com.gavin.giframe.widget.GIEditText
+            android:id="@+id/et_option"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/transparent"
+            android:gravity="top"
+            android:hint="欢迎您提出宝贵的意见和建议，我们会仔细聆听。"
+            android:inputType="textMultiLine"
+            android:lines="6"
+            android:padding="10dp"
+            android:scrollbarStyle="outsideOverlay"
+            android:scrollbars="vertical"
+            android:textColor="@color/font_title"
+            android:textColorHint="@color/font_hint"
+            android:textSize="@dimen/font_normal"
+            app:maxLength="@integer/int_textlength_500" />
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:text="联系方式"
+        android:textColor="@color/font_title"
+        android:textSize="@dimen/font_normal" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white">
+
+        <com.gavin.giframe.widget.GIEditText
+            android:id="@+id/et_tel"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/transparent"
+            android:hint="请留下联系方式，方便我们联系您"
+            android:inputType="number"
+            android:padding="10dp"
+            android:singleLine="true"
+            android:textColor="@color/font_title"
+            android:textColorHint="@color/font_hint"
+            android:textSize="@dimen/font_normal"
+            app:maxLength="11" />
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btn_submit"
+        style="@style/style_btn_submit"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginBottom="10dp"
+        android:text="提　交" />
+</LinearLayout>

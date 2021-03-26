@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorWhite">
+
+    <include
+        android:id="@+id/view_contact_title"
+        layout="@layout/title_bar" />
+
+    <include
+        android:id="@+id/view_contact_search"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/view_contact_title"
+        layout="@layout/search_bar"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_contact_view"
+        android:layout_below="@+id/view_contact_search"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="5dp" />
+
+    <ImageView
+        android:id="@+id/iv_contact_line"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/colorLine"
+        android:layout_below="@+id/rv_contact_view"/>
+
+    <ListView
+        android:id="@+id/lv_contact_list"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:divider="@null"
+        android:scrollbars="none"
+        android:layout_below="@+id/iv_contact_line"
+        android:layout_above="@+id/rl_contact_bottom_layout"/>
+
+    <RelativeLayout
+        android:id="@+id/rl_contact_bottom_layout"
+        android:layout_alignParentBottom="true"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:visibility="gone">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/colorLine" />
+
+        <TextView
+            android:id="@+id/tv_contact_count"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            android:layout_marginStart="@dimen/dimen_margin_16"
+            android:text="@string/contact_had_count"
+            android:textColor="@color/colorBlack"
+            android:textSize="14sp"
+            />
+
+        <Button
+            android:id="@+id/btn_contact_sure"
+            android:layout_width="100dp"
+            android:layout_height="35dp"
+            android:layout_alignParentRight="true"
+            android:background="@drawable/ic_rounded_rectangle_btn"
+            android:text="@string/contact_sure"
+            android:textColor="@color/colorWhite"
+            android:textSize="16sp"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="@dimen/dimen_margin_16"/>
+    </RelativeLayout>
+
+</RelativeLayout>

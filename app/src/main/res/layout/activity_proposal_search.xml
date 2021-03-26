@@ -1,0 +1,264 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    android:orientation="vertical">
+
+    <include layout="@layout/view_head_white" />
+
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/nestedScrollView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/llProposalSearchBottom"
+        android:layout_below="@+id/rl_head"
+        android:overScrollMode="never">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <com.suncn.ihold_zxztc.view.MenuItemEditLayout
+                android:id="@+id/tv_year"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:label="@string/string_particular_year"
+                app:show_arrow="true"
+                app:show_line="true" />
+
+            <com.suncn.ihold_zxztc.view.MenuItemEditLayout
+                android:id="@+id/tvSession"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:label="@string/string_session"
+                app:show_arrow="true"
+                app:show_line="true" />
+
+            <com.suncn.ihold_zxztc.view.MenuItemEditLayout
+                android:id="@+id/tvProposalType"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:label="@string/string_proposal_type"
+                app:show_arrow="true"
+                app:show_line="true" />
+
+            <com.suncn.ihold_zxztc.view.MenuItemEditLayout
+                android:id="@+id/tvProposalStatus"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:label="@string/string_proposal_status_no_line"
+                app:show_arrow="true"
+                app:show_line="true" />
+
+            <com.suncn.ihold_zxztc.view.MenuItemEditLayout
+                android:id="@+id/tvProponentType"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:label="@string/string_proponen_type"
+                app:show_arrow="true"
+                app:show_line="true" />
+
+            <com.suncn.ihold_zxztc.view.MenuItemEditLayout
+                android:id="@+id/tvSector"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:label="@string/string_belonging_to_sector"
+                app:show_arrow="true"
+                app:show_line="true" />
+
+            <com.suncn.ihold_zxztc.view.MenuItemEditLayout
+                android:id="@+id/tvAffiliatedSpecialCommittee"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:label="@string/string_affiliated_special_committee"
+                app:show_arrow="true"
+                app:show_line="true" />
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="@color/white"
+                android:orientation="vertical"
+                android:padding="10dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="5dp"
+                    android:text="@string/string_organizer_main"
+                    android:textColor="@color/font_title" />
+
+                <com.gavin.giframe.widget.GIEditText
+                    android:id="@+id/etOrganizer"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/corners_edit_source"
+                    android:hint="@string/string_please_enter_organizer_main"
+                    android:minLines="2"
+                    android:padding="5dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="5dp"
+                    android:text="@string/string_organizer"
+                    android:textColor="@color/font_title" />
+
+                <com.gavin.giframe.widget.GIEditText
+                    android:id="@+id/etJointVenture"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/corners_edit_source"
+                    android:hint="@string/string_please_enter_organizer"
+                    android:minLines="2"
+                    android:padding="5dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="5dp"
+                    android:text="@string/string_branch_office_name"
+                    android:textColor="@color/font_title" />
+
+                <com.gavin.giframe.widget.GIEditText
+                    android:id="@+id/etBranchOffice"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/corners_edit_source"
+                    android:hint="@string/string_please_enter_branch_office_name"
+                    android:minLines="2"
+                    android:padding="5dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="5dp"
+                    android:text="@string/string_proposer"
+                    android:textColor="@color/font_title" />
+
+                <com.gavin.giframe.widget.GIEditText
+                    android:id="@+id/etProponent"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/corners_edit_source"
+                    android:hint="@string/string_please_enter_proposer"
+                    android:minLines="2"
+                    android:padding="5dp" />
+
+                <TextView
+                    android:id="@+id/tvSubjectTag"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="5dp"
+                    android:text="@string/string_subject"
+                    android:textColor="@color/font_title" />
+
+                <com.gavin.giframe.widget.GIEditText
+                    android:id="@+id/etSubject"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/corners_edit_source"
+                    android:hint="@string/string_please_enter_subject"
+                    android:minLines="2"
+                    android:padding="5dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="5dp"
+                    android:text="@string/string_proposal_content"
+                    android:textColor="@color/font_title" />
+
+                <com.gavin.giframe.widget.GIEditText
+                    android:id="@+id/etContent"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/corners_edit_source"
+                    android:hint="@string/string_please_enter_proposal_content"
+                    android:minLines="2"
+                    android:padding="5dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="5dp"
+                    android:text="@string/string_serial_number"
+                    android:textColor="@color/font_title" />
+
+                <com.gavin.giframe.widget.GIEditText
+                    android:id="@+id/etSerialNumber"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/corners_edit_source"
+                    android:hint="@string/string_please_enter_serial_number"
+                    android:minLines="2"
+                    android:padding="5dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="5dp"
+                    android:text="@string/string_proposal_no"
+                    android:textColor="@color/font_title" />
+
+                <com.gavin.giframe.widget.GIEditText
+                    android:id="@+id/etProposalNo"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/corners_edit_source"
+                    android:hint="@string/string_please_enter_proposal_no"
+                    android:minLines="2"
+                    android:padding="5dp" />
+            </LinearLayout>
+        </LinearLayout>
+
+
+    </androidx.core.widget.NestedScrollView>
+
+    <LinearLayout
+        android:id="@+id/llProposalSearchBottom"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="10dp">
+
+        <TextView
+            android:id="@+id/tv_confirm"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_weight="1"
+            android:background="@drawable/shape_bg_red_r15"
+            android:gravity="center"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
+            android:text="@string/string_query"
+            android:textColor="@color/white"
+            android:textSize="@dimen/font_16_dp" />
+
+        <TextView
+            android:id="@+id/tv_clear"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_weight="1"
+            android:background="@drawable/shape_bg_gray_r15"
+            android:gravity="center"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
+            android:text="@string/string_reset"
+            android:textColor="@color/font_title"
+            android:textSize="@dimen/font_16_dp" />
+    </LinearLayout>
+
+</RelativeLayout>

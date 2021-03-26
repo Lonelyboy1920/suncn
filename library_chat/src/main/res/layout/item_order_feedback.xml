@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:id="@+id/ll_title_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="5dp"
+        android:gravity="center_vertical"
+        android:layout_marginLeft="@dimen/dimen_margin_16"
+        android:layout_marginRight="@dimen/dimen_margin_16">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/iv_item_icon"
+            android:layout_width="@dimen/dimen_normal_photo_size"
+            android:layout_height="@dimen/dimen_normal_photo_size" />
+
+        <TextView
+            android:id="@+id/tv_item_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/colorBlack"
+            android:textSize="14sp"
+            android:layout_marginLeft="10dp"
+            />
+
+        <TextView
+            android:id="@+id/tv_item_state"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/ic_order_done"
+            android:textColor="#A2D8C6"
+            android:paddingTop="3dp"
+            android:paddingBottom="3dp"
+            android:paddingRight="8dp"
+            android:paddingLeft="8dp"
+            android:textSize="10sp"
+            android:layout_marginLeft="20dp"
+            />
+
+        <TextView
+            android:id="@+id/tv_item_time"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="right"
+            android:textSize="14sp"
+            android:textColor="@color/colorTextUnFocused"
+            />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tv_item_content"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_below="@+id/ll_title_layout"
+        android:layout_marginStart="58dp"
+        android:layout_marginEnd="25dp"
+        android:maxLines="2"
+        android:ellipsize="end"
+        android:textColor="@color/colorTextUnFocused"
+        android:textSize="14sp"
+        />
+    
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@+id/tv_item_content"
+        android:background="@color/colorLine"
+        android:layout_marginLeft="@dimen/dimen_margin_16"
+        android:layout_marginRight="@dimen/dimen_margin_16"/>
+
+</RelativeLayout>

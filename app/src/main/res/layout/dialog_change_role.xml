@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
+    android:padding="20dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@mipmap/change_role_dialog_top_bg">
+
+        <com.gavin.giframe.widget.GITextView
+            android:id="@+id/tv_close"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="15dp"
+            android:layout_marginRight="15dp"
+            android:background="?android:attr/selectableItemBackground"
+            android:text="&#xe63f;"
+            android:textColor="@color/font_title"
+            android:textSize="@dimen/font_huge"
+            android:visibility="gone" />
+
+        <com.gavin.giframe.widget.RoundImageView
+            android:id="@+id/iv_person_head"
+            style="@style/style_iv_headPhoto"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_below="@id/tv_close"
+            android:layout_centerInParent="true"
+            android:layout_centerHorizontal="true" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        android:paddingLeft="20dp"
+        android:paddingTop="10dp"
+        android:paddingRight="20dp"
+        android:paddingBottom="20dp">
+
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:ellipsize="end"
+            android:gravity="center"
+            android:maxLines="2"
+            android:text="欢迎您登陆使用"
+            android:textColor="@color/font_title"
+            android:textSize="@dimen/font_medium" />
+
+        <TextView
+            android:id="@+id/tv_source"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:ellipsize="end"
+            android:gravity="center"
+            android:maxLines="2"
+            android:text="请选择您当前的身份角色"
+            android:textColor="@color/font_content"
+            android:textSize="@dimen/font_normal" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:orientation="horizontal"
+            android:paddingLeft="5dp"
+            android:paddingTop="10dp"
+            android:paddingRight="5dp"
+            android:paddingBottom="10dp">
+
+            <Button
+                android:id="@+id/btn_change_mem"
+                style="@style/Widget.AppCompat.Button.Borderless"
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                android:layout_marginTop="30dp"
+                android:layout_marginRight="20dp"
+                android:layout_weight="1"
+                android:background="@drawable/shape_btn_change_role_bg"
+                android:foreground="?android:attr/selectableItemBackground"
+                android:padding="10dp"
+                android:text="委员"
+                android:textColor="@color/white"
+                android:textSize="@dimen/font_normal" />
+
+            <Button
+                android:id="@+id/btn_change_worker"
+                style="@style/Widget.AppCompat.Button.Borderless"
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                android:layout_marginTop="30dp"
+                android:layout_weight="1"
+                android:background="@drawable/shape_btn_change_role_bg"
+                android:foreground="?android:attr/selectableItemBackground"
+                android:padding="10dp"
+                android:text="机关人员"
+                android:textColor="@color/white"
+                android:textSize="@dimen/font_normal" />
+        </LinearLayout>
+
+        <CheckBox
+            android:id="@+id/cb_remind"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:button="@drawable/selector_cb_login"
+            android:gravity="center"
+            android:text="不再提醒"
+            android:textColor="@drawable/font_login_selector"
+            android:textSize="@dimen/font_small" />
+    </LinearLayout>
+</LinearLayout>

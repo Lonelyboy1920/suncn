@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/rl_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:gravity="center_horizontal"
+    android:orientation="vertical">
+
+    <include layout="@layout/view_head_white" />
+
+    <RelativeLayout
+        android:id="@+id/ll_video"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/rl_head"
+        android:background="#F5F5F5"
+        android:orientation="horizontal"
+        android:paddingLeft="10dp"
+        android:paddingTop="5dp"
+        android:paddingBottom="5dp"
+        android:visibility="gone">
+
+
+        <com.gavin.giframe.widget.GITextView
+            android:id="@+id/tv_play"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:onClick="@{(v)->viewModel.onClick(v)}"
+            android:text="@string/font_robot_pause"
+            android:textColor="@color/view_head_bg"
+            android:textSize="40dp"
+            app:myStyle="1" />
+
+        <SeekBar
+            android:id="@+id/seekBar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="50dp"
+            android:layout_toEndOf="@+id/tv_play"
+            android:max="100"
+            android:maxHeight="3dp"
+            android:minHeight="3dp"
+            android:progressDrawable="@drawable/robot_seekbar"
+            android:thumb="@mipmap/seekbar_thumb" />
+
+        <com.gavin.giframe.widget.GITextView
+            android:id="@+id/tv_close"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:text="@string/font_robot_close"
+            android:textColor="@color/font_source"
+            android:textSize="@dimen/font_normal" />
+    </RelativeLayout>
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/scrollview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/ll_write_comment"
+        android:layout_below="@id/ll_video">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:descendantFocusability="blocksDescendants">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_above="@id/ll_write_comment"
+                android:layout_below="@id/ll_video"
+                android:overScrollMode="never"
+                android:scrollbars="none" />
+
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+    <LinearLayout
+        android:id="@+id/ll_write_comment"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_alignParentBottom="true"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <View style="@style/style_line_bg_white" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:paddingLeft="10dp"
+            android:paddingTop="5dp"
+            android:paddingBottom="5dp">
+
+            <TextView
+                android:id="@+id/et_comment"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/shape_et_comment_bg"
+                android:focusable="false"
+                android:gravity="center_vertical"
+                android:hint="@string/string_friendly_commen_is_the_starting_point_of_communication"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:textColor="@color/font_title"
+                android:textColorHint="@color/font_source"
+                android:textCursorDrawable="@null"
+                android:textSize="@dimen/font_small" />
+
+            <RelativeLayout
+                android:id="@+id/rl_top"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:foreground="?android:attr/selectableItemBackground"
+                android:orientation="vertical"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp">
+
+                <com.gavin.giframe.widget.GITextView
+                    android:id="@+id/tv_top"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text="@string/font_top"
+                    android:textColor="@color/font_content"
+                    android:textSize="@dimen/font_large"
+                    app:myStyle="1" />
+
+                <com.gavin.giframe.widget.GITextView
+                    android:id="@+id/tv_count"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginLeft="-6dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_toRightOf="@+id/tv_top"
+                    android:background="@drawable/bg_white_dialog"
+                    android:gravity="center"
+                    android:paddingLeft="3dp"
+                    android:paddingBottom="1dp"
+                    android:text=""
+                    android:textColor="@color/zxta_state_red"
+                    android:textSize="10sp"
+                    android:textStyle="bold"
+                    android:visibility="gone" />
+            </RelativeLayout>
+
+            <com.gavin.giframe.widget.GITextView
+                android:id="@+id/tv_shou"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:foreground="?android:attr/selectableItemBackground"
+                android:gravity="center"
+                android:paddingLeft="5dp"
+                android:paddingRight="5dp"
+                android:text="@string/font_shou"
+                android:textColor="@color/font_content"
+                android:textSize="@dimen/font_large"
+                app:myStyle="1" />
+
+            <com.gavin.giframe.widget.GITextView
+                android:id="@+id/tv_zhuan"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:foreground="?android:attr/selectableItemBackground"
+                android:gravity="center"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:text="@string/font_zhuan"
+                android:textColor="@color/font_content"
+                android:textSize="@dimen/font_medium"
+                android:visibility="visible"
+                app:myStyle="1" />
+        </LinearLayout>
+    </LinearLayout>
+</RelativeLayout>

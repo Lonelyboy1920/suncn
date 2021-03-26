@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:gravity="center_horizontal"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/ll_tab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@mipmap/tab_unchoose"
+        android:gravity="center">
+
+        <com.gavin.giframe.widget.GITextView
+            android:id="@+id/tv_title"
+            android:layout_width="40dp"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:padding="5dp"
+            android:text="参加活动"
+            android:textColor="@color/font_content"
+            android:textSize="@dimen/font_12_dp" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tv_select_icon"
+        android:layout_width="20dp"
+        android:layout_height="3dp"
+        android:background="@drawable/shape_tab_bline_select"
+        android:visibility="invisible" />
+
+</LinearLayout>

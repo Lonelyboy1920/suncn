@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:foreground="?android:attr/selectableItemBackground"
+    android:gravity="center_vertical"
+    android:orientation="vertical"
+    android:paddingLeft="10dp"
+    android:paddingTop="10dp"
+    android:paddingRight="10dp"
+    android:paddingBottom="10dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <com.gavin.giframe.widget.GITextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="&#xe625;"
+            android:textColor="@color/font_source"
+            android:textSize="@dimen/font_mini" />
+
+        <com.gavin.giframe.widget.GITextView
+            android:id="@+id/tv_name"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="2dp"
+            android:layout_marginRight="10dp"
+            android:layout_weight="1"
+            android:singleLine="true"
+            android:text="张三"
+            android:textColor="@color/font_source"
+            android:textSize="@dimen/font_mini" />
+
+        <com.gavin.giframe.widget.GITextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:singleLine="true"
+            android:text="&#xe642;"
+            android:textColor="@color/font_source"
+            android:textSize="@dimen/font_mini" />
+
+        <com.gavin.giframe.widget.GITextView
+            android:id="@+id/tv_date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="2dp"
+            android:singleLine="true"
+            android:text="2017-02-26"
+            android:textColor="@color/font_source"
+            android:textSize="@dimen/font_mini"
+            app:myStyle="1" />
+    </LinearLayout>
+
+    <View style="@style/style_line_bg_white" />
+
+    <TextView
+        android:id="@+id/tv_content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:ellipsize="end"
+        android:maxLines="2"
+        android:text="速度发生的快乐福建省领导开发商爵士岛咖啡就算了的快乐是雷锋精神类似 法律手段"
+        android:textColor="@color/font_title"
+        android:textSize="@dimen/font_normal" />
+
+    <com.gavin.giframe.widget.GITextView
+        android:id="@+id/tv_unit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:singleLine="true"
+        android:text="承办单位"
+        android:textColor="@color/font_source"
+        android:textSize="@dimen/font_mini" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <com.gavin.giframe.widget.GITextView
+            android:id="@+id/tv_solution"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="10dp"
+            android:singleLine="true"
+            android:text="解决程度"
+            android:textColor="@color/font_source"
+            android:textSize="@dimen/font_mini" />
+
+        <com.gavin.giframe.widget.GITextView
+            android:id="@+id/tv_sector"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:singleLine="true"
+            android:text="界别：中共"
+            android:textColor="@color/font_source"
+            android:textSize="@dimen/font_mini"
+            android:visibility="invisible" />
+
+        <com.gavin.giframe.widget.GITextView
+            android:id="@+id/tv_finish_date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="right"
+            android:singleLine="true"
+            android:textColor="@color/font_source"
+            android:textSize="@dimen/font_mini"
+            app:myStyle="1"
+            tools:text="2019-08-01 19:53:22" />
+
+        <com.gavin.giframe.widget.GITextView
+            android:id="@+id/tv_state"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:singleLine="true"
+            android:text="未立案"
+            android:textColor="@color/zxta_state_orange"
+            android:textSize="@dimen/font_mini"
+            app:myStyle="1" />
+    </LinearLayout>
+</LinearLayout>

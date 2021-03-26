@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="white">#ffffff</color>
+    <color name="white_trans">#ffffffff</color>
+    <color name="black">#000000</color>
+    <color name="red">#ff0000</color>
+    <color name="transparent">#00000000</color>
+
+    <color name="colorPrimary">@color/view_head_bg</color>
+    <color name="colorPrimaryDark">@color/view_head_bg</color>
+
+    <!--主界面背景-->
+    <color name="main_bg">#f5f5f5</color>
+    <!--主题色-->
+    <color name="view_head_bg">#ef4b39</color>
+    <color name="font_title">#333333</color>
+    <color name="font_content">#666666</color>
+    <color name="font_source">#999999</color>
+    <!--白色背景的分割线-->
+    <color name="line_bg_white">#f0f0f0</color>
+</resources>

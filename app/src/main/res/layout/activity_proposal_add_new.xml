@@ -1,0 +1,423 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical">
+
+    <include layout="@layout/view_head_white" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:overScrollMode="never">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="top"
+                android:orientation="horizontal">
+
+                <com.gavin.giframe.widget.GIEditText
+                    android:id="@+id/et_title"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@null"
+                    android:hint="@string/string_please_enter_proposal_title"
+                    android:inputType=""
+                    android:padding="10dp"
+                    app:maxLength="100"
+                    android:textColor="@color/font_title"
+                    android:textColorHint="@color/font_hint"
+                    android:textSize="@dimen/font_normal" />
+
+                <CheckBox
+                    android:id="@+id/cb_meeting"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="10dp"
+                    android:checked="true"
+                    android:paddingLeft="3dp"
+                    android:text="@string/string_meeting_proposal"
+                    android:textColor="@color/view_head_bg"
+                    android:textSize="@dimen/font_small"
+                    android:visibility="gone" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/repeat_et_line" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="10dp"
+                android:background="@color/main_bg" />
+
+            <com.suncn.ihold_zxztc.view.MenuItemEditLayout
+                android:id="@+id/tv_unit"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:label="@string/string_suggested_undertaker"
+                app:label_color="@color/font_title"
+                app:label_size="@dimen/font_15"
+                app:show_arrow="true" />
+
+            <com.suncn.ihold_zxztc.view.MenuItemEditLayout
+                android:id="@+id/tv_unit_main"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:hint="@string/string_please_select_organizer"
+                app:label="@string/string_suggested_organizer"
+                app:label_color="@color/font_title"
+                app:label_size="@dimen/font_15"
+                app:show_arrow="true" />
+
+            <com.suncn.ihold_zxztc.view.MenuItemEditLayout
+                android:id="@+id/tv_unit_help"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:hint="@string/string_please_select_joint_organization"
+                app:label="@string/string_suggested_joint_organization"
+                app:label_color="@color/font_title"
+                app:label_size="@dimen/font_15"
+                app:show_arrow="true" />
+
+
+            <View style="@style/style_line_bg_white_margin" />
+
+            <TextView
+                android:id="@+id/tv_way_tag"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="10dp"
+                android:paddingTop="10dp"
+                android:paddingRight="10dp"
+                android:text="@string/string_negotiation_methods_to_be_handled"
+                android:textColor="@color/font_title"
+                android:textSize="@dimen/font_15" />
+
+            <com.suncn.ihold_zxztc.view.WrapLinearlayout
+                android:id="@+id/ll_way"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                app:grivate="left"
+                app:horizontal_Space="10dp"
+                app:isFull="false"
+                app:vertical_Space="10dp" />
+
+            <View style="@style/style_line_bg_white_margin" />
+
+            <LinearLayout
+                android:id="@+id/ll_support"
+                style="@style/gi_style_layout_item_normal"
+                android:paddingTop="5dp"
+                android:paddingBottom="5dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/string_is_secondment_allowed"
+                    android:textColor="@color/font_title"
+                    android:textSize="@dimen/font_15" />
+
+                <RadioGroup
+                    android:id="@+id/rg_supported"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="right"
+                    android:orientation="horizontal"
+                    android:paddingRight="10dp">
+
+                    <RadioButton
+                        android:id="@+id/rb_yes"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:buttonTint="@color/radiobutton_selector"
+                        android:text="@string/string_yes"
+                        android:textColor="@color/font_title"
+                        android:textSize="@dimen/font_15" />
+
+                    <RadioButton
+                        android:id="@+id/rb_no"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="15dp"
+                        android:buttonTint="@color/radiobutton_selector"
+                        android:checked="true"
+                        android:text="@string/string_no"
+                        android:textColor="@color/font_title"
+                        android:textSize="@dimen/font_15" />
+                </RadioGroup>
+            </LinearLayout>
+
+            <View style="@style/style_line_bg_white_margin" />
+
+            <com.suncn.ihold_zxztc.view.MenuItemEditLayout
+                android:id="@+id/tv_mainwrite"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:hint="@string/string_select_lead_author"
+                app:label="@string/string_lead_author"
+                app:label_color="@color/font_title"
+                app:label_size="@dimen/font_15"
+                app:show_arrow="true" />
+
+
+            <View style="@style/style_line_bg_white_margin" />
+
+            <com.suncn.ihold_zxztc.view.MenuItemEditLayout
+                android:id="@+id/tv_jointMem"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:hint="@string/string_please_select_associate"
+                app:label="@string/string_associate"
+                app:label_color="@color/font_title"
+                app:label_size="@dimen/font_15"
+                app:show_arrow="true" />
+
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="10dp"
+                android:background="@color/main_bg" />
+
+            <TextView
+                android:id="@+id/tv_other"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="10dp"
+                android:paddingTop="10dp"
+                android:paddingRight="10dp"
+                android:text="@string/string_other_select"
+                android:textColor="@color/font_title"
+                android:textSize="@dimen/font_15" />
+
+            <com.suncn.ihold_zxztc.view.WrapLinearlayout
+                android:id="@+id/ll_other_otions"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tv_title"
+                android:padding="10dp"
+                app:grivate="left"
+                app:horizontal_Space="10dp"
+                app:isFull="false"
+                app:vertical_Space="10dp" />
+
+            <View style="@style/style_line_bg_white_margin" />
+
+            <LinearLayout
+                android:id="@+id/ll_process"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginBottom="5dp"
+                        android:text="@string/string_research_process"
+                        android:textColor="@color/font_title"
+                        android:textSize="@dimen/font_15" />
+
+                    <TextView
+                        android:id="@+id/tv_process_count"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_toStartOf="@+id/tv_mike2"
+                        android:textColor="@color/font_source"
+                        android:textSize="@dimen/font_small" />
+
+                    <com.gavin.giframe.widget.GITextView
+                        android:id="@+id/tv_mike2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentRight="true"
+                        android:foreground="?android:attr/selectableItemBackground"
+                        android:paddingLeft="10dp"
+                        android:paddingTop="10dp"
+                        android:paddingRight="10dp"
+                        android:paddingBottom="5dp"
+                        android:text="@string/font_mike"
+                        android:textColor="@color/font_content"
+                        android:textSize="@dimen/font_medium" />
+                </RelativeLayout>
+
+                <com.gavin.giframe.widget.GIEditText
+                    android:id="@+id/et_process"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:background="@null"
+                    android:fadeScrollbars="false"
+                    android:gravity="top"
+                    android:hint="@string/string_please_enter_research_process"
+                    android:inputType=""
+                    android:minLines="6"
+                    android:scrollbars="vertical"
+                    android:textColor="@color/font_title"
+                    android:textColorHint="@color/font_hint"
+                    android:textSize="@dimen/font_15"
+                    app:maxLength="@integer/int_textlength_500" />
+
+                <View
+                    style="@style/style_line_bg_white_margin"
+                    android:layout_marginTop="10dp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_dynamic_one"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingLeft="10dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/tv_label_one"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginBottom="5dp"
+                        android:text="动态名称一"
+                        android:textColor="@color/font_title"
+                        android:textSize="@dimen/font_15" />
+
+                    <TextView
+                        android:id="@+id/tv_label_one_count"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_toStartOf="@+id/tv_mike"
+                        android:textColor="@color/font_source"
+                        android:textSize="@dimen/font_small" />
+
+                    <com.gavin.giframe.widget.GITextView
+                        android:id="@+id/tv_mike"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentRight="true"
+                        android:foreground="?android:attr/selectableItemBackground"
+                        android:paddingLeft="10dp"
+                        android:paddingTop="10dp"
+                        android:paddingRight="10dp"
+                        android:paddingBottom="5dp"
+                        android:text="@string/font_mike"
+                        android:textColor="@color/font_content"
+                        android:textSize="@dimen/font_medium" />
+                </RelativeLayout>
+
+                <com.gavin.giframe.widget.GIEditText
+                    android:id="@+id/et_content_one"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="10dp"
+                    android:background="@null"
+                    android:fadeScrollbars="false"
+                    android:gravity="top"
+                    android:hint="请输入动态名称一"
+                    android:inputType=""
+                    android:minLines="6"
+                    android:scrollbars="vertical"
+                    android:textColor="@color/font_title"
+                    android:textColorHint="@color/font_hint"
+                    android:textSize="@dimen/font_15"
+                    app:maxLength="@integer/int_textlength_5000" />
+
+                <View
+                    style="@style/style_line_bg_white_margin"
+                    android:layout_marginTop="10dp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_dynamic_two"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingLeft="10dp"
+                android:paddingBottom="10dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/tv_label_two"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginBottom="5dp"
+                        android:text="动态名称二"
+                        android:textColor="@color/font_title"
+                        android:textSize="@dimen/font_15" />
+
+                    <TextView
+                        android:id="@+id/tv_label_two_count"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_toStartOf="@+id/tv_mike1"
+                        android:textColor="@color/font_source"
+                        android:textSize="@dimen/font_small" />
+
+                    <com.gavin.giframe.widget.GITextView
+                        android:id="@+id/tv_mike1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentRight="true"
+                        android:foreground="?android:attr/selectableItemBackground"
+                        android:paddingLeft="10dp"
+                        android:paddingTop="10dp"
+                        android:paddingRight="10dp"
+                        android:paddingBottom="5dp"
+                        android:text="@string/font_mike"
+                        android:textColor="@color/font_content"
+                        android:textSize="@dimen/font_medium" />
+                </RelativeLayout>
+
+                <com.gavin.giframe.widget.GIEditText
+                    android:id="@+id/et_content_two"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="10dp"
+                    android:background="@null"
+                    android:fadeScrollbars="false"
+                    android:gravity="top"
+                    android:hint="请输入动态名称二"
+                    android:inputType=""
+                    android:minLines="6"
+                    android:scrollbars="vertical"
+                    android:textColor="@color/font_title"
+                    android:textColorHint="@color/font_hint"
+                    android:textSize="@dimen/font_15"
+                    app:maxLength="@integer/int_textlength_5000" />
+
+                <View
+                    style="@style/style_line_bg_white_margin"
+                    android:layout_marginTop="10dp" />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

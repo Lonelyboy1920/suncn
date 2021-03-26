@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/webrtc_video_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.intraminds.webrtc.PercentFrameLayout
+        android:id="@+id/video_layout1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <org.webrtc.SurfaceViewRenderer
+            android:id="@+id/video_view1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </com.intraminds.webrtc.PercentFrameLayout>
+    <com.intraminds.webrtc.PercentFrameLayout
+        android:id="@+id/video_layout2"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <org.webrtc.SurfaceViewRenderer
+            android:id="@+id/video_view2" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+    </com.intraminds.webrtc.PercentFrameLayout>
+    <com.intraminds.webrtc.PercentFrameLayout
+        android:id="@+id/video_layout3" android:layout_width="match_parent" android:layout_height="match_parent">
+        <org.webrtc.SurfaceViewRenderer android:id="@+id/video_view3" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+    </com.intraminds.webrtc.PercentFrameLayout>
+    <com.intraminds.webrtc.PercentFrameLayout
+        android:id="@+id/video_layout4" android:layout_width="match_parent" android:layout_height="match_parent">
+        <org.webrtc.SurfaceViewRenderer android:id="@+id/video_view4" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+    </com.intraminds.webrtc.PercentFrameLayout>
+    <com.intraminds.webrtc.PercentFrameLayout
+        android:id="@+id/video_layout5" android:layout_width="match_parent" android:layout_height="match_parent">
+        <org.webrtc.SurfaceViewRenderer android:id="@+id/video_view5" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+    </com.intraminds.webrtc.PercentFrameLayout>
+    <com.intraminds.webrtc.PercentFrameLayout
+        android:id="@+id/video_layout6" android:layout_width="match_parent" android:layout_height="match_parent">
+        <org.webrtc.SurfaceViewRenderer android:id="@+id/video_view6" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+    </com.intraminds.webrtc.PercentFrameLayout>
+    <com.intraminds.webrtc.PercentFrameLayout
+        android:id="@+id/video_layout7" android:layout_width="match_parent" android:layout_height="match_parent">
+        <org.webrtc.SurfaceViewRenderer android:id="@+id/video_view7" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+    </com.intraminds.webrtc.PercentFrameLayout>
+    <com.intraminds.webrtc.PercentFrameLayout
+        android:id="@+id/video_layout8" android:layout_width="match_parent" android:layout_height="match_parent">
+        <org.webrtc.SurfaceViewRenderer android:id="@+id/video_view8" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+    </com.intraminds.webrtc.PercentFrameLayout>
+    <com.intraminds.webrtc.PercentFrameLayout
+        android:id="@+id/video_layout9" android:layout_width="match_parent" android:layout_height="match_parent">
+        <org.webrtc.SurfaceViewRenderer android:id="@+id/video_view9" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+    </com.intraminds.webrtc.PercentFrameLayout>
+    <com.intraminds.webrtc.PercentFrameLayout
+        android:id="@+id/video_layout10" android:layout_width="match_parent" android:layout_height="match_parent">
+        <org.webrtc.SurfaceViewRenderer android:id="@+id/video_view10" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+    </com.intraminds.webrtc.PercentFrameLayout>
+    <com.intraminds.webrtc.PercentFrameLayout
+        android:id="@+id/video_layout11" android:layout_width="match_parent" android:layout_height="match_parent">
+        <org.webrtc.SurfaceViewRenderer android:id="@+id/video_view11" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+    </com.intraminds.webrtc.PercentFrameLayout>
+    <com.intraminds.webrtc.PercentFrameLayout
+        android:id="@+id/video_layout12" android:layout_width="match_parent" android:layout_height="match_parent">
+        <org.webrtc.SurfaceViewRenderer android:id="@+id/video_view12" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+    </com.intraminds.webrtc.PercentFrameLayout>
+    <com.intraminds.webrtc.PercentFrameLayout
+        android:id="@+id/video_layout13" android:layout_width="match_parent" android:layout_height="match_parent">
+        <org.webrtc.SurfaceViewRenderer android:id="@+id/video_view13" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+    </com.intraminds.webrtc.PercentFrameLayout>
+    <com.intraminds.webrtc.PercentFrameLayout
+        android:id="@+id/video_layout14" android:layout_width="match_parent" android:layout_height="match_parent">
+        <org.webrtc.SurfaceViewRenderer android:id="@+id/video_view14" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+    </com.intraminds.webrtc.PercentFrameLayout>
+    <com.intraminds.webrtc.PercentFrameLayout
+        android:id="@+id/video_layout15" android:layout_width="match_parent" android:layout_height="match_parent">
+        <org.webrtc.SurfaceViewRenderer android:id="@+id/video_view15" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+    </com.intraminds.webrtc.PercentFrameLayout>
+    <com.intraminds.webrtc.PercentFrameLayout
+        android:id="@+id/video_layout16" android:layout_width="match_parent" android:layout_height="match_parent">
+        <org.webrtc.SurfaceViewRenderer android:id="@+id/video_view16" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+    </com.intraminds.webrtc.PercentFrameLayout>
+    <com.intraminds.webrtc.PercentFrameLayout
+        android:id="@+id/video_layout17" android:layout_width="match_parent" android:layout_height="match_parent">
+        <org.webrtc.SurfaceViewRenderer android:id="@+id/video_view17" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+    </com.intraminds.webrtc.PercentFrameLayout>
+    <com.intraminds.webrtc.PercentFrameLayout
+        android:id="@+id/video_layout18" android:layout_width="match_parent" android:layout_height="match_parent">
+        <org.webrtc.SurfaceViewRenderer android:id="@+id/video_view18" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+    </com.intraminds.webrtc.PercentFrameLayout>
+    <com.intraminds.webrtc.PercentFrameLayout
+        android:id="@+id/video_layout19" android:layout_width="match_parent" android:layout_height="match_parent">
+        <org.webrtc.SurfaceViewRenderer android:id="@+id/video_view19" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+    </com.intraminds.webrtc.PercentFrameLayout>
+    <com.intraminds.webrtc.PercentFrameLayout
+        android:id="@+id/video_layout20" android:layout_width="match_parent" android:layout_height="match_parent">
+        <org.webrtc.SurfaceViewRenderer android:id="@+id/video_view20" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+    </com.intraminds.webrtc.PercentFrameLayout>
+    <com.intraminds.webrtc.PercentFrameLayout
+        android:id="@+id/video_layout21" android:layout_width="match_parent" android:layout_height="match_parent">
+        <org.webrtc.SurfaceViewRenderer android:id="@+id/video_view21" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+    </com.intraminds.webrtc.PercentFrameLayout>
+    <com.intraminds.webrtc.PercentFrameLayout
+        android:id="@+id/video_layout22" android:layout_width="match_parent" android:layout_height="match_parent">
+        <org.webrtc.SurfaceViewRenderer android:id="@+id/video_view22" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+    </com.intraminds.webrtc.PercentFrameLayout>
+    <com.intraminds.webrtc.PercentFrameLayout
+        android:id="@+id/video_layout23" android:layout_width="match_parent" android:layout_height="match_parent">
+        <org.webrtc.SurfaceViewRenderer android:id="@+id/video_view23" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+    </com.intraminds.webrtc.PercentFrameLayout>
+    <com.intraminds.webrtc.PercentFrameLayout
+        android:id="@+id/video_layout24" android:layout_width="match_parent" android:layout_height="match_parent">
+        <org.webrtc.SurfaceViewRenderer android:id="@+id/video_view24" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+    </com.intraminds.webrtc.PercentFrameLayout>
+    <com.intraminds.webrtc.PercentFrameLayout
+        android:id="@+id/video_layout25" android:layout_width="match_parent" android:layout_height="match_parent">
+        <org.webrtc.SurfaceViewRenderer android:id="@+id/video_view25" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+    </com.intraminds.webrtc.PercentFrameLayout>
+    <com.intraminds.webrtc.PercentFrameLayout
+        android:id="@+id/video_layout26" android:layout_width="match_parent" android:layout_height="match_parent">
+        <org.webrtc.SurfaceViewRenderer android:id="@+id/video_view26" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+    </com.intraminds.webrtc.PercentFrameLayout>
+    <com.intraminds.webrtc.PercentFrameLayout
+        android:id="@+id/video_layout27" android:layout_width="match_parent" android:layout_height="match_parent">
+        <org.webrtc.SurfaceViewRenderer android:id="@+id/video_view27" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+    </com.intraminds.webrtc.PercentFrameLayout>
+
+    <com.intraminds.webrtc.PercentFrameLayout
+        android:id="@+id/video_layout28"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <org.webrtc.SurfaceViewRenderer
+            android:id="@+id/video_view28"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </com.intraminds.webrtc.PercentFrameLayout>
+
+    <com.intraminds.webrtc.PercentFrameLayout
+        android:id="@+id/video_layout0" android:layout_width="match_parent" android:layout_height="match_parent">
+        <org.webrtc.SurfaceViewRenderer android:id="@+id/video_view0" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+    </com.intraminds.webrtc.PercentFrameLayout>
+    <com.intraminds.webrtc.PercentFrameLayout
+        android:id="@+id/shot_video_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <org.webrtc.SurfaceViewRenderer
+            android:id="@+id/shot_video_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </com.intraminds.webrtc.PercentFrameLayout>
+</RelativeLayout>
+

@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/iv_item_photo"
+        android:layout_width="@dimen/dimen_big_photo_size"
+        android:layout_height="@dimen/dimen_big_photo_size"
+        android:layout_centerVertical="true"
+        android:layout_marginStart="@dimen/dimen_margin_16"
+        android:layout_marginTop="12dp"
+        android:focusable="false"
+        android:layout_marginBottom="12dp"/>
+
+    <TextView
+        android:id="@+id/tv_item_name"
+        android:layout_toRightOf="@+id/iv_item_photo"
+        android:layout_alignTop="@+id/iv_item_photo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginStart="10dp"
+        android:textColor="@color/colorBlack"
+        android:textSize="@dimen/text_view_size_focused"
+        />
+
+    <TextView
+        android:id="@+id/tv_item_info"
+        android:layout_below="@+id/tv_item_name"
+        android:layout_alignStart="@+id/tv_item_name"
+        android:layout_toStartOf="@+id/iv_item_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="7dp"
+        android:layout_marginEnd="7dp"
+        android:layout_marginBottom="12dp"
+        android:textSize="14sp"
+        android:textColor="@color/colorTextUnFocused"/>
+
+    <Button
+        android:id="@+id/iv_item_btn"
+        android:layout_width="50dp"
+        android:layout_height="25dp"
+        android:textSize="14sp"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="@dimen/dimen_margin_16"
+        android:layout_centerVertical="true"
+        android:background="@drawable/ic_rounded_rectangle_btn"
+        android:focusable="false"
+        android:text="@string/friend_invite_agree"
+        android:textColor="@color/colorWhite"
+        />
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignStart="@id/tv_item_name"
+        android:contentDescription="@null"
+        android:src="@color/colorLine" />
+
+</RelativeLayout>

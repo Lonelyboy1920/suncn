@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="XEditText">
+        <attr name="x_separator" format="string"/>
+        <attr name="x_disableClear" format="boolean"/>
+        <attr name="x_clearDrawable" format="reference"/>
+        <attr name="x_showPwdDrawable" format="reference"/>
+        <attr name="x_hidePwdDrawable" format="reference"/>
+        <attr name="x_disableEmoji" format="boolean"/>
+        <attr name="x_togglePwdDrawableEnable" format="boolean"/>
+        <attr name="x_pattern" format="string"/>
+    </declare-styleable>
+
+    <declare-styleable name="SwipeMenuLayout">
+        <attr name="swipeEnable" format="boolean"/>
+        <attr name="ios" format="boolean"/>
+        <attr name="leftSwipe" format="boolean"/>
+    </declare-styleable>
+
+    <declare-styleable name="WaveSideBar">
+        <attr name="sidebar_lazy_respond" format="boolean"/>
+        <attr name="sidebar_text_size" format="dimension"/>
+        <attr name="sidebar_text_color" format="color"/>
+        <attr name="sidebar_max_offset" format="dimension"/>
+        <attr name="sidebar_position" format="enum">
+            <enum name="right" value="0"/>
+            <enum name="left" value="1"/>
+        </attr>
+        <attr name="sidebar_text_alignment" format="enum">
+            <enum name="center" value="0"/>
+            <enum name="left" value="1"/>
+            <enum name="right" value="2" />
+        </attr>
+    </declare-styleable>
+
+    <declare-styleable name="MovieRecorderView">
+        <!-- 开始是否打开摄像头 -->
+        <attr name="is_open_camera" format="boolean" />
+        <!-- 一次拍摄最长时间 -->
+        <attr name="record_max_time" format="integer"/>
+        <!-- 视频分辨率宽度 -->
+        <attr name="video_width" format="integer"/>
+        <!-- 视频分辨率高度 -->
+        <attr name="video_height" format="integer"/>
+    </declare-styleable>
+</resources>

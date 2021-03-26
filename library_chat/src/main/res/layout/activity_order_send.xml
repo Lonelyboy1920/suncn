@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/colorActivityBackground"
+    >
+
+    <include
+        android:id="@+id/view_os_title"
+        layout="@layout/title_bar" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingTop="10dp">
+
+            <include
+                android:id="@+id/view_os_type"
+                layout="@layout/item_base_info" />
+
+            <include
+                android:id="@+id/view_os_level"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                layout="@layout/item_base_info"
+                android:layout_marginTop="10dp" />
+
+            <EditText
+                android:id="@+id/et_os_title"
+                android:layout_width="match_parent"
+                android:layout_height="44dp"
+                android:background="@android:drawable/editbox_background_normal"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="10dp"
+                android:hint="@string/im_text_order_title_hint"
+                android:textColorHint="@color/colorTextUnFocused"
+                android:textSize="14sp"
+                android:textColor="@color/colorBlack"
+                android:singleLine="true"
+                />
+
+            <EditText
+                android:id="@+id/et_os_content"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:background="@android:drawable/editbox_background_normal"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="10dp"
+                android:hint="@string/im_text_order_content_hint"
+                android:textColorHint="@color/colorTextUnFocused"
+                android:textSize="14sp"
+                android:textColor="@color/colorBlack"
+                android:gravity="top"
+                />
+
+            <include
+                android:id="@+id/view_os_add_pic"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                layout="@layout/item_base_info"
+                android:layout_marginTop="10dp" />
+
+            <LinearLayout
+                android:id="@+id/ll_os_pic_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/colorWhite"
+                android:orientation="horizontal" />
+
+
+            <include
+                android:id="@+id/view_os_add_file"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                layout="@layout/item_base_info"
+                android:layout_marginTop="10dp" />
+
+            <LinearLayout
+                android:id="@+id/ll_os_file_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/colorWhite"
+                android:orientation="vertical" />
+
+            <include
+                android:id="@+id/view_os_select_user"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                layout="@layout/item_base_info"
+                android:layout_marginTop="10dp" />
+
+            <include
+                android:id="@+id/view_os_select_date"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                layout="@layout/item_base_info"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="20dp"
+                />
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>

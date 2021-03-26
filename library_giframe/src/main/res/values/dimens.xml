@@ -1,0 +1,35 @@
+<resources>
+    <!-- font size -->
+    <dimen name="font_button">28sp</dimen>
+    <dimen name="font_huge">24sp</dimen>
+    <dimen name="font_large">20sp</dimen>
+    <dimen name="font_medium">18sp</dimen>
+    <dimen name="font_17">17sp</dimen>
+    <dimen name="font_normal">16sp</dimen>
+    <dimen name="font_15">15sp</dimen>
+    <dimen name="font_small">14sp</dimen>
+    <dimen name="font_13">13sp</dimen>
+    <dimen name="font_mini">12sp</dimen>
+    <dimen name="font_11">11sp</dimen>
+    <dimen name="font_10">10sp</dimen>
+    <dimen name="font_9">9sp</dimen>
+    <dimen name="font_8">8sp</dimen>
+
+    <!--tablayout高度-->
+    <dimen name="global_tablayout_height">40dp</dimen>
+    <!--标题栏高度-->
+    <dimen name="layout_height_head">45dip</dimen>
+    <!--底部菜单高度-->
+    <dimen name="bottom_menu_layout_height">55dip</dimen>
+    <!--状态栏高度-->
+    <dimen name="statusBar_height">25dip</dimen>
+    <dimen name="font_24_dp">24dp</dimen>
+    <dimen name="font_15_dp">15dp</dimen>
+    <dimen name="font_14_dp">14dp</dimen>
+    <dimen name="font_12_dp">12dp</dimen>
+    <dimen name="font_10_dp">10dp</dimen>
+    <dimen name="font_18_dp">18dp</dimen>
+    <dimen name="font_20_dp">20dp</dimen>
+    <dimen name="font_16_dp">16dp</dimen>
+    <dimen name="sp_100_dp">100sp</dimen>
+</resources>

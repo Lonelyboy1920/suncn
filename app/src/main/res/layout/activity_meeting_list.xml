@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorActivityBackground"
+    android:orientation="vertical">
+
+    <include
+        android:id="@+id/view_ml_title"
+        layout="@layout/view_head_white"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:orientation="horizontal"
+        android:background="@color/colorWhite"
+        >
+
+        <LinearLayout
+            android:id="@+id/ll_ml_doing_layout"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:gravity="center"
+            >
+
+            <TextView
+                android:id="@+id/tv_ml_doing"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="@string/meeting_doing"
+                android:gravity="center"
+                android:textSize="@dimen/font_16_dp"
+                android:textColor="@color/view_head_bg" />
+
+            <ImageView
+                android:id="@+id/iv_ml_doing"
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:background="@color/view_head_bg" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_ml_done_layout"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:gravity="center"
+            >
+
+            <TextView
+                android:id="@+id/tv_ml_done"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="@string/meeting_done"
+                android:gravity="center"
+                android:textSize="@dimen/font_16_dp"
+                android:textColor="#666666" />
+
+            <ImageView
+                android:id="@+id/iv_ml_done"
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:background="@color/colorActivityBackground" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <com.handmark.pulltorefresh.library.PullToRefreshListView
+        android:id="@+id/lv_ml_list"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:divider="@null" />
+
+</LinearLayout>

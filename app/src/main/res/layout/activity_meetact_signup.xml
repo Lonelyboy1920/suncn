@@ -1,0 +1,245 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tool="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/main_bg"
+    android:orientation="vertical">
+
+    <include layout="@layout/view_head_white" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/white"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tv_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:textColor="@color/font_title"
+                android:textSize="@dimen/font_normal"
+                tool:text="这里是标题" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:background="@color/main_bg"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:padding="10dp">
+
+                    <TextView
+                        android:id="@+id/tv_start_date_tag"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/font_source"
+                        android:textSize="@dimen/font_small"
+                        tool:text="开始日期" />
+
+                    <TextView
+                        android:id="@+id/tv_start_time"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:textColor="@color/font_content"
+                        android:textSize="@dimen/font_small"
+                        tool:text="2018-5-22" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp">
+
+                    <TextView
+                        android:id="@+id/tv_end_date_tag"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/font_source"
+                        android:textSize="@dimen/font_small"
+                        tool:text="结束日期" />
+
+                    <TextView
+                        android:id="@+id/tv_end_time"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:textColor="@color/font_content"
+                        android:textSize="@dimen/font_small"
+                        tool:text="2018-5-22" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:padding="10dp">
+
+                    <TextView
+                        android:id="@+id/tv_place_tag"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/font_source"
+                        android:textSize="@dimen/font_small"
+                        tool:text="会议地点" />
+
+                    <TextView
+                        android:id="@+id/tv_place"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:textColor="@color/font_content"
+                        android:textSize="@dimen/font_small"
+                        tool:text="2018-5-22" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="10dp"
+                android:layout_marginTop="10dp"
+                android:background="@color/line_bg_white" />
+
+            <com.suncn.ihold_zxztc.view.MenuItemEditLayout
+                android:id="@+id/tv_state"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:hint="@string/string_please_select"
+                app:label="@string/string_attendance_status"
+                app:show_arrow="true"/>
+
+
+            <LinearLayout
+                android:id="@+id/ll_leave"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/line_bg_white"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <LinearLayout
+                    android:id="@+id/ll_leave_type"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="0.5dp"
+                    android:background="@color/white"
+                    android:foreground="?android:attr/selectableItemBackground"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/string_leave_type"
+                        android:textColor="@color/font_title"
+                        android:textSize="@dimen/font_normal" />
+
+                    <TextView
+                        android:id="@+id/tv_leave_type"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="right"
+                        android:hint="@string/string_please_select"
+                        android:paddingLeft="5dp"
+                        android:paddingTop="10dp"
+                        android:paddingRight="5dp"
+                        android:paddingBottom="10dp"
+                        android:textColor="@color/font_content"
+                        android:textColorHint="@color/font_hint"
+                        android:textSize="@dimen/font_15" />
+
+                    <com.gavin.giframe.widget.GITextView style="@style/style_arrow" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/ll_deduction"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="0.5dp"
+                    android:background="@color/white"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:paddingLeft="10dp"
+                    android:paddingTop="5dp"
+                    android:paddingRight="10dp"
+                    android:paddingBottom="5dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/string_deduction_type"
+                        android:textColor="@color/font_title"
+                        android:textSize="@dimen/font_normal" />
+
+                    <RadioGroup
+                        android:id="@+id/rg_deduction"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:orientation="horizontal">
+
+                        <RadioButton
+                            android:id="@+id/rb_no"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:buttonTint="@color/radiobutton_selector"
+                            android:text="@string/string_no_deduction"
+                            android:textColor="@color/font_content"
+                            android:textSize="@dimen/font_15" />
+
+                        <RadioButton
+                            android:id="@+id/rb_yes"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="15dp"
+                            android:buttonTint="@color/radiobutton_selector"
+                            android:checked="true"
+                            android:text="@string/string_deduction"
+                            android:textColor="@color/font_content"
+                            android:textSize="@dimen/font_15" />
+                    </RadioGroup>
+                </LinearLayout>
+
+                <com.gavin.giframe.widget.GIEditText
+                    android:id="@+id/et_reason"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="0.5dp"
+                    android:background="@color/white"
+                    android:gravity="top"
+                    android:hint="@string/string_please_enter_the_reason_for_leave"
+                    android:inputType="textMultiLine"
+                    android:minLines="3"
+                    android:padding="10dp"
+                    android:textColor="@color/font_content"
+                    android:textColorHint="@color/font_hint"
+                    android:textSize="@dimen/font_15" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rv_img"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp" />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginRight="10dp"
+    android:background="@color/main_bg">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="15dp"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/line_top"
+            android:layout_width="1dp"
+            android:layout_height="0dp"
+            android:layout_weight="1.5"
+            android:background="#dddddd" />
+
+        <TextView
+            android:layout_width="10dp"
+            android:layout_height="10dp"
+            android:background="@mipmap/red_dot" />
+
+        <LinearLayout
+            android:id="@+id/line_bot"
+            android:layout_width="1dp"
+            android:layout_height="0dp"
+            android:layout_weight="1.5"
+            android:background="#dddddd" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginRight="5dp"
+        android:layout_marginBottom="15dp"
+        android:paddingTop="5dp"
+        android:paddingBottom="5dp"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:background="@drawable/shape_bg_border_white_r5"
+        android:elevation="3dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tv_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="11:20"
+            android:textColor="@color/font_source"
+            android:textSize="@dimen/font_mini" />
+
+        <TextView
+            android:id="@+id/tv_meet"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:ellipsize="end"
+            android:paddingTop="5dp"
+            android:paddingBottom="5dp"
+            android:text="会议开幕式"
+            android:textColor="@color/font_title"
+            android:textSize="@dimen/font_normal" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical">
+
+            <ImageView
+                android:layout_width="15dp"
+                android:layout_height="wrap_content"
+                android:src="@mipmap/sign_icon" />
+
+            <TextView
+                android:id="@+id/tv_place"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:singleLine="true"
+                android:text="111111111111111"
+                android:textColor="@color/font_source"
+                android:textSize="@dimen/font_mini" />
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

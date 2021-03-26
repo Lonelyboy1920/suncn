@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<level-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:minLevel="0" android:maxLevel="600" android:drawable="@mipmap/im_record_animate_01"/>
+    <item android:minLevel="600" android:maxLevel="1000" android:drawable="@mipmap/im_record_animate_02"/>
+    <item android:minLevel="1000" android:maxLevel="1200" android:drawable="@mipmap/im_record_animate_03"/>
+    <item android:minLevel="1200" android:maxLevel="1400" android:drawable="@mipmap/im_record_animate_04"/>
+    <item android:minLevel="1400" android:maxLevel="1600" android:drawable="@mipmap/im_record_animate_05"/>
+    <item android:minLevel="1600" android:maxLevel="1800" android:drawable="@mipmap/im_record_animate_06"/>
+    <item android:minLevel="1800" android:maxLevel="2000" android:drawable="@mipmap/im_record_animate_07"/>
+    <item android:minLevel="2000" android:maxLevel="3000" android:drawable="@mipmap/im_record_animate_08"/>
+    <item android:minLevel="3000" android:maxLevel="4000" android:drawable="@mipmap/im_record_animate_09"/>
+    <item android:minLevel="4000" android:maxLevel="6000" android:drawable="@mipmap/im_record_animate_10"/>
+    <item android:minLevel="6000" android:maxLevel="8000" android:drawable="@mipmap/im_record_animate_11"/>
+    <item android:minLevel="8000" android:maxLevel="10000" android:drawable="@mipmap/im_record_animate_12"/>
+    <item android:minLevel="10000" android:maxLevel="12000" android:drawable="@mipmap/im_record_animate_13"/>
+    <item android:minLevel="12000" android:drawable="@mipmap/im_record_animate_14"/>
+</level-list>

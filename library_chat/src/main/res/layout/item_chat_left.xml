@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/transparent">
+
+    <ImageView
+        android:id="@+id/iv_chat_check"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginStart="10dp"
+        android:src="@drawable/ic_round_unselected" />
+
+    <TextView
+        android:id="@+id/tv_chat_msg_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="5dp"
+        android:background="@drawable/bg_msg_time"
+        android:padding="5dp"
+        android:textColor="@color/colorWhite"
+        android:textSize="12sp"
+        android:layout_marginStart="45dp"
+        android:layout_marginEnd="45dp"
+        />
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/iv_chat_icon"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_below="@+id/tv_chat_msg_time"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_toEndOf="@+id/iv_chat_check" />
+
+    <RelativeLayout
+        android:id="@+id/rl_chat_content_layout"
+        android:layout_width="280dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="3dp"
+        android:layout_alignTop="@+id/iv_chat_icon"
+        android:layout_toEndOf="@+id/iv_chat_icon">
+
+        <TextView
+            android:id="@+id/tv_chat_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:textColor="@color/colorTextUnFocused"
+            android:textSize="12sp" />
+
+        <LinearLayout
+            android:id="@+id/ll_chat_container"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_below="@+id/tv_chat_name"/>
+
+        <TextView
+            android:id="@+id/tv_burn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/ll_chat_container"
+            android:layout_marginTop="5dp"
+            android:textSize="9sp"
+            android:textColor="@color/colorWhite"
+            android:text="@string/burn_after_read"
+            android:background="@drawable/bg_msg_time"
+            android:padding="3dp"
+            android:visibility="gone"
+            />
+
+    </RelativeLayout>
+
+
+</RelativeLayout>

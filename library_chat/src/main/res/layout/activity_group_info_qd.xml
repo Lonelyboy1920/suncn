@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorActivityBackground"
+    android:orientation="vertical">
+
+    <include
+        android:id="@+id/td_title"
+        layout="@layout/title_bar" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <include
+                android:id="@+id/view_gi_info"
+                layout="@layout/item_base_info" />
+
+            <com.qd.longchat.view.QDGridView
+                android:id="@+id/gv_gi_grid"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/colorWhite"
+                android:listSelector="@android:color/transparent"
+                android:numColumns="5"
+                android:paddingBottom="10dp"
+                android:verticalSpacing="5dp" />
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="20dp" />
+
+            <include
+                android:id="@+id/view_gi_name"
+                layout="@layout/item_base_info" />
+
+            <include
+                android:id="@+id/view_gi_desc"
+                layout="@layout/item_base_info" />
+
+            <include
+                android:id="@+id/view_gi_nickname"
+                layout="@layout/item_base_info"
+                android:visibility="gone"/>
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="20dp" />
+
+            <include
+                android:id="@+id/view_gi_notice"
+                layout="@layout/item_base_info"
+                />
+
+            <include
+                android:id="@+id/view_gi_file"
+                layout="@layout/item_base_info"
+                android:visibility="gone"/>
+
+            <include
+                android:id="@+id/view_gi_history"
+                layout="@layout/item_base_info" />
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="20dp" />
+
+            <include
+                android:id="@+id/view_gi_top"
+                layout="@layout/item_base_info" />
+
+            <include
+                android:id="@+id/view_gi_shield"
+                layout="@layout/item_base_info" />
+
+            <include
+                android:id="@+id/view_gi_banned"
+                layout="@layout/item_base_info" />
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="20dp" />
+
+            <include
+                android:id="@+id/view_gi_set_manager"
+                layout="@layout/item_base_info"
+                android:visibility="gone"/>
+
+            <include
+                android:id="@+id/view_gi_change_owner"
+                layout="@layout/item_base_info"
+                android:visibility="gone"/>
+
+            <ImageView
+                android:id="@+id/iv_gi_space"
+                android:layout_width="match_parent"
+                android:layout_height="20dp"
+                android:visibility="gone"/>
+
+            <include
+                android:id="@+id/view_gi_clear"
+                layout="@layout/item_base_info" />
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="20dp" />
+
+            <TextView
+                android:id="@+id/tv_gi_btn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="15dp"
+                android:background="@color/colorWhite"
+                android:gravity="center"
+                android:paddingTop="10dp"
+                android:paddingBottom="10dp"
+                android:text="@string/group_info_exit_group"
+                android:textColor="@color/view_head_bg"
+                android:textSize="16sp" />
+        </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>

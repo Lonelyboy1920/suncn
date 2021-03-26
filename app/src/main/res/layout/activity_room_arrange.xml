@@ -1,0 +1,219 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/main_bg">
+
+    <include layout="@layout/view_head_white" />
+
+    <LinearLayout
+        android:layout_marginTop="0.5dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:padding="10dp">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.5"
+            android:text="酒店名称"
+            android:textColor="@color/font_title"
+            android:textSize="@dimen/font_normal" />
+
+        <TextView
+            android:id="@+id/tv_room_name"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="left"
+            android:text="11111"
+            android:textColor="@color/font_content"
+            android:textSize="@dimen/font_15" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.5"
+            android:text=""
+            android:textColor="@color/font_content"
+            android:textSize="@dimen/font_15" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_marginTop="0.5dp"
+        android:background="@color/white"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.5"
+            android:text="酒店地址"
+            android:textColor="@color/font_title"
+            android:textSize="@dimen/font_normal" />
+
+        <TextView
+            android:id="@+id/tv_room_address"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="left"
+            android:text="11111"
+            android:textColor="@color/font_content"
+            android:textSize="@dimen/font_normal" />
+
+        <TextView
+            android:id="@+id/tv_see_address"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.5"
+            android:text="查看地图"
+            android:gravity="right"
+            android:textColor="@color/font_content"
+            android:textSize="@dimen/font_15" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_marginTop="0.5dp"
+        android:background="@color/white"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.5"
+            android:text="入住时间"
+            android:textColor="@color/font_title"
+            android:textSize="@dimen/font_normal" />
+
+        <TextView
+            android:id="@+id/tv_in_time"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="left"
+            android:text="11111"
+            android:textColor="@color/font_content"
+            android:textSize="@dimen/font_normal" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.5"
+            android:text=""
+            android:textColor="@color/font_content"
+            android:textSize="@dimen/font_15" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_marginTop="0.5dp"
+        android:background="@color/white"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.5"
+            android:text="退房时间"
+            android:textColor="@color/font_title"
+            android:textSize="@dimen/font_normal" />
+
+        <TextView
+            android:id="@+id/tv_out_time"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="left"
+            android:text="11111"
+            android:textColor="@color/font_content"
+            android:textSize="@dimen/font_normal" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.5"
+            android:text=""
+            android:textColor="@color/font_content"
+            android:textSize="@dimen/font_15" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_room_num"
+        android:layout_marginTop="0.5dp"
+        android:background="@color/white"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.5"
+            android:text="房间号"
+            android:textColor="@color/font_title"
+            android:textSize="@dimen/font_normal" />
+
+        <TextView
+            android:id="@+id/tv_room_num"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="left"
+            android:text="11111"
+            android:textColor="@color/font_content"
+            android:textSize="@dimen/font_normal" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.5"
+            android:text=""
+            android:textColor="@color/font_content"
+            android:textSize="@dimen/font_15" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_res_address"
+        android:layout_marginTop="0.5dp"
+        android:background="@color/white"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.5"
+            android:text="餐厅地址"
+            android:textColor="@color/font_title"
+            android:textSize="@dimen/font_normal" />
+
+        <TextView
+            android:id="@+id/tv_res_address"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="left"
+            android:text="11111"
+            android:textColor="@color/font_content"
+            android:textSize="@dimen/font_normal" />
+
+        <TextView
+            android:id="@+id/tv_see_order"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.5"
+            android:text="查看菜单"
+            android:gravity="right"
+            android:textColor="@color/font_content"
+            android:textSize="@dimen/font_15" />
+    </LinearLayout>
+</LinearLayout>
