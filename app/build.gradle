@@ -1,4 +1,6 @@
 apply plugin: 'com.android.application'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-android-extensions'
 
 android {
     signingConfigs {
@@ -199,13 +201,7 @@ android {
         annotationProcessor 'com.jakewharton:butterknife-compiler:10.2.1'
         api 'com.jakewharton:butterknife:10.2.1'
 
-//        implementation 'com.arialyy.aria:core:3.8.6'
-//        annotationProcessor 'com.arialyy.aria:compiler:3.8.6'
-////                {
-////            transitive = false
-////        }
+        implementation "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
+        implementation 'androidx.core:core-ktx:1.3.2'
     }
-}
-
-dependencies {
 }
