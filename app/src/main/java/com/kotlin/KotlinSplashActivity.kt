@@ -4,12 +4,15 @@ import android.Manifest
 import android.os.Build
 import android.os.Bundle
 import android.os.PersistableBundle
+import android.util.Log
 import android.view.WindowManager
 import com.gavin.giframe.http.BaseResponse
 import com.gavin.giframe.utils.GILogUtil
 import com.gavin.giframe.utils.GIPhoneUtils
 import com.gavin.giframe.utils.GISharedPreUtil
 import com.gavin.giframe.utils.RxUtils
+import com.kotlin.net.RetrofitManager
+import com.kotlin.net.exception.ExceptionHandle
 import com.suncn.ihold_zxztc.ApiManager
 import com.suncn.ihold_zxztc.R
 import com.suncn.ihold_zxztc.rxhttp.RxDisposeManager
@@ -35,28 +38,32 @@ class KotlinSplashActivity : KotlinBaseActivity() {
 
     override fun onResume() {
         super.onResume()
-        if (resources.getBoolean(R.bool.IS_OPEN_SPLASH_ROBOT) and !GISharedPreUtil.getString(this, "strSplashUrl").isNullOrEmpty()) {
-            videoView = CustomVideoView(this)
-            setContentView(videoView)
-        }
-
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.P) {
-            var params = window.attributes
-            params.layoutInDisplayCutoutMode = WindowManager.LayoutParams.LAYOUT_IN_DISPLAY_CUTOUT_MODE_SHORT_EDGES
-            window.attributes = params
-        }
+//        if (resources.getBoolean(R.bool.IS_OPEN_SPLASH_ROBOT) and !GISharedPreUtil.getString(this, "strSplashUrl").isNullOrEmpty()) {
+//            videoView = CustomVideoView(this)
+//            setContentView(videoView)
+//        }
+//
+//        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.P) {
+//            var params = window.attributes
+//            params.layoutInDisplayCutoutMode = WindowManager.LayoutParams.LAYOUT_IN_DISPLAY_CUTOUT_MODE_SHORT_EDGES
+//            window.attributes = params
+//        }
+        Log.i("===============","SplashOnRes")
+        doLogin()
     }
 
     override fun onCreate(savedInstanceState: Bundle?, persistentState: PersistableBundle?) {
         super.onCreate(savedInstanceState, persistentState)
         setContentView(R.layout.activity_splash_kotlin)
 
-
+        Log.i("===============","SplashOnCre")
         object : RequestCallBack<Any> {
             override fun onSucess(data: Any, sign: Int) {
 
             }
         }
+
+
 
     }
 
@@ -73,6 +80,12 @@ class KotlinSplashActivity : KotlinBaseActivity() {
                 textParamMap.put("intType", "20")
                 textParamMap.put("strVersion", GIPhoneUtils.getAppVersionCode(this@KotlinSplashActivity).toString())
 //                doRequestNormal(ApiManager.getInstance().doLogin(textParamMap), 0)
+
+                RetrofitManager.service.doLogin(textParamMap).subscribe({
+                    Log.i("=======================", it.toString())
+                }, {
+                    Log.i("=======================", ExceptionHandle.handleException(it) + ExceptionHandle.errorCode)
+                })
             }
 
             override fun onClose() { // 用户关闭权限申请

@@ -1,8 +1,8 @@
 package com.kotlin.api
 
-import com.gavin.giframe.http.BaseResponse
-import com.suncn.ihold_zxztc.bean.LoginBean
+import com.kotlin.bean.LoginBean
 import io.reactivex.Observable
+import retrofit2.http.FieldMap
 import retrofit2.http.POST
 import retrofit2.http.QueryMap
 
@@ -14,8 +14,8 @@ import retrofit2.http.QueryMap
  */
 abstract class IKotlinRequestApi {
 
-    @POST
-    abstract fun doLogin(@QueryMap map: Map<String, String>): Observable<BaseResponse<LoginBean>>
+    @POST("AuthServlet")
+    abstract fun doLogin(@FieldMap map: Map<String, String>): Observable<LoginBean>
 
 
 //    //登录
