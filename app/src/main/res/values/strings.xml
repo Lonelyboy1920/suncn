@@ -1,8 +1,8 @@
 <resources>
-    <string name="app_name">履职掌中宝</string>
+    <string name="app_name">政协Kotlin</string>
     <!--测试服务器地址-->
-    <string name="default_server">192.168.1.140</string>
-    <string name="default_port">8081/cppcc2019</string>
+    <string name="default_server">yanshi04.suncn.com.cn</string>
+    <string name="default_port">gzzx</string>
     <!--吴振超服务器地址-->
     <!--<string name="default_server">192.168.4.189</string>
     <string name="default_port">8080/cppcc2019</string>-->

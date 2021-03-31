@@ -1,5 +1,6 @@
 package com.kotlin.api
 
+import com.kotlin.bean.KotlinBaseResponse
 import com.kotlin.bean.LoginBean
 import io.reactivex.Observable
 import retrofit2.http.FieldMap
@@ -12,10 +13,10 @@ import retrofit2.http.QueryMap
  * PackageName：com.kotlin
  * Desc：
  */
-abstract class IKotlinRequestApi {
+interface IKotlinRequestApi {
 
     @POST("AuthServlet")
-    abstract fun doLogin(@FieldMap map: Map<String, String>): Observable<LoginBean>
+    fun doLogin(@QueryMap map: Map<String, String>): Observable<KotlinBaseResponse<LoginBean>>
 
 
 //    //登录

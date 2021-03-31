@@ -6,9 +6,11 @@ import com.gavin.giframe.http.PersistentCookieStore
 import com.gavin.giframe.utils.GISharedPreUtil
 import com.gavin.giframe.utils.GIStringUtil
 import com.kotlin.api.IKotlinRequestApi
+import com.suncn.ihold_zxztc.ApiManager
 import com.suncn.ihold_zxztc.MyApplication
 import com.suncn.ihold_zxztc.utils.DefineUtil
 import com.suncn.ihold_zxztc.utils.HttpsUtils
+import com.suncn.ihold_zxztc.utils.Utils
 import okhttp3.*
 import retrofit2.Retrofit
 import retrofit2.adapter.rxjava2.RxJava2CallAdapterFactory
@@ -21,20 +23,33 @@ import java.util.concurrent.TimeUnit
  * PackageName：com.kotlin.net
  * Desc：
  */
-object RetrofitManager {
+class RetrofitManager {
+    lateinit var retrofit: Retrofit
+    var mContext: Context = MyApplication.getInstance().applicationContext
 
-    val service: IKotlinRequestApi by lazy {
-        getRetrofit().create(IKotlinRequestApi::class.java)
+
+    lateinit var INSTANCE: IKotlinRequestApi
+
+
+    open fun getInstance(): IKotlinRequestApi {
+//        if (INSTANCE == null) {
+//            synchronized(RetrofitManager) {
+        INSTANCE = getAppApi()
+//            }
+//        }
+        return INSTANCE
     }
 
-    private fun getRetrofit(): Retrofit {
-        val baseUrl = "http://yanshi04.suncn.com.cn/gzzx/" + "ios/" //服务端根路径
-        return Retrofit.Builder()
+
+    private fun getAppApi(): IKotlinRequestApi {
+        var baseUrl = Utils.getFileDomain(mContext) + "ios/"
+        retrofit = Retrofit.Builder()
+                .addConverterFactory(GsonConverterFactory.create())
+                .addCallAdapterFactory(RxJava2CallAdapterFactory.create())
                 .baseUrl(baseUrl)
                 .client(getOkHttpClient())
-                .addCallAdapterFactory(RxJava2CallAdapterFactory.create())
-                .addConverterFactory(GsonConverterFactory.create())
                 .build()
+        return retrofit.create(IKotlinRequestApi::class.java)
     }
 
     private fun getOkHttpClient(): OkHttpClient {
@@ -60,28 +75,21 @@ object RetrofitManager {
 
         override fun intercept(chain: Interceptor.Chain): Response {
             var request: Request = chain.request()
-            var oldHttpUrl = request.url()
             var builder = request.newBuilder()
-            var headerValues = request.header("urlname")
 
             if (GISharedPreUtil.getBoolean(mContext, "isHasLogin")) {
                 mParams.put("intUserRole", GISharedPreUtil.getInt(mContext, "intUserRole").toString() + "") // 用户类型（0-委员；1-用户；2-承办单位）
                 mParams.put("strSid", GIStringUtil.nullToEmpty(GISharedPreUtil.getString(mContext, "strSid") + ""))
                 mParams.put("strUdid", GIStringUtil.nullToEmpty(GISharedPreUtil.getString(mContext, "deviceCode") + ""))
             } else {
-
+                mParams.remove("strSid")
+                mParams.remove("intUserRole")
             }
             var urlBuilder = request.url().newBuilder()
             if (null != mParams && mParams.size > 0) {
                 var keys = mParams.keys
                 for (headKey in keys) {
                     urlBuilder.addQueryParameter(headKey, mParams.get(headKey)).build()
-                }
-            }
-            if (mHeaders!!.size > 0) {
-                var keys = mHeaders!!.keys
-                for (headKey in keys) {
-                    builder.addHeader(headKey, mHeaders!!.get(headKey))
                 }
             }
             builder.method(request.method(), request.body())
