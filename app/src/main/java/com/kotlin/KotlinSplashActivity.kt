@@ -1,16 +1,21 @@
 package com.kotlin
 
 import android.Manifest
+import android.app.Activity
+import android.content.Intent
 import android.os.Bundle
 import android.util.Log
 import com.gavin.giframe.authcode.GIAESOperator
 import com.gavin.giframe.utils.GILogUtil
 import com.gavin.giframe.utils.GIPhoneUtils
 import com.gavin.giframe.utils.GISharedPreUtil
-import com.kotlin.bean.KotlinBaseResponse
+import com.kotlin.activity.KotlinLoginActivity
 import com.kotlin.bean.LoginBean
 import com.kotlin.net.RetrofitManager
 import com.suncn.ihold_zxztc.R
+import com.suncn.ihold_zxztc.activity.MainActivity
+import com.suncn.ihold_zxztc.bean.LoginBean.*
+import com.suncn.ihold_zxztc.utils.Utils
 import com.suncn.ihold_zxztc.view.CustomVideoView
 import me.weyye.hipermission.HiPermission
 import me.weyye.hipermission.PermissionCallback
@@ -39,10 +44,16 @@ class KotlinSplashActivity : KotlinBaseActivity() {
             override fun onSucess(data: Any?, sign: Int) {
                 var loginBean = data as LoginBean
                 Log.i("===============", "姓名:${loginBean.strName}\t 用户角色:${loginBean.intUserRole}")
+                sp_loginIn(this@KotlinSplashActivity, loginBean)
+                skipActivity(this@KotlinSplashActivity, KotlinLoginActivity().javaClass)
+            }
+
+            override fun onError(msg: String?) {
+                Log.i("====================", msg)
+                showActivity(this@KotlinSplashActivity, KotlinLoginActivity().javaClass)
             }
         }
         setTest(requestCallBack)
-        Log.i("===============", "SplashOnCre")
         doLogin()
 
     }
@@ -58,7 +69,7 @@ class KotlinSplashActivity : KotlinBaseActivity() {
                 var textParamMap = HashMap<String, String>()
                 textParamMap.put("strUdid", deviceCode)
                 // 用户名、密码登录方式
-                textParamMap.put("strUsername", "zhaoliying")
+                textParamMap.put("strUsername", "wangqihao")
                 textParamMap.put("strPassword", GIAESOperator.getInstance().encrypt("abcd@12345"))
                 textParamMap.put("strVersion", GIPhoneUtils.getAppVersionCode(this@KotlinSplashActivity).toString())
                 doRequestNormal(RetrofitManager().getInstance().doLogin(textParamMap), 0)
@@ -76,5 +87,18 @@ class KotlinSplashActivity : KotlinBaseActivity() {
                 GILogUtil.e("onDeny")
             }
         })
+    }
+
+    /**
+     * 设置登录后的存储信息
+     */
+    fun sp_loginIn(activity: Activity?, loginBean: LoginBean) {
+        GISharedPreUtil.setValue(activity, "isCheckUpdate", true)
+        GISharedPreUtil.setValue(activity, "strUserId", loginBean.strUserId) // 用户唯一ID
+        GISharedPreUtil.setValue(activity, "strPathUrl", Utils.formatFileUrl(activity, loginBean.strPathUrl)) // 登录用户头像地址
+        GISharedPreUtil.setValue(activity, "strName", loginBean.strName)
+        GISharedPreUtil.setValue(activity, "isHasLogin", true)
+        GISharedPreUtil.setValue(activity, "intUserRole", loginBean.intUserRole)
+        GISharedPreUtil.setValue(activity, "strSid", loginBean.strSid)
     }
 }

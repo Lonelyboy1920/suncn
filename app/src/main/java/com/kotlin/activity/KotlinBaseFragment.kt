@@ -1,26 +1,26 @@
-package com.kotlin
+package com.kotlin.activity
 
 import android.app.Activity
 import android.content.Intent
 import android.os.Bundle
-import androidx.appcompat.app.AppCompatActivity
+import android.view.View
+import androidx.fragment.app.Fragment
 import com.gavin.giframe.utils.RxUtils
+import com.kotlin.KotlinBaseActivity
 import com.kotlin.bean.KotlinBaseResponse
-import com.kotlin.bean.LoginBean
 import com.suncn.ihold_zxztc.rxhttp.RxDisposeManager
 import io.reactivex.Observable
 import io.reactivex.android.schedulers.AndroidSchedulers
 import io.reactivex.functions.Consumer
 import io.reactivex.schedulers.Schedulers
-import kotlin.reflect.KClass
 
 /**
  * @author :Sea
- * Date：2021-3-26 10:42
- * PackageName：com.kotlin
+ * Date：2021-12-1 15:52
+ * PackageName：com.kotlin.activity
  * Desc：
  */
-open class KotlinBaseActivity : AppCompatActivity() {
+open class KotlinBaseFragment : Fragment() {
 
     open var requestCallBack: RequestCallBack<Any>? = null
 
@@ -29,14 +29,11 @@ open class KotlinBaseActivity : AppCompatActivity() {
 
     }
 
-    override fun onResume() {
-        super.onResume()
-    }
 
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-    }
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
 
+    }
 
     interface RequestCallBack<T> {
         /**
@@ -71,8 +68,7 @@ open class KotlinBaseActivity : AppCompatActivity() {
 
     public fun skipActivity(activity: Activity, kcls: Class<Any>) {
         startActivity(Intent(activity, kcls))
-        finish()
+        activity.finish()
     }
-
 
 }

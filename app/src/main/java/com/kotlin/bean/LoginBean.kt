@@ -10,4 +10,5 @@ data class LoginBean(val strName: String,
                      val intUserRole: Int,
                      val strPathUrl: String,
                      val strUserName: String,
-                     val strUserId: String)
+                     val strUserId: String,
+                     val strSid: String)
