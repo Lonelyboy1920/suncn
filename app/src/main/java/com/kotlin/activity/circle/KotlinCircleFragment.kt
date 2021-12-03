@@ -6,9 +6,12 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import com.kotlin.activity.KotlinBaseFragment
+import com.kotlin.adapter.CircleRvAdapter
+import com.kotlin.bean.DynamicListServletBean
 import com.kotlin.bean.KotlinNewsInfoListServletBean
 import com.kotlin.net.RetrofitManager
 import com.suncn.ihold_zxztc.R
+import kotlinx.android.synthetic.main.fragment_kotlin_circle.*
 import java.util.HashMap
 
 /**
@@ -18,6 +21,8 @@ import java.util.HashMap
  * Desc：
  */
 class KotlinCircleFragment : KotlinBaseFragment() {
+
+    var mAdapter: CircleRvAdapter? = null
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
         return inflater.inflate(R.layout.fragment_kotlin_circle, null)
@@ -29,8 +34,9 @@ class KotlinCircleFragment : KotlinBaseFragment() {
 
         var requestCallBack = object : RequestCallBack<Any> {
             override fun onSucess(data: Any?, sign: Int) {
-                var loginBean = data as KotlinNewsInfoListServletBean
-
+                var loginBean = data as DynamicListServletBean
+                Log.i("=================", loginBean.toString())
+                mAdapter!!.setList(loginBean.dynamicList)
             }
 
             override fun onError(msg: String?) {
@@ -38,6 +44,10 @@ class KotlinCircleFragment : KotlinBaseFragment() {
             }
         }
         setTest(requestCallBack)
+        getDynamicListServlet()
+
+        mAdapter = CircleRvAdapter()
+        rv_circle.adapter = mAdapter
 
     }
 
@@ -45,9 +55,8 @@ class KotlinCircleFragment : KotlinBaseFragment() {
     /**
      * 请求列表数据
      */
-    fun getNewsInfoListServlet(strId: String) {
+    fun getDynamicListServlet() {
         var textParamMap = HashMap<String, String>()
-        textParamMap.put("strId", strId)
-        doRequestNormal(RetrofitManager().getInstance().getNewsInfoListServlet(textParamMap), 0)
+        doRequestNormal(RetrofitManager().getInstance().getDynamicListServlet(textParamMap), 0)
     }
 }

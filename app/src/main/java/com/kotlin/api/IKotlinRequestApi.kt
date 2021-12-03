@@ -1,9 +1,6 @@
 package com.kotlin.api
 
-import com.kotlin.bean.KotlinBaseResponse
-import com.kotlin.bean.KotlinNewsColumnListBean
-import com.kotlin.bean.KotlinNewsInfoListServletBean
-import com.kotlin.bean.LoginBean
+import com.kotlin.bean.*
 import io.reactivex.Observable
 import retrofit2.http.FieldMap
 import retrofit2.http.POST
@@ -35,5 +32,8 @@ interface IKotlinRequestApi {
 
     @POST("NewsInfoListServlet")
     fun getNewsInfoListServlet(@QueryMap map: Map<String, String>): Observable<KotlinBaseResponse<KotlinNewsInfoListServletBean>>
+
+    @POST("DynamicListServlet")
+    fun getDynamicListServlet(@QueryMap map: Map<String, String>): Observable<KotlinBaseResponse<DynamicListServletBean>>
 
 }

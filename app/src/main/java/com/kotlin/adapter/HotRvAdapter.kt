@@ -1,4 +1,4 @@
-package com.kotlin
+package com.kotlin.adapter
 
 import com.chad.library.adapter.base.BaseQuickAdapter
 import com.chad.library.adapter.base.viewholder.BaseViewHolder

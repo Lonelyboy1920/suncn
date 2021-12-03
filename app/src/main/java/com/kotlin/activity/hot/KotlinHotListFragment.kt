@@ -6,7 +6,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import com.hjq.toast.ToastUtils
-import com.kotlin.HotRvAdapter
+import com.kotlin.adapter.HotRvAdapter
 import com.kotlin.activity.KotlinBaseFragment
 import com.kotlin.bean.KotlinNewsInfoListServletBean
 import com.kotlin.net.RetrofitManager
