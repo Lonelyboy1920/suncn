@@ -53,8 +53,9 @@ class KotlinSplashActivity : KotlinBaseActivity() {
                 showActivity(this@KotlinSplashActivity, KotlinLoginActivity().javaClass)
             }
         }
+        showActivity(this@KotlinSplashActivity, KotlinLoginActivity().javaClass)
         setTest(requestCallBack)
-        doLogin()
+//        doLogin()
 
     }
 

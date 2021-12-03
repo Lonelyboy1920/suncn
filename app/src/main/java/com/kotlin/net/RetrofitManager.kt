@@ -76,15 +76,16 @@ class RetrofitManager {
         override fun intercept(chain: Interceptor.Chain): Response {
             var request: Request = chain.request()
             var builder = request.newBuilder()
-
-            if (GISharedPreUtil.getBoolean(mContext, "isHasLogin")) {
-                mParams.put("intUserRole", GISharedPreUtil.getInt(mContext, "intUserRole").toString() + "") // 用户类型（0-委员；1-用户；2-承办单位）
-                mParams.put("strSid", GIStringUtil.nullToEmpty(GISharedPreUtil.getString(mContext, "strSid") + ""))
-                mParams.put("strUdid", GIStringUtil.nullToEmpty(GISharedPreUtil.getString(mContext, "deviceCode") + ""))
-            } else {
-                mParams.remove("strSid")
-                mParams.remove("intUserRole")
-            }
+            mParams.remove("strSid")
+            mParams.remove("intUserRole")
+//            if (GISharedPreUtil.getBoolean(mContext, "isHasLogin")) {
+            mParams.put("intUserRole", GISharedPreUtil.getInt(mContext, "intUserRole").toString() + "") // 用户类型（0-委员；1-用户；2-承办单位）
+            mParams.put("strSid", GIStringUtil.nullToEmpty(GISharedPreUtil.getString(mContext, "strSid") + ""))
+            mParams.put("strUdid", GIStringUtil.nullToEmpty(GISharedPreUtil.getString(mContext, "deviceCode") + ""))
+//            } else {
+//            mParams.remove("strSid")
+//            mParams.remove("intUserRole")
+//            }
             var urlBuilder = request.url().newBuilder()
             if (null != mParams && mParams.size > 0) {
                 var keys = mParams.keys

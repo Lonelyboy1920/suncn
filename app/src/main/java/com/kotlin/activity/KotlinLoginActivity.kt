@@ -1,6 +1,7 @@
 package com.kotlin.activity
 
 import android.Manifest
+import android.app.Activity
 import android.content.Intent
 import android.os.Bundle
 import android.util.Log
@@ -15,6 +16,7 @@ import com.kotlin.bean.LoginBean
 import com.kotlin.net.RetrofitManager
 import com.suncn.ihold_zxztc.R
 import com.suncn.ihold_zxztc.activity.MainActivity
+import com.suncn.ihold_zxztc.utils.Utils
 import kotlinx.android.synthetic.main.activity_kotlin_login.*
 import me.weyye.hipermission.HiPermission
 import me.weyye.hipermission.PermissionCallback
@@ -38,6 +40,7 @@ class KotlinLoginActivity : KotlinBaseActivity() {
             override fun onSucess(data: Any?, sign: Int) {
                 var loginBean = data as LoginBean
                 Log.i("===============", "姓名:${loginBean.strName}\t 用户角色:${loginBean.intUserRole}")
+                sp_loginIn(this@KotlinLoginActivity, loginBean)
                 showActivity(this@KotlinLoginActivity, KotlinMainActivity().javaClass)
             }
 
@@ -75,6 +78,7 @@ class KotlinLoginActivity : KotlinBaseActivity() {
      * 登陆操作
      */
     private fun doLogin() {
+        GISharedPreUtil.setValue(this, "strSid", "")
         HiPermission.create(this).checkSinglePermission(Manifest.permission.READ_PHONE_STATE, object : PermissionCallback {
             override fun onGuarantee(permisson: String, position: Int) { // 同意/已授权
                 val deviceCode = GIPhoneUtils.getSerialNumber(this@KotlinLoginActivity) // 获取设备号
@@ -100,5 +104,18 @@ class KotlinLoginActivity : KotlinBaseActivity() {
                 GILogUtil.e("onDeny")
             }
         })
+    }
+
+    /**
+     * 设置登录后的存储信息
+     */
+    fun sp_loginIn(activity: Activity?, loginBean: LoginBean) {
+        GISharedPreUtil.setValue(activity, "isCheckUpdate", true)
+        GISharedPreUtil.setValue(activity, "strUserId", loginBean.strUserId) // 用户唯一ID
+        GISharedPreUtil.setValue(activity, "strPathUrl", Utils.formatFileUrl(activity, loginBean.strPathUrl)) // 登录用户头像地址
+        GISharedPreUtil.setValue(activity, "strName", loginBean.strName)
+//        GISharedPreUtil.setValue(activity, "isHasLogin", true)
+        GISharedPreUtil.setValue(activity, "intUserRole", loginBean.intUserRole)
+        GISharedPreUtil.setValue(activity, "strSid", loginBean.strSid)
     }
 }

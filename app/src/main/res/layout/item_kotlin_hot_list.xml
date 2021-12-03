@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:foreground="?android:attr/selectableItemBackground"
+    android:orientation="vertical"
+    android:paddingLeft="10dp"
+    android:paddingTop="15dp"
+    android:paddingRight="10dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="15dp">
+
+        <LinearLayout
+            android:id="@+id/ll_special"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:visibility="visible">
+
+            <com.gavin.giframe.widget.GITextView
+                android:id="@+id/tv_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:maxLines="2"
+                android:text="市政协主席韩冰主持召开“双联双创”座谈会议会议的活动会议会议的活动"
+                android:textColor="@color/font_title"
+                android:textSize="@dimen/font_normal"
+                app:myStyle="3" />
+
+            <LinearLayout
+                android:id="@+id/ll_video"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:visibility="gone">
+
+                <com.suncn.ihold_zxztc.view.MyVideoPlayer
+                    android:id="@+id/video_player"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_multi_image"
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:layout_marginTop="10dp"
+                android:visibility="gone">
+
+                <ImageView
+                    android:id="@+id/iv_multi_image1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:contentDescription="TODO"
+                    android:scaleType="centerCrop" />
+
+                <View
+                    android:layout_width="10dp"
+                    android:layout_height="match_parent" />
+
+                <ImageView
+                    android:id="@+id/iv_multi_image2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:contentDescription="TODO"
+                    android:scaleType="centerCrop" />
+
+                <View
+                    android:layout_width="10dp"
+                    android:layout_height="match_parent" />
+
+                <ImageView
+                    android:id="@+id/iv_multi_image3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:contentDescription="TODO"
+                    android:scaleType="centerCrop" />
+            </LinearLayout>
+            <!--其他的信息-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:gravity="bottom"
+                android:orientation="horizontal">
+
+                <com.gavin.giframe.widget.GITextView
+                    android:id="@+id/tv_top"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="10dp"
+                    android:background="@drawable/shape_top"
+                    android:paddingLeft="5dp"
+                    android:paddingTop="2dp"
+                    android:paddingRight="5dp"
+                    android:visibility="gone"
+                    android:paddingBottom="2dp"
+                    android:text="置顶"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/font_10" />
+
+                <com.gavin.giframe.widget.GITextView
+                    android:id="@+id/tv_hot"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="10dp"
+                    android:background="@drawable/shape_hot"
+                    android:paddingLeft="5dp"
+                    android:paddingTop="2dp"
+                    android:paddingRight="5dp"
+                    android:visibility="gone"
+                    android:paddingBottom="2dp"
+                    android:text="热"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/font_10" />
+
+                <com.gavin.giframe.widget.GITextView
+                    android:id="@+id/tv_department"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="10dp"
+                    android:maxLines="1"
+                    android:text="学习宣传处"
+                    android:textColor="@color/font_source"
+                    android:textSize="@dimen/font_mini"
+                    app:myStyle="1" />
+
+                <com.gavin.giframe.widget.GITextView
+                    android:id="@+id/tv_discussCount"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="10dp"
+                    android:maxLines="1"
+                    android:text=""
+                    android:textColor="@color/font_source"
+                    android:textSize="@dimen/font_mini"
+                    app:myStyle="1" />
+
+                <com.gavin.giframe.widget.GITextView
+                    android:id="@+id/tv_time"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:maxLines="1"
+                    android:text="2019-03-20"
+                    android:textColor="@color/font_source"
+                    android:textSize="@dimen/font_mini"
+                    app:myStyle="1" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/iv_simple_image"
+            style="@style/style_iv_itemImage"
+            android:src="@mipmap/icon_delete"
+            android:visibility="gone" />
+    </LinearLayout>
+
+    <View style="@style/style_line_bg_white" />
+</LinearLayout>

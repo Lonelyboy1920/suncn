@@ -6,6 +6,7 @@ import android.os.Bundle
 import android.view.View
 import androidx.fragment.app.Fragment
 import com.gavin.giframe.utils.RxUtils
+import com.hjq.toast.ToastUtils
 import com.kotlin.KotlinBaseActivity
 import com.kotlin.bean.KotlinBaseResponse
 import com.suncn.ihold_zxztc.rxhttp.RxDisposeManager
@@ -53,7 +54,11 @@ open class KotlinBaseFragment : Fragment() {
                 .compose(RxUtils.schedulersTransformer()) //线程调度
                 .subscribe(Consumer { tBaseResponse ->
                     var kotlinBaseResponse = tBaseResponse as KotlinBaseResponse<T>
-                    requestCallBack?.onSucess(kotlinBaseResponse.data, sign)
+                    if (200 == kotlinBaseResponse.code) {
+                        requestCallBack?.onSucess(kotlinBaseResponse.data, sign)
+                    } else if (500 == kotlinBaseResponse.code) {
+                        ToastUtils.show(kotlinBaseResponse.msg)
+                    }
                 }, Consumer { throwable ->
                     throwable.printStackTrace()
                     requestCallBack?.onError(throwable.message)

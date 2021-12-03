@@ -1,6 +1,8 @@
 package com.kotlin.api
 
 import com.kotlin.bean.KotlinBaseResponse
+import com.kotlin.bean.KotlinNewsColumnListBean
+import com.kotlin.bean.KotlinNewsInfoListServletBean
 import com.kotlin.bean.LoginBean
 import io.reactivex.Observable
 import retrofit2.http.FieldMap
@@ -26,5 +28,12 @@ interface IKotlinRequestApi {
 //    //退出登录
 //    @POST("LogoutServlet")
 //    Observable<BaseResponse<BaseGlobal>> doLoginOut(@QueryMap Map<String, String> map);
+
+
+    @POST("MyNewsColumnServlet")
+    fun getMyNewsColumnServlet(@QueryMap map: Map<String, String>): Observable<KotlinBaseResponse<KotlinNewsColumnListBean>>
+
+    @POST("NewsInfoListServlet")
+    fun getNewsInfoListServlet(@QueryMap map: Map<String, String>): Observable<KotlinBaseResponse<KotlinNewsInfoListServletBean>>
 
 }
